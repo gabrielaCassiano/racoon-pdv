@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Racoon</title>
+		<link
+			rel="stylesheet"
+			href="./styles/normalize.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="./styles/login.css"
+		/>
+	</head>
+
+	<body>
+		<main>
+			<section class="ladoEsquerdo">
+				<div id="boasVindasContainer">
+					<h1 id="boasVindasH">
+						<span id="texto"></span>
+						<span id="cursor">|</span>
+					</h1>
+				</div>
+			</section>
+			<section class="ladoDireito">
+				<div class="card">
+                    <div class="logo">
+                        <img
+                            src="./src/logoraccoonn2.png"
+                            alt="logo da pagina um guaxinin fofinho"
+                        />
+                        <h1>Login</h1>
+                    </div>
+                    <div class="inputsLogin">
+                        <form
+                            class="loginForm"
+                            action=""
+                            method="post"
+                            onsubmit="event.preventDefault()"
+                        >
+                            <input
+                                type="text"
+                                name="cpf"
+                                id="cpf"
+                                placeholder="Digite seu CPF aqui"
+                            />
+                            <input
+                                type="password"
+                                name="pass"
+                                id="pass"
+                                placeholder="Digite sua SENHA aqui"
+                            />
+                            <input
+                                type="submit"
+                                name="login"
+                                id="login"
+                                value="Login"
+                            />
+                        </form>
+                        <input
+                            type="button"
+                            name="cadastro"
+                            id="cadastro"
+                            value="Cadastre-se"
+                        />
+                    </div>
+                </div>
+			</section>
+		</main>
+		<script src="./js/typeAnimation.js"></script>
+	</body>
+</html>
