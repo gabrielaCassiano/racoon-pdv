@@ -17,5 +17,3 @@ function fazerAparecer() {
 	}
 }
 fazerAparecer()
-
-// VE SE FUNCIONO
