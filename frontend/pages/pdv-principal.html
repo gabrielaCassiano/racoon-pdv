@@ -5,35 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/normalize.css">
     <link rel="stylesheet" href="../styles/mainPage.css">
-    <title>Racoon - Main</title>
+    <title>Raccoon - Main</title>
 </head>
 <body>
     <main>
-        <div id="perfil">
-            <img class="logo" src="../src/logoraccoonn2.png" alt="logo da pagina um guaxinin fofinho">
-            <img class="userIcon" src= "../src/user.png" alt="icon de usuario">
+        <div   id="perfil">
+            <img class="logo" src="../src/logoraccooncirculo.png" alt="logo da pagina um guaxinin fofinho">
             
+            <h1>R <br> A<br>C<br>C<br><span class="oo">O</span><br><span class="oo">O</span><br>N</h1> 
+            
+            <img class="saida" src="../src/exit.png" alt="saida">
         </div>
 
         <section id="venda" >
 
             <div class="valores card">
+                
             <form>
-    
-                <label for="produto"> Produto: </label>
-                <input 
+                <label for="produto" class="word"> Produto: </label>
+                <div class="busca">
+                    <input 
                     type="text" 
                     name="produto"
                     id="produto"
-                />
+                    placeholder="digite o produto"
+                    />
+                    <img class="lupa"   src="../src/search.png" alt="lupa">
+                </div>
         
                 <div class="inp">       
                     <input 
                         type="text" 
                         name="quantidade" 
                         id="quantidade"
+                        placeholder="digite a quantidade"
                     />
-                    <label for="quantidade"> Quantidade </label>
+                    <label for="quantidade" class="word"> Quantidade </label>
                 </div>
         
                 <div class="inp">
@@ -41,8 +48,9 @@
                         type="text" 
                         name="unitario"
                         id="unitario"
+                        placeholder="valor unitário"
                     />
-                    <label for="unitario"> Unitario </label>
+                    <label for="unitario" class="word"> Unitario </label>
                 </div>
         
     
@@ -52,11 +60,11 @@
     
             <div class="opcao card">
 
-                <input class="b1" type="button" value="PAGAMENTO" >
+                <input  class="b1 scale" type="button" value="PAGAMENTO" >
                 
-                <input class="b2" type="button" value="Cancelar" >
+                <input class="b2 scale" type="button" value="Cancelar" >
 
-                <input class="b3" type="button" value="Produtos" >
+                <input class="b3 scale" type="button" value="Produtos" >
 
             </div>
     
@@ -67,13 +75,97 @@
         <section id="infoProdutos">
             
             <div class="listagem" >
+
+                <table>
+                    <thead>
+
+                        <th>Id</th>
+                        <th>Produto</th>
+                        <th>Qtde</th>
+                        <th>Unitário</th>
+                        <th>Total</th>
+
+                    </thead>
+                    
+                    <tbody>
+                        <tr>
+                            <td>01</td>
+                            <td>Coca Cola Zero 2L</td>
+                            <td>1</td>
+                            <td>12.99</td>
+                            <td>12.99</td>
+                        </tr>                        <tr>
+                            <td>01</td>
+                            <td>Coca Cola Zero 2L</td>
+                            <td>1</td>
+                            <td>12.99</td>
+                            <td>12.99</td>
+                        </tr>                        </tr>                        <tr>
+                            <td>01</td>
+                            <td>Coca Cola Zero 2L</td>
+                            <td>1</td>
+                            <td>12.99</td>
+                            <td>12.99</td>
+                        </tr>                        </tr>                        <tr>
+                            <td>01</td>
+                            <td>Coca Cola Zero 2L</td>
+                            <td>1</td>
+                            <td>12.99</td>
+                            <td>12.99</td>
+                        </tr>                        </tr>                        <tr>
+                            <td>01</td>
+                            <td>Coca Cola Zero 2L</td>
+                            <td>1</td>
+                            <td>12.99</td>
+                            <td>12.99</td>
+                        </tr>                        </tr>                        <tr>
+                            <td>01</td>
+                            <td>Coca Cola Zero 2L</td>
+                            <td>1</td>
+                            <td>12.99</td>
+                            <td>12.99</td>
+                        </tr>                        </tr>                        <tr>
+                            <td>01</td>
+                            <td>Coca Cola Zero 2L</td>
+                            <td>1</td>
+                            <td>12.99</td>
+                            <td>12.99</td>
+                        </tr>                        </tr>                        <tr>
+                            <td>01</td>
+                            <td>Coca Cola Zero 2L</td>
+                            <td>1</td>
+                            <td>12.99</td>
+                            <td>12.99</td>
+                        </tr>                        </tr>                        <tr>
+                            <td>01</td>
+                            <td>Coca Cola Zero 2L</td>
+                            <td>1</td>
+                            <td>12.99</td>
+                            <td>12.99</td>
+                        </tr>
+
+                    </tbody>
+
+
+                </table>
         
             </div>
 
 
 
-            <div id="valor">
-                
+            <div class="valor">
+                <table>
+                    <thead>
+                        <th>Itens:</th>
+                        <th>Subtotal:</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>R$ 12.99</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
     </main>
