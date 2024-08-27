@@ -176,4 +176,7 @@ main {
     gap: 1em;
     
 }
-
+.codigos{
+    display: flex;
+    gap: 2em;
+}
