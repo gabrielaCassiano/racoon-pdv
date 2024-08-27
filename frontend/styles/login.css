@@ -7,31 +7,27 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 }
 .logo h1{
     position: absolute;
     bottom: 0;
-    
 }
 .logo img {
     margin: 0;
     padding: 0;
-	width: 300px;
-	height: 300px;
+	width: 200px;
+	height: 200px;
 }
 
 .ladoEsquerdo {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
 	width: 50vw;
 	height: 100vh;
 	background-color: black;
 	color: white;
 	border-radius: 0px 30px 30px 0px;
-	
 }
 .ladoEsquerdo h1 {
 	margin: 0;
@@ -68,13 +64,11 @@ main {
 	flex-direction: column;
 	align-items: center; 
     justify-content: center;
-	
 }
 .loginForm{
 	display: flex;
 	flex-direction: column;
 	gap: 30px;
-    
 }
 .inputsLogin{
     display: flex;
@@ -87,7 +81,6 @@ main {
     border-radius: 5px;
 	width: 22vw;
 	height: 6vh;
-
 }
 input::placeholder {
     font-family:'Segoe UI',Verdana, sans-serif ;
@@ -99,14 +92,13 @@ input::placeholder {
 }
 
 #login{
+	border-radius: 30px;
 	background-color: black;
     color: white;
-	
-
 }
 
 .msg {
-	padding-top: 5vh;
+	margin-top: 14vh;
 }
 
 #cadastrese{
@@ -116,8 +108,6 @@ input::placeholder {
     border: none;
 	width: 100px;
 	height: 35px;
-
-	
 }
 .planos {
 	display: flex;
@@ -136,56 +126,88 @@ input::placeholder {
 	justify-content: space-around;
 }
 .loginCard {
-	display: flex;
-}
-.loginCard {
-	opacity: 1;
-	visibility: visible;
-}
-.registro {
-	overflow-y: scroll;
-	box-sizing: border-box;
-	transition: display 5s linear;
-	position: absolute;
-	opacity: 0;
-	visibility: hidden;
-	transition: opacity 1s linear, visibility 1s linear;
+    display: flex;
+    flex-direction: column;
+	justify-content: space-between;
 }
 
-.registro::-webkit-scrollbar {
-    width: 8px;
+#cadastro {
+	background-color: black;
+	color: white;
+	border-radius: 30px;
 
 }
-.registro::-webkit-scrollbar-thumb {
-    background-color: #000000;
+
+.toggle-buttons {
+    position: relative;
+    display: flex;
+    background-color: #f0f0f0;
+	align-items: center;
+	justify-content: center;
+    border-radius: 20px;
+	overflow: hidden;
+	width: 25vw;
+	margin-left: 2.5vw;
+}
+.toggle-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #a5e85d;
+    border-radius: 20px;
+    transition: transform 0.5s ease-in;
+}
+
+.toggle-btn {
+	flex: 1;
+    padding: 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    z-index: 1;
+    transition: transform 0.5s ease-in;
+}
+
+
+.slideWindow {
+    display: flex;
+	align-items: center;
+    transition: transform 0.5s ease-in;
+    width: 200%;
+	overflow-y: auto;
+}
+.slideWindow::-webkit-scrollbar {
+    width: 5px;
+}
+.slideWindow::-webkit-scrollbar-thumb {
+    background-color: #b3e47e;
     border-radius: 5px;
 }
 
-.slideWindow {
-	display: flex;
+.login, .cadastro {
+    width: 50%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
 .card {
     box-sizing: border-box;
-	padding: 2vh 0;
+    padding: 2vh 0;
     display: flex;
+    flex-direction: column;
+    justify-content: end;
     width: 30vw;
     height: 80vh;
-	overflow-x: hidden;
-	justify-content: center;
-	align-items: center;
-
     border-radius: 20px;
-
     box-shadow: 2px 2px 40px 3px rgb(0 0 0 / 20%);
+    overflow: hidden;
 }
-
-.card div {
-	flex-direction: column;
-    align-items: center ;
-    justify-content: center;
-}
-
 
 @keyframes pisca {
 	from,
