@@ -5,6 +5,9 @@ cardCadastro = document.querySelector(".registro")
 cardLogin = document.querySelector(".loginCard")
 
 cadastrese.addEventListener('click', () => {
-    cardCadastro.style.display = 'flex'
-    cardLogin.style.display = 'none'
+    cardCadastro.style.opacity = '1'
+    cardCadastro.style.visibility = 'visible'
+
+    cardLogin.style.opacity = '0'
+    cardLogin.style.visibility = 'hidden'
 })
