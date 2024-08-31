@@ -1,13 +1,14 @@
-cadastro =  document.getElementById("cadastro")
-login = document.getElementById("login")
-cadastrese =  document.getElementById("cadastrese")
-cardCadastro = document.querySelector(".registro")
-cardLogin = document.querySelector(".loginCard")
+const loginBtn = document.getElementById('loginBtn');
+const cadastroBtn = document.getElementById('cadastroBtn');
+const slideWindow = document.querySelector('.slideWindow');
+const toggleSlider = document.querySelector('.toggle-slider');
 
-cadastrese.addEventListener('click', () => {
-    cardCadastro.style.opacity = '1'
-    cardCadastro.style.visibility = 'visible'
+loginBtn.addEventListener('click', () => {
+    slideWindow.style.transform = 'translateX(0)';
+    toggleSlider.style.transform = 'translateX(0)';
+});
 
-    cardLogin.style.opacity = '0'
-    cardLogin.style.visibility = 'hidden'
-})
+cadastroBtn.addEventListener('click', () => {
+    slideWindow.style.transform = 'translateX(-50%)';
+    toggleSlider.style.transform = 'translateX(100%)';
+});

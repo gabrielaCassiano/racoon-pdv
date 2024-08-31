@@ -37,8 +37,14 @@ main {
     height: 10em;
 }
 .saida{
+    display: flex;
+    transition: scale 200ms ease-in-out;
     height: 7vh;
-    margin-top: 7vh;
+    
+}
+
+.saida:hover{
+    scale: 1.2;
 }
 
 
@@ -180,3 +186,65 @@ main {
     display: flex;
     gap: 2em;
 }
+.botsaida{
+    display: flex;
+    align-items: center;
+    background: none;
+    margin-top: 7em;
+    border: none;
+    height: 4em;
+}
+.botlupa{
+    background: none;
+    border: none;
+
+}
+.arrow{
+    display: flex;
+    height: 4em;
+    width: 4em;
+    transition: scale 200ms ease-in-out;    
+    
+}
+
+.arrow:hover{
+    scale: 1.2;
+}
+
+
+.id{
+    display: flex;
+    flex-direction: column;
+    gap: 18em;
+    
+    
+}
+.botvoltar{
+    display: flex;
+    justify-content: center;
+    width: 4em;
+    margin-left: 2em;
+    background: none;
+    border: none;
+}
+
+.plus{
+    display: flex;
+    height: 4em;
+    width: 4em;
+    transition: scale 200ms ease-in-out;   
+}
+
+.plus:hover{
+    scale: 1.2;
+}
+
+
+button{
+    cursor: pointer;
+}
+.pezin{
+    display: flex;
+}
+
+
