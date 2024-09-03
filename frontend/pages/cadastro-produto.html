@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/cadastro-produto.css">
+    <title>Document</title>
+</head>
+<body>
+    <body>
+        <main>
+
+            <div   id="perfil">
+                <img class="logo" src="../src/logoraccooncirculo.png" alt="logo da pagina um guaxinin fofinho">
+                
+                <h1>R <br> A<br>C<br>C<br><span class="oo">O</span><br><span class="oo">O</span><br>N</h1> 
+                
+                
+                <button class="botsaida"> 
+
+                    <img class="saida" src="../src/exit.png" alt="saida">
+
+                </button>
+            
+            </div>
+
+            
+            <section id="pesquisa">
+
+                <div class="tabelapesquisa"> 
+                    
+                    <div class="id">
+                        
+                        <form class="formulario">
+                            <h1>Produto:</h1>
+
+                            <label for="nomeproduto" class="barrapesquisa"> Nome/Codigo: </label>
+
+                            <div class="codigos">
+
+                                <input type="text"
+                                name="nomeproduto"
+                                id="nomeproduto"
+                                placeholder="digite o codigo"
+                                >
+
+                                <button class="botlupa">
+                                    <img class="lupa"   src="../src/search.png" alt="lupa">
+                                </button>
+                                
+                            </div>
+
+                            <select name="inteligente" id="int">
+                                <option value="" selected disabled hidden>Pesquisa inteligente</option>
+                                <option value="op1">Codigo de barras</option>
+                                <option value="op2">Categoria</option>
+
+                            </select>
+
+                        </form>
+                        <div class="pezin">
+                            <button class="botvoltar">
+                                <img class="arrow" src="../src/arrow.png" alt="voltar">
+                            </button>
+                            <button class="botvoltar">
+                                <img class="plus" src="../src/plus.png" alt="adicionar">
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+                
+
+            </section>
+
+            
+        <section id="listadeprodutos">
+            
+            <div class="listagemprodutos" >
+
+                <h1>Cadastro de Produto</h1>
+                    
+            <form>
+               
+                <div class="busca">
+                    <input 
+                    type="text" 
+                    name="nome"
+                    id="nome"
+                    placeholder="digite o nome"
+                    />
+                    <label for="nome" class="word"> nome: </label>
+                </div>
+
+                <div class="inp">
+                    <input 
+                        type="text" 
+                        name="preco"
+                        id="preco"
+                        placeholder="codigoDeBarra"
+                    />
+                    <label for="unitario" class="word"> Digite o preço </label>
+                </div>
+        
+                <div class="inp">       
+                    <input 
+                        type="text" 
+                        name="codigo" 
+                        id="codigo"
+                        placeholder="digite o codigo"
+                    />
+                    <label for="quantidade" class="word"> Código </label>
+                </div>
+        
+                <div class="inp">
+                    <input 
+                        type="text" 
+                        name="codigoDeBarra"
+                        id="codigoDeBarra"
+                        placeholder="codigoDeBarra"
+                    />
+                    <label for="unitario" class="word"> Código de barras </label>
+                </div>
+                
+                <div>
+                    <select name="Categoria" id="cat">
+                        <option value="" selected disabled hidden>Selecione uma categoria</option>
+                        <option value="op1">Mercearia</option>
+                        <option value="op2">Doces</option>
+                        <option value="op2">Carne</option>
+                    </select>
+                    
+                    <label > Categoria </label>
+                    
+                </div>
+                
+                </select>
+    
+            </form>
+               
+                
+        
+            </div>
+
+           
+        </section>
+
+
+        </main>
+
+
+
+
+
+
+
+
+</body>
+
+
+</html>
