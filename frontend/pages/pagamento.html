@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/pagamento.css">
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <main style="display: flex;">
+        <div   id="perfil">
+            <img class="logo" src="../src/logoraccooncirculo.png" alt="logo da pagina um guaxinin fofinho">
+            
+            <h1>R <br> A<br>C<br>C<br><span class="oo">O</span><br><span class="oo">O</span><br>N</h1> 
+            
+            <img class="saida" src="../src/exit.png" alt="saida">
+        </div>
+
+        <section id="cl">
+            <div class="esq">
+
+                <div class="cliente">
+                    <div class="cpfDiv">
+                        <label for="produto" class="clientecpf"> CPF: </label>
+                        <input
+                        type="text" 
+                        name="cpf"
+                        id="cpfInput"
+                        placeholder="Digite o cpf do cliente"
+                        />
+                    </div>
+                    <div class="plus">
+                        <img src="../src/plus.png" alt="adicionar">
+                    </div>  
+                    <div class="arrow">
+                        <img src="../src/arrow.png" alt="adicionar">
+                    </div> 
+                </div>
+    
+                <div class="metodosDePagamento">
+                    <div class="botoes">
+                        <button class="btn">  
+                            Dinheiro
+                        </button>
+                        <button class="btn">  
+                            Debito
+                        </button>
+                        <button class="btn">  
+                            Credito
+                        </button>
+                        <button class="btn">  
+                            Voucher
+                        </button>
+                        <button class="btn">  
+                            Pix
+                        </button>
+                        <button class="btn cashBtn">  
+                            CashBack
+                        </button>
+                    </div>
+                    
+                    <div class="listagem" >
+
+                        <table>
+                            <thead>
+        
+                                <th>Metodo:</th>
+                                <th>Valor pago:</th>
+                                <th>Data:</th>
+                                <th>Troco:</th>
+        
+                            </thead>
+                            
+                            <tbody>
+                                <tr>
+                                    <td>Debito</td>
+                                    <td>R$ 23.00</td>
+                                    <td>03/09/2024</td>
+                                    <td>R$ 00.00</td>
+                                </tr>
+                            </tbody>
+        
+        
+                        </table>
+                
+                    </div>
+
+                </div>
+
+              
+             
+
+            </div>
+            
+            <div class="dir">
+                <div class="info">
+
+                  <table class="infoTable">
+
+                    <thead>
+                        <tr>
+                            <th>Total Venda:</th>
+                            <th>Desconto CashBack:</th>
+                            <th>Restante:</th>
+                            <th>Troco:</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>R$ 25.00</td>
+                            <td>R$ 2.00</td>
+                            <td>R$ 23.00</td>
+                            <td>R$ 00.00</td>
+                        </tr>
+                    </tbody>
+
+
+
+                  </table>
+                    
+                    
+                    
+                </div>
+
+                <div class="tabelaPagamentos">
+                        <div class="valorInsideDiv">
+                            <label for="produto" class="valorTxt"> VALOR: </label>
+                            <input
+                            type="text" 
+                            name="valor"
+                            id="valorInput"
+                            placeholder="Digite o valor"
+                            />
+                        </div>
+
+                       
+                        <button class="btnConfirmPay">  
+                            Confirmar pagamento
+                        </button>              
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        
+        
+    </main>
+
+
+    
+</body>
+</html>
