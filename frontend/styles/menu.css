@@ -1,0 +1,53 @@
+/* CSS for the given HTML code */
+
+.dropdown-menu {
+    background-color: #ffffff;
+    padding: 10px;
+    left: 35em;
+    position: flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 8em;
+    width: 40em;
+    height: 30em;
+    border-radius: 20px;
+    box-shadow: 2px 2px 40px 3px rgb(0 0 0 / 20%);
+    z-index: 1;
+}
+
+.dropdown-menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    padding-left: 0px;
+    margin-bottom: 0px;
+    line-height: 70px;
+    border: 2px solid rgba(74, 74, 74, 0.075);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.19);
+}
+
+.lista ul {
+    list-style-type: none;
+    box-sizing: border-box;
+    margin: 1em;
+    padding: 0em;
+}
+
+.lista ul li {
+    display: flex;
+}
+
+.lista ul li a {
+    text-decoration: none;
+    box-sizing: border-box;
+    box-shadow: #ff0000;
+    color: #ff0000;
+}
+
+.lista ul li a:hover {
+    color: #ff0000;
+}
