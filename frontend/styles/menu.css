@@ -1,33 +1,39 @@
 /* CSS for the given HTML code */
-
+.menu {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    position: absolute;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.412);
+    backdrop-filter: blur(3px);
+    z-index: 0;
+}
 .dropdown-menu {
     background-color: #ffffff;
     padding: 10px;
     left: 35em;
-    position: flex;
+    top: 8em;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     top: 8em;
     width: 40em;
     height: 30em;
     border-radius: 20px;
-    box-shadow: 2px 2px 40px 3px rgb(0 0 0 / 20%);
-    z-index: 1;
+    z-index: 0;
 }
 
-.dropdown-menu {
+.nav {
     list-style-type: none;
-    display: flex;
-    justify-content: space-between;
     margin: 0;
     padding: 0;
+    align-items: center;
     display: inline-block;
     padding-left: 0px;
     margin-bottom: 0px;
     line-height: 70px;
-    border: 2px solid rgba(74, 74, 74, 0.075);
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.19);
 }
 
 .lista ul {
