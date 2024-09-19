@@ -12,21 +12,38 @@
     backdrop-filter: blur(3px);
     z-index: 1;
 }
-.logo img {
-    width: 9em;
-    height: 9em;
-    margin-top: -1em;
+.header {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    background-color: #000;
+    border-radius: 20px;
+    flex-direction: column;
+    /* flex-wrap: nowrap; */
+    /* align-content: space-between; */
+}
+
+.header h1{
+    display: flex;
+    color: #fff;
+}
+.back-icon{
+    position: relative;
+    top: -1em;
+    right: 10em;
 }
 .opcoes {
-    display: flex;
+    /* display: flex; */
     flex-direction: row;
-    margin-top: -3em;
-    height: 23em;
+    margin-top: -em;
+    /* height: 23em; */
     width: 18em;
-    margin-left: 1em;
+    /* margin-left: 1em; */
     flex-wrap: wrap;
-    align-content: space-between;
-    align-items: flex-end;
+    /* align-content: space-evenly; */
+    align-items: flex-start;
     justify-content: space-between;
 }
 .opcoes button {
@@ -50,12 +67,6 @@
     height: 6em;
     border-radius: 20px;
     z-index: 1000;
-}
-.divisao title {
-    color: #ffffff;
-    font-size: 20px;
-    margin-top: 1em;
-    margin-left: 1em;
 }
 .dropdown-menu {
     background-color: #ffffff;
