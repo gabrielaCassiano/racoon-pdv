@@ -10,15 +10,57 @@
     width: 100%;
     background-color: rgba(0, 0, 0, 0.412);
     backdrop-filter: blur(3px);
-    z-index: 0;
+    z-index: 1;
+}
+.logo img {
+    width: 9em;
+    height: 9em;
+    margin-top: -1em;
+}
+.opcoes {
+    display: flex;
+    flex-direction: row;
+    margin-top: -3em;
+    height: 23em;
+    width: 18em;
+    margin-left: 1em;
+    flex-wrap: wrap;
+    align-content: space-between;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.opcoes button {
+    width: 100%;
+    padding: 15px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.divisao {
+    background-color: #000000;
+    position: relative;
+    left: 0.63em;
+    display: flex;
+    width: 42em;
+    margin-top: -10px;
+    margin-left: -20px;
+    height: 6em;
+    border-radius: 20px;
+    z-index: 1000;
+}
+.divisao title {
+    color: #ffffff;
+    font-size: 20px;
+    margin-top: 1em;
+    margin-left: 1em;
 }
 .dropdown-menu {
     background-color: #ffffff;
     padding: 10px;
-    left: 35em;
-    top: 8em;
     display: flex;
-    top: 8em;
     width: 40em;
     height: 30em;
     border-radius: 20px;
