@@ -163,9 +163,16 @@ main {
 }
 .b3:hover{
     background-color: #000000;
-    color: white;
-    
-    
+    color: white;  
+}
+
+.b4 {
+    background-color: #b3e47e;
+    transition: background-color  200ms ease-in-out, color 150ms ease-in-out,scale 300ms ease-in-out;
+}
+.b4:hover{
+    background-color: #000000;
+    color: white;  
 }
 
 
@@ -262,4 +269,84 @@ main {
 }
 .word{
     font-size: 1.5em;
+}
+
+
+
+/* MODAL FUNCIONARIO */
+
+.inputAbertura {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+#modalAberturaDeCaixa {
+    position: fixed;
+    background-color: #cccccce8;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.bloco{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    height: 35em;
+    width: 50em;
+    border-radius: 2em;
+    box-shadow: 2px 2px 40px 3px rgb(0 0 0 / 20%);
+    gap: 1em;
+    
+}
+
+#btn:hover{
+     background-color: black;
+    color: white
+}
+
+.logo{
+    width: 10em;
+}
+
+.dentro{
+     
+    display: flex;
+    gap: 1em;
+    
+    
+    flex-direction: column;
+    align-items: center;
+}
+
+.dentro h1{
+    font-size: 2.5em;
+}
+
+.dentro input{
+    border-radius: 5px;
+	width: 22vw;
+	height: 6vh;
+}
+#botaoLoginFunc{
+    
+    background-color: blueviolet;
+    width: 22em;
+    
+    border-radius: 0.5em;
+    background-color: black;
+    color: white;
+    border: none;
+    transition: background-color  200ms ease-in-out, color 150ms ease-in-out, scale 300ms ease-in-out;
+}
+#botaoLoginFunc:hover{
+    background-color: #a5e85d;
+   color: rgb(0, 0, 0)
 }

@@ -3,6 +3,19 @@ let logoSaida = document.querySelector('#perfil .saida');
 let logoMenu = document.getElementsByClassName('b3 scale')[0];
 let dropdownMenubackground = document.querySelector('.nav');
 let Esconder = document.querySelector('.menu');
+
+const btnAbrirCaixa = document.getElementById("btnAbrirCaixa")
+const modalAbrirCaixa = document.getElementById("modalAberturaDeCaixa")
+
+btnAbrirCaixa.addEventListener('click', () => {
+    let modalStateAbrirCaixa = modalAbrirCaixa.style.display
+    console.log(modalStateAbrirCaixa)
+    if (modalStateAbrirCaixa == 'none') {
+        modalAbrirCaixa.style.display = 'flex'
+    }
+})
+
+
 Esconder.style.display = 'none';
 logoMenu.addEventListener('click', function() {
     console.log('A imagem do menu foi clicada!');

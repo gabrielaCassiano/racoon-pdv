@@ -1,0 +1,56 @@
+html, body {
+    background-color: #ecedf8;
+}
+.sec{
+    display: flex;
+    justify-content: center;
+    margin-top: 4em;
+    
+    
+}
+.bloco{
+    display: flex;
+    justify-content: center;
+    
+    background-color: rgb(255, 255, 255);
+    height: 35em;
+    width: 50em;
+    border-radius: 2em;
+    box-shadow: 2px 2px 40px 3px rgb(0 0 0 / 20%);
+    
+}
+#btn{
+    background-color: blueviolet;
+    width: 15em;
+    height: 3em;
+    border-radius: 1em;
+    background-color: #a5e85d;
+    border: none;
+    transition: background-color  200ms ease-in-out, color 150ms ease-in-out, scale 300ms ease-in-out;
+}
+
+#btn:hover{
+     background-color: black;
+    color: white
+}
+
+.logo{
+    width: 10em;
+}
+.oo{
+    color:  #a5e85d;
+}
+.dentro{
+
+    margin-top: 7em;
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+}
+.voltar{
+    margin-top: 7em;
+    margin-right: 43em;
+
+    width: 3em;
+}
