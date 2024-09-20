@@ -48,4 +48,9 @@ html, body {
     flex-direction: column;
     align-items: center;
 }
-    
+.voltar{
+    margin-top: 7em;
+    margin-right: 43em;
+
+    width: 3em;
+}
