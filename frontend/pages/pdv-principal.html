@@ -5,9 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/normalize.css">
     <link rel="stylesheet" href="../styles/mainPage.css">
+    <link rel="stylesheet" href="../styles/menu.css">
+    <link rel="script" href="../js/pdv-principal.js">
+    <script type="module" src="../js/aberturaDeCaixa.js"></script>
     <title>Raccoon - Main</title>
 </head>
 <body>
+    <div id="modalAberturaDeCaixa" style="display: none;">
+        <div class="bloco">
+            <div class="dentro">
+                
+        
+                <h1>Abertura De Caixa </h1>
+                <div class="inputAbertura">
+                    <label for="fundoDeCaixa">Fundo do caixa</label>
+                    <input type="text" id="fundoDeCaixa" name="fundoDeCaixa" placeholder="Fundo do caixa">
+                </div>
+                <div class="inputAbertura">
+                    <label for="numeroCadastrado">Numero de Cadastro</label>
+                    <input type="text" id="numeroCadastrado" name="numeroCadastrado" placeholder="Numero de Cadastro"> 
+                </div>
+               
+
+                <input type="button" id="botaoLoginFunc" name="botao" value="Abrir">
+
+            </div>
+           
+        </div>
+    </div>
+
     <main>
         <div   id="perfil">
             <img class="logo" src="../src/logoraccooncirculo.png" alt="logo da pagina um guaxinin fofinho">
@@ -58,12 +84,18 @@
                 
             </div>
     
-            <div class="opcao card">
+            <div class="opcao card" id="optPdv" style="display: none;">
 
                 <input  class="b1 scale" type="button" value="PAGAMENTO" >
                 
                 <input class="b2 scale" type="button" value="Cancelar" >
 
+                <input class="b3 scale" type="button" value="Configurações" >
+
+            </div>
+            <div class="opcao card abertura" id="optOpen">
+
+                <input class="b4 scale" type="button" id="btnAbrirCaixa" value="ABRIR CAIXA" >
                 <input class="b3 scale" type="button" value="Configurações" >
 
             </div>
@@ -170,10 +202,7 @@
         </section>
     </main>
 
-
-    
-
-
+    <script src="../js/pdv-principal.js"></script>
     
 </body>
 </html>
