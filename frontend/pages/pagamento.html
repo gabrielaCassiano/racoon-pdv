@@ -9,13 +9,62 @@
 </head>
 
 <body>
+        <!-- MODAL INICIO  -->
+        <div id="modalConfig" style="display: none;">
+            <div class="bloco">
+                <div class="dentro1">   
+                    <div class="inputs">
+                        <h1>Cadastro de cliente:</h1>
+                        <p>Efetue o cadastro do cliente  para que o acesso <br> ao cash-back via reciclagem seja liberado.</p>
+                        <input type="text" class="cpfInp" placeholder="Nome cliente"> 
+                        <input type="text" class="cpfInp" placeholder="Cpf Cliente"> 
+                        <button class="cadastrarCpf">
+                            Cadastrar clientex
+                        </button> 
+                    </div>
+    
+                    <button class="botvoltar">
+                        <img class="arrow" src="../src/arrow.png" alt="voltar">
+                    </button>
+    
+                </div>
+               
+            </div>
+        </div>
+        <!-- MODAL FIM -->
+
+        <!-- MODAL INICIO  -->
+        <div id="modalCashBack" style="display: none;">
+            <div class="bloco">
+                <div class="dentro">   
+                 
+                    
+
+                <div>
+                    <h1>Valor Total: R$ 0.15 </h1>
+
+                </div>
+
+            
+                </div>
+                        
+
+                    <button class="botvoltar">
+                        <img class="arrow" src="../src/arrow.png" alt="voltar">
+                    </button>
+                </div>     
+            </div>
+        </div>
+        <!-- MODAL FIM -->
+
     <main style="display: flex;">
         <div   id="perfil">
             <img class="logo" src="../src/logoraccooncirculo.png" alt="logo da pagina um guaxinin fofinho">
             
             <h1>R <br> A<br>C<br>C<br><span class="oo">O</span><br><span class="oo">O</span><br>N</h1> 
-            
-            <img class="saida" src="../src/exit.png" alt="saida">
+            <button id="botSaida">
+                <img class="saida" src="../src/exit.png" alt="saida">
+            </button>
         </div>
 
         <section id="cl">
@@ -32,9 +81,14 @@
                         />
                     </div>
                     <div class="plus">
-                        <img src="../src/plus.png" alt="adicionar">
-                    </div>  
-                    <div class="arrow">
+
+                        <button class="btnCadastrar" >
+                            <img src="../src/plus.png" alt="adicionar">
+                        </button>
+                    </div> 
+
+                    <div class="arrow"  id="botvoltar">
+
                         <img src="../src/arrow.png" alt="adicionar">
                     </div> 
                 </div>
@@ -56,7 +110,7 @@
                         <button class="btn">  
                             Pix
                         </button>
-                        <button class="btn cashBtn">  
+                        <button id="cashbackBtn" class="btn cashBtn">  
                             CashBack
                         </button>
                     </div>
@@ -137,7 +191,7 @@
                         </div>
 
                        
-                        <button class="btnConfirmPay">  
+                        <button id="btnConfirmar" class="btnConfirmPay">  
                             Confirmar pagamento
                         </button>              
                 </div>
@@ -153,7 +207,9 @@
         
     </main>
 
-
+    <!-- <script src="../js/searchproduto.js"></script> -->
+    <script src="../js/pagamento.js"></script>
+    <script src="../js/signUp.js"></script>
     
 </body>
 </html>

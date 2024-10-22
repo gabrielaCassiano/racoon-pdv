@@ -41,6 +41,8 @@
 
 
 
+
+
 .container a {
     color: #333;
     font-size: 13px;
@@ -219,7 +221,7 @@
 .container.active .toogle-right{
     transform: translateX(200%);
 }
-img{
+.sing-in img{
     margin: 0;  
     padding: 0;
 	width: 8em;
@@ -234,11 +236,10 @@ img{
     width: 30em;
 }
 
+.hidden{
+    margin-top: 20em;
 
-
-
-
-
+}
 
 .slider{
     display: flex;
@@ -246,17 +247,13 @@ img{
     align-items: center;
     position: relative;
     width: 50vw;
-    height: 100vh;
+    height: 80vh;
     overflow: hidden;
     background-color: #000000;
     border-radius: 0px 30px 30px 0px;   
     
-    
+}
 
-}
-.slider h1{
-    margin-top: 2em;
-}
 .item{
     position: absolute;
     width: 23em;
@@ -267,7 +264,7 @@ img{
     padding: 20px;
     transition:  0.5s;
     left: calc(50% - 11.5em);
-    top: 13em;
+    top: 10em;
     
 }
 .item:hover{
@@ -313,7 +310,7 @@ img{
 }
 #prev{
     position: absolute;
-    margin-right: 1em;
+    margin-right: 2em;
     top: 80%;
     
 }
@@ -336,6 +333,7 @@ img{
 
 
 #boasVindasContainer {
+    
 	width: 500px;
 }
 
@@ -370,4 +368,100 @@ img{
 
 
 
+/* MODAL INICIO */
+
+.inputAbertura {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+#modalAberturaDeCaixa, #modalConfig {
+    position: fixed;
+    background-color: #cccccce8;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.bloco{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    height: 35em;
+    width: 50em;
+    border-radius: 2em;
+    box-shadow: 2px 2px 40px 3px rgb(0 0 0 / 20%);
+    gap: 1em;
+    
+}
+
+#btn:hover{
+     background-color: black;
+    color: white
+}
+
+.logo{
+    width: 10em;
+}
+
+.dentro{
+     
+    display: flex;
+    gap: 1em;
+    
+    
+    flex-direction: column;
+    align-items: center;
+}
+
+.dentro h1{
+    font-size: 2.5em;
+}
+
+.dentro input{
+    border-radius: 5px;
+	width: 22vw;
+	height: 6vh;
+}
+#botaoLoginFunc{
+    
+    background-color: blueviolet;
+    width: 22em;
+    
+    border-radius: 0.5em;
+    background-color: black;
+    color: white;
+    border: none;
+    transition: background-color  200ms ease-in-out, color 150ms ease-in-out, scale 300ms ease-in-out;
+}
+#botaoLoginFunc:hover{
+    background-color: #a5e85d;
+   color: rgb(0, 0, 0)
+}
+
+/* MODAL FIM */
+
+.botvoltar{
+    display: flex;
+    justify-content: center;
+    width: 4em;
+    margin-left: 2em;
+    background: none;
+    border: none;
+    z-index: 1;
+}
+.arrow{
+    display: flex;
+    height: 4em;
+    width: 4em;
+    transition: scale 200ms ease-in-out;    
+    
+}
 

@@ -8,6 +8,99 @@
     <title>Document</title>
 </head>
 <body>
+    
+      <!-- MODAL INICIO  -->
+      <div id="modalConfig" style="display: none;">
+        <div class="bloco">
+            <div class="dentro">
+                
+        
+                <form class="modalCadastro">
+
+                    <h1>Cadastro Produto</h1>
+               
+                    <div class="busca">
+                        <input 
+                        type="text" 
+                        name="nome"
+                        id="nome"
+                        placeholder="digite o nome"
+                        />
+                        
+                    </div>
+                    
+                    <div class="inp">       
+                        <input 
+                            type="text" 
+                            name="codigo" 
+                            id="codigo"
+                            placeholder="digite o codigo"
+                        />
+                        
+                    </div>
+                    <div class="inp">
+                        <input 
+                            type="text" 
+                            name="preco"
+                            id="preco"
+                            placeholder="codigoDeBarra"
+                        />
+                       
+                    </div>
+            
+            
+                    <div class="inp">
+                        <input 
+                            type="text" 
+                            name="codigoDeBarra"
+                            id="codigoDeBarra"
+                            placeholder="Preço"
+                        />
+                        
+                    </div>
+
+                    <div class="inp">
+                        <input 
+                            type="text" 
+                            name="codigoDeBarra"
+                            id="codigoDeBarra"
+                            placeholder="Valor CashBack"
+                        />
+                        
+                    </div>
+                    
+                    <div>
+                        <select name="Categoria" id="cat">
+                            <option value="" selected disabled hidden>Selecione uma categoria</option>
+                            <option value="op1">Mercearia</option>
+                            <option value="op2">Doces</option>
+                            <option value="op2">Carne</option>
+                        </select>
+                        
+                       
+                    </div>
+                    
+                    
+                    <input type="button" name="btnConf" id="btnConf" value="Confirmar">
+        
+                    
+                </form>
+                
+                <button class="botvoltar">
+                    <img class="arrow" src="../src/arrow.png" alt="voltar">
+                </button>
+                
+            
+            
+
+            </div>
+           
+        </div>
+    </div>
+    <!-- MODAL FIM -->
+
+
+    
         <main>
 
             <div   id="perfil">
@@ -16,7 +109,7 @@
                 <h1>R <br> A<br>C<br>C<br><span class="oo">O</span><br><span class="oo">O</span><br>N</h1> 
                 
                 
-                <button class="botsaida"> 
+                <button id="botSaida"> 
 
                     <img class="saida" src="../src/exit.png" alt="saida">
 
@@ -59,10 +152,11 @@
 
                         </form>
                         <div class="pezin">
-                            <button class="botvoltar">
-                                <img class="arrow" src="../src/arrow.png" alt="voltar">
+                            <button id="botvoltarPage">
+                                <img class="arrow1" src="../src/arrow.png" alt="voltar">
                             </button>
-                            <input type="button" id="btn" name="btn" value="cadastrar Produto">
+
+                            <input type="button" class="btnCadastrar" name="btn" value="cadastrar produto">
                         </div>
 
                     </div>
@@ -83,6 +177,7 @@
                         <th>Codigo</th>
                         <th>Codgiodebarras</th>
                         <th>Preco</th>
+                        <th>CashBack</th>
 
                     </thead>
                     
@@ -93,6 +188,7 @@
                             <td>01</td>
                             <td>1653148565344</td>
                             <td>12.99</td>
+                            <td>0.15</td>
                         </tr>
 
                         <tr>
@@ -101,6 +197,7 @@
                             <td>01</td>
                             <td>1653148565344</td>
                             <td>12.99</td>
+                            <td>0.15</td>
                         </tr>
 
                         <tr>
@@ -109,6 +206,7 @@
                             <td>01</td>
                             <td>1653148565344</td>
                             <td>12.99</td>
+                            <td>0.15</td>
                         </tr>
 
                         <tr>
@@ -117,6 +215,7 @@
                             <td>01</td>
                             <td>1653148565344</td>
                             <td>12.99</td>
+                            <td>0.15</td>
                         </tr>
 
                         <tr>
@@ -125,6 +224,7 @@
                             <td>01</td>
                             <td>1653148565344</td>
                             <td>12.99</td>
+                            <td>0.15</td>
                         </tr>
 
                         <tr>
@@ -133,6 +233,7 @@
                             <td>01</td>
                             <td>1653148565344</td>
                             <td>12.99</td>
+                            <td>0.15</td>
                         </tr>
                         <tr>
                             <td>Coca Cola Zero 2L</td>
@@ -140,6 +241,7 @@
                             <td>01</td>
                             <td>1653148565344</td>
                             <td>12.99</td>
+                            <td>0.15</td>
                         </tr>
                         <tr>
                             <td>Coca Cola Zero 2L</td>
@@ -147,6 +249,7 @@
                             <td>01</td>
                             <td>1653148565344</td>
                             <td>12.99</td>
+                            <td>0.15</td>
                         </tr>
                         <tr>
                             <td>Coca Cola Zero 2L</td>
@@ -154,6 +257,7 @@
                             <td>01</td>
                             <td>1653148565344</td>
                             <td>12.99</td>
+                            <td>0.15</td>
                         </tr>
                         <tr>
                             <td>Coca Cola Zero 2L</td>
@@ -161,6 +265,7 @@
                             <td>01</td>
                             <td>1653148565344</td>
                             <td>12.99</td>
+                            <td>0.15</td>
                         </tr>
 
                         <tr>
@@ -169,6 +274,7 @@
                             <td>01</td>
                             <td>1653148565344</td>
                             <td>12.99</td>
+                            <td>0.15</td>
                         </tr>
 
 
@@ -189,8 +295,8 @@
 
 
 
-
-
+    <script src="../js/searchproduto.js"></script>
+    <script src="../js/signUp.js"></script>
 
 </body>
 </html>
