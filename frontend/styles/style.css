@@ -46,11 +46,11 @@
 .container a {
     color: #333;
     font-size: 13px;
-    text-decoration: none;
+    
     margin: 15px 0 10px;
 }
 .container button {
-    background-color: #a5e85d;
+    background-color: #000000;
     color: #fff;
     padding: 10px 45px;
     border: 1px solid transparent;
@@ -60,6 +60,12 @@
     text-transform: uppercase;
     margin-top: 10px;
     cursor: pointer;
+}
+
+#register{
+    background-color: #a5e85d;
+    color: #ffffff;
+    
 }
 
 .container button.hidden {
@@ -108,11 +114,13 @@
     width: 50%;
     z-index: 2;
     
+    
 }
 .sign-in form {
     width: 70%;
     height: 75%;
     border-radius: 20px;
+    
     box-shadow: 2px 2px 40px 3px rgb(0 0 0 / 30%);
 }
 
@@ -265,10 +273,15 @@
     transition:  0.5s;
     left: calc(50% - 11.5em);
     top: 10em;
+    border: 4px solid rgb(255, 255, 255);
     
 }
 .item:hover{
     scale: 1.1;
+}
+
+.selecionada {
+    border-color: #a5e85d; 
 }
 
 
@@ -370,11 +383,6 @@
 
 /* MODAL INICIO */
 
-.inputAbertura {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-}
 
 #modalAberturaDeCaixa, #modalConfig {
     position: fixed;
@@ -387,6 +395,18 @@
     justify-content: center;
     align-items: center;
     z-index: 1;
+}
+#modalEsqueceuSenha, #modalEntreContato {
+    position: fixed;
+    background-color: #cccccce8;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
 }
 
 .bloco{
@@ -408,7 +428,7 @@
 }
 
 .logo{
-    width: 10em;
+    width: 8em;
 }
 
 .dentro{
@@ -425,7 +445,7 @@
     font-size: 2.5em;
 }
 
-.dentro input{
+.dentro input:not(.inpRecovery){
     border-radius: 5px;
 	width: 22vw;
 	height: 6vh;
@@ -464,4 +484,58 @@
     transition: scale 200ms ease-in-out;    
     
 }
+.arrow:hover {
+    scale: 1.1;
+}
 
+.pezinDoLogin{
+    margin-top: 4em;
+    width: 35em;
+    display: flex;
+    gap: 10em;
+}
+
+.pezinDoLogin button{
+    margin-left: 3em;
+    width: 15em;
+}
+.pezinDoLogin a{
+    margin-top: 2em;
+}
+
+.enviarRecovery {
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 0;
+    width: 25vw;
+    height: 6vh;
+}
+.recoveryText {
+    width: 24em;
+}
+.recoveryText h1 {
+    font-size: 30px;
+    margin-bottom: 0.5em;
+}
+.recoveryText p {
+    font-size: 15px;
+}
+
+.inpRecovery {
+    border-radius: 5px;
+	width: 25vw;
+	height: 6vh;
+    padding: 8px;
+}
+
+.botvoltarmodal{
+    width: 4em;
+    background: none;
+    border: none;
+    z-index: 1;
+    position: relative;
+    top: 8vh;
+    margin-left: 1em;
+}

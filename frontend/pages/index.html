@@ -4,9 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../styles/teste.css">
+    <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
+      <!-- MODAL INICIO  -->
+      <div id="modalEsqueceuSenha" style="display: none;">
+        <div class="bloco">
+            <div class="dentro">
+              <img  class="logo" src="../src/logomenor.png" alt="logo raccoon">
+              <div class="recoveryText">
+                <h1>Problemas com o acesso?</h1>
+                <p>Insira seu e-mail de cadastro e enviaremos um link para redefinir o seu acesso a sua conta. </p>
+              </div>
+              <input type="text" class="inpRecovery" id="emailm" name="email" placeholder="Digite o seu Email:">
+              <input type="text" class="inpRecovery" id="codigom" name="email" placeholder="Digite o codigo" style="display: none;">
+              <button class="enviarRecovery">Enviar</button> 
+            </div>    
+            <button class="botvoltarmodal">
+              <img class="arrow" src="../src/arrow.png" alt="voltar">
+          </button>         
+        </div>
+      </div>
+      <!-- MODAL FIM -->
+
+      <!-- MODAL INICIO  -->
+      <div id="modalEntreContato" style="display: none;">
+        <div class="bloco">
+            <div class="dentro">
+            </div>      
+            <button class="botvoltarmodal">
+              <img class="arrow" src="../src/arrow.png" alt="voltar">
+          </button>           
+        </div>
+      </div>
+      <!-- MODAL FIM -->
+  
     
     <div class="container" id="container">
               
@@ -38,19 +70,24 @@
           <div class="sign-in">
             <form>
                 <img  class="logo" src="../src/logomenor.png" alt="logo raccoon">
-              <h1>Login-in</h1>
+              
+                <h1>Login-in</h1>
              
               
               <input type="text" placeholder="Email" />
               <input type="password" placeholder="Password" />
-              <a href="#">Esqueceu a senha?</a>
               <button id="loginBtn">Log-in</button>
+              <a href="#" id="esqueceuSenha">Esqueceu a senha?</a>
 
-              
-              
-              
-              
-              <button class="" id="register">Cadastre-se</button>
+
+
+              <div class="pezinDoLogin">
+  
+                <button id="register">Cadastre-se</button>
+                <a href="" id="entreEmContato">entre em contato</a>
+
+              </div>
+
               
             </form>
           </div>
@@ -68,21 +105,21 @@
         
                     <p class="text">Conheça nossos planos e selecione o que melhor se encaixa no perfil de sua empresa:</p>
         
-                    <div class="item">
+                    <div id="item1" class="item">
                         <h1 class="titulo1">Básico:</h1>
                         <p class="titulo1">Conheça nossos planos e selecione o que melhor se encaixa no perfil de sua empresa:</p>
                         <h1 class="valor" >R$35,00 /mês</h1>
                        
                     </div>
         
-                    <div class="item">
+                    <div  id="item2" class="item">
                         <h1 class="titulo1">Medio:</h1>
                         <p class="titulo1">Conheça nossos planos e selecione o que melhor se encaixa no perfil de sua empresa:</p>
                         <h1 class="valor">R$35,00 /mês</h1>
                        
                     </div>
         
-                    <div class="item" >
+                    <div id="item3" class="item" >
                         <h1 class="titulo1">Avançado:</h1>
                         <p class="titulo1">Conheça nossos planos e selecione o que melhor se encaixa no perfil de sua empresa:</p>
                         <h1 class="valor" >R$35,00 /mês</h1>

@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const btnConfig = document.querySelectorAll(".fechamento1")
-const btnVoltar1 = document.querySelectorAll(".botvoltar")
+const btnVoltar1 = document.querySelectorAll(".botVoltarModal")
 
 // MODAL INICIO
 const modalConfig = document.getElementById("modalConfig")

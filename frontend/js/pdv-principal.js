@@ -25,7 +25,7 @@ btnBuscarProduto.addEventListener('click', () => {
     console.log(valueProd)
     fetchData(`/api/products/${valueProd}`, {method: 'GET'})
         .then(response => response.json())
-        .then(data => listagemProdutos.innerHTML = `<tr>
+        .then(data => listagemProdutos.innerHTML += `<tr>
                                                         <td>${data.id}</td>
                                                         <td>${data.name}</td>
                                                         <td>${data.qtd}</td>

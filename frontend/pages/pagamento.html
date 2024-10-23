@@ -19,11 +19,11 @@
                         <input type="text" class="cpfInp" placeholder="Nome cliente"> 
                         <input type="text" class="cpfInp" placeholder="Cpf Cliente"> 
                         <button class="cadastrarCpf">
-                            Cadastrar clientex
+                            Cadastrar cliente
                         </button> 
                     </div>
     
-                    <button class="botvoltar">
+                    <button  id="botvoltarCliente" class="botvoltar">
                         <img class="arrow" src="../src/arrow.png" alt="voltar">
                     </button>
     
@@ -36,23 +36,112 @@
         <!-- MODAL INICIO  -->
         <div id="modalCashBack" style="display: none;">
             <div class="bloco">
-                <div class="dentro">   
+                <div  id="listadeprodutos" class="dentro">   
                  
-                    
+                <h1>Embalagens Cashback</h1>
 
-                <div>
-                    <h1>Valor Total: R$ 0.15 </h1>
+                <div class="listagemprodutos">
+
+                    <table>
+                        <thead>
+                            <th>produto</th>
+                            <th></th>
+                            <th>codigo</th>
+                            <th></th>
+                            
+                            <th>CashBack</th>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>coca cola 2l</td>
+                                <td></td>
+                                <td>000000000</td>
+                                <td></td>
+                                
+                                <td>R$ 0.15 <input type="checkbox" name="selecionar" id="selecionar"></td>
+
+                            </tr>
+
+                            <tr>
+                                <td>coca cola 2l</td>
+                                <td></td>
+                                <td>000000000</td>
+                                <td></td>
+                                
+                                <td>R$ 0.15 <input type="checkbox" name="selecionar" id="selecionar"></td>
+
+                            </tr>
+
+
+                            <tr>
+                                <td>coca cola 2l</td>
+                                <td></td>
+                                <td>000000000</td>
+                                <td></td>
+                               
+                                <td>R$ 0.15 <input type="checkbox" name="selecionar" id="selecionar"></td>
+
+                            </tr>
+
+
+                            <tr>
+                                <td>coca cola 2l</td>
+                                <td></td>
+                                <td>000000000</td>
+                                <td></td>
+                                
+                                <td>R$ 0.15 <input type="checkbox" name="selecionar" id="selecionar"></td>
+
+                            </tr>
+
+                            <tr>
+                                <td>coca cola 2l</td>
+                                <td></td>
+                                <td>000000000</td>
+                                <td></td>
+                                
+                                <td>R$ 0.15 <input type="checkbox" name="selecionar" id="selecionar"></td>
+
+                            </tr>
+
+                            <tr>
+                                <td>coca cola 2l</td>
+                                <td></td>
+                                <td>000000000</td>
+                                <td></td>
+                                
+                                <td>R$ 0.15 <input type="checkbox" name="selecionar" id="selecionar"></td>
+
+                            </tr>
+
+                        </tbody>
+
+
+
+
+                    </table>
 
                 </div>
 
             
                 </div>
-                        
+
+                <div class="pezinCashback">
 
                     <button class="botvoltar">
                         <img class="arrow" src="../src/arrow.png" alt="voltar">
                     </button>
-                </div>     
+                    
+                    <div class="valorTotal">
+                        <input type="button" name="confirmarCashback" id="confirmarCashback" value="Confirmar">
+                        <h2>Valor: R$0,15</h2>
+                    </div>
+                </div>
+                        
+
+            </div>    
+
             </div>
         </div>
         <!-- MODAL FIM -->

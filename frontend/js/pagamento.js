@@ -60,3 +60,10 @@ const btnConfirmar = document.getElementById("btnConfirmar")
 btnConfirmar.addEventListener("click", () => {
     window.location.href ="../pages/finalPage.html"
 })
+
+
+const btnConfirmarCashback = document.getElementById("confirmarCashback");
+
+btnConfirmarCashback.addEventListener("click", () => {
+    window.location.href ="../pages/pagamento.html"
+})
