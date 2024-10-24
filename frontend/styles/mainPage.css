@@ -1,5 +1,6 @@
 html, body {
     background-color: #ecedf8;
+   
 }
 
 .scale:hover{
@@ -38,14 +39,22 @@ main {
 
 #perfil .logo{
     margin-top: 1em;
-    height: 10em;
+    height: 8em;
+    width: 8em;
 }
 
-#perfil .saida{
-    height: 7vh;
+#botSaida {
+    height: 6em;
     margin-top: 7vh;
+    background: none;
+    border: none;
 }
-
+.saida {
+    height: 4em;
+}
+.saida:hover{
+    scale: 1.2;
+}
 
 .oo {
     font-weight: bold;
@@ -230,6 +239,7 @@ main {
 }
 .listagem thead th{
     padding: 0.5em;
+    width: 500vw;
     border-bottom: 2px solid black;
 }
 
@@ -273,7 +283,7 @@ main {
 
 
 
-/* MODAL FUNCIONARIO */
+/* MODAL INICIO */
 
 .inputAbertura {
     display: flex;
@@ -281,7 +291,7 @@ main {
     align-items: start;
 }
 
-#modalAberturaDeCaixa {
+#modalAberturaDeCaixa, #modalConfig, #modalCancelar {
     position: fixed;
     background-color: #cccccce8;
     top: 0;
@@ -306,7 +316,10 @@ main {
     gap: 1em;
     
 }
-
+.btnCadastrar {
+    background-color: none;
+    outline: none;
+}
 #btn:hover{
      background-color: black;
     color: white
@@ -316,7 +329,7 @@ main {
     width: 10em;
 }
 
-.dentro{
+.dentro:not(.optConfig){
      
     display: flex;
     gap: 1em;
@@ -334,6 +347,12 @@ main {
     border-radius: 5px;
 	width: 22vw;
 	height: 6vh;
+    box-sizing: border-box;
+    padding: 5px;
+    border: 2px solid #818181;
+}
+.dentro input::placeholder {
+    color: #ccc;
 }
 #botaoLoginFunc{
     
@@ -350,3 +369,68 @@ main {
     background-color: #a5e85d;
    color: rgb(0, 0, 0)
 }
+
+/* MODAL FIM */
+
+.arrow{
+    display: flex;
+    height: 4em;
+    width: 4em;
+    transition: scale 200ms ease-in-out;    
+    
+}
+
+.optConfig {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    max-width: 45em;
+}
+
+.optConfig button:not(.botvoltar) {
+    background-color: #000000;
+    color: white;
+    border: 2px solid #b1b1b1;
+    border-radius: 8px;
+    padding: 12px;
+    width: 20em;
+    text-transform: uppercase;
+    transition: background-color 200ms ease-in-out;
+}
+.optConfig button:not(.botvoltar):hover {
+    background-color: white;
+}
+.botvoltar{
+    display: flex;
+    justify-content: center;
+    width: 4em;
+    background: none;
+    border: none;
+    z-index: 1;
+    
+}
+.blocoConfig {
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Modal Cancelar */    
+#blocoCancelar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    height: 15em;
+    width: 20em;
+    border-radius: 2em;
+    box-shadow: 2px 2px 40px 3px rgba(255, 0, 0, 0.2);
+    gap: 1em;
+    padding: 24px;
+    
+}
+
+
+/* Modal Cancelar Fim*/

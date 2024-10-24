@@ -1,165 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Raccoon</title>
-    <link rel="stylesheet" href="../styles/normalize.css" />
-    <link rel="stylesheet" href="../styles/login.css" />
-    <link rel="stylesheet" href="../styles/MenuPwRecover.css">
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+      <!-- MODAL INICIO  -->
+      <div id="modalEsqueceuSenha" style="display: none;">
+        <div class="bloco">
+            <div class="dentro">
+              <img  class="logo" src="../src/logomenor.png" alt="logo raccoon">
+              <div class="recoveryText">
+                <h1>Problemas com o acesso?</h1>
+                <p>Insira seu e-mail de cadastro e enviaremos um link para redefinir o seu acesso a sua conta. </p>
+              </div>
+              <input type="text" class="inpRecovery" id="emailm" name="email" placeholder="Digite o seu Email:">
+              <input type="text" class="inpRecovery" id="codigom" name="email" placeholder="Digite o codigo" style="display: none;">
+              <button class="enviarRecovery">Enviar</button> 
+            </div>    
+            <button class="botvoltarmodal">
+              <img class="arrow" src="../src/arrow.png" alt="voltar">
+          </button>         
+        </div>
+      </div>
+      <!-- MODAL FIM -->
 
-  <body>
-    <main>
-      <section class="ladoEsquerdo">
-        <div id="boasVindasContainer">
-          <h1 id="boasVindasH">
-            <span id="texto"></span>
-            <span id="cursor">|</span>
-          </h1>
-        </div>
-      </section>
-      
-      <section class="menu">
-        <div class="Cardcontato">
-          <head>
-            <title>
-             Problemas com o acesso?
-            </title>
-            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-           </head>
-           <body>
-            <div class="container">
-             <img alt="Raccoon icone" height="100" src="../src/logoraccoonn2.png" width="100"/>
-             <i class="fas fa-lock">
-             </i>
-             <h1>
-              Problemas com o acesso?
-             </h1>
-             <p>
-              Insira seu e-mail de cadastro e enviaremos um link para redefinir o seu acesso a sua conta.
-             </p>
-             <input placeholder="Digite seu E-MAIL:" type="email"/>
-             <button>
-              ENVIAR LINK PARA REDEFINIÇÃO DE SENHA
-             </button>
-             <a class="help-link" href="../pages/Contato.html">
-              Precisa de ajuda?
-             </a>
-             <i class="fas fa-backward back-icon">
-             </i>
-            </div>
-           </body>
-        </div>
-      </section>
-      
-      <section class="ladoDireito">
-        <div class="card loginCard">
-          <div class="slideWindow">
-            <!-- LOGIN -->
-            <div class="login">
-              <div class="logo">
-                <img
-                  src="../src/logoraccoonn2.png"
-                  alt="logo da pagina um guaxinin fofinho"
-                />
-                <h1>Login</h1>
+      <!-- MODAL INICIO  -->
+      <div id="modalEntreContato" style="display: none;">
+        <div class="bloco">
+            <div class="dentro">
+              <img  class="logo1" src="../src/logomenor.png" alt="logo raccoon">
+              <div class="recoveryText1">
+                <h1>Precisa entrar em contato?</h1>
+                
               </div>
-              <div class="inputsLogin">
-                <form
-                  class="loginForm"
-                  action=""
-                  method="post"
-                  onsubmit="event.preventDefault()"
-                >
-                  <input
-                    type="text"
-                    name="cnpj"
-                    id="cnpj"
-                    placeholder="Digite seu CNPJ aqui"
-                  />
-                  <input
-                    type="password"
-                    name="pass"
-                    id="pass"
-                    placeholder="Digite sua SENHA aqui"
-                  />
-                  <input type="submit" name="login" id="login" value="Login" />
-                </form>
-                <div class="PwRecover">
-                  <a href="#">
-                    Esqueceu sua senha?
-                   </a>
+              <input type="email" class="inpRecovery" id="emailm" name="email" placeholder="Digite o seu Email:">
+              <input type="text" class="inpRecovery" id="name" name="name" placeholder="Digite o seu Nome:">
+              <textarea id="input1" name="input1" rows="7" maxlength="350" placeholder="Descreva o motivo do contato:"></textarea>
+              
+              <button class="enviarRecovery">Enviar</button> 
+            </div>    
+            <button id="botvoltarmodal3" class="botvoltarmodal2">
+              <img class="arrow" src="../src/arrow.png" alt="voltar">
+            </button>          
+        </div>
+      </div>
+      <!-- MODAL FIM -->
+  
+    
+    <div class="container" id="container">
+              
+            
+                <div class="sign-up">
+                  <form>
+                    <h1>Cadastro:</h1>
+                 
+                    <input type="text" id="nomeEmpresa" name="nomeEmpresa" placeholder="Digite o NOME da sua empresa:">
+                    <input type="text" id="nomeDono" name="nomeDono" placeholder="Digite o seu NOME COMPLETO:">
+                    <input type="text" id="cnpj" name="cnpj" placeholder="Digite o CNPJ da sua empresa:">
+                    <input type="text" id="cpf" name="cpf" placeholder="Digite o seu CPF:">
+                    <input type="text" id="email" name="email" placeholder="Digite o seu Email:">
+                    <input type="text" id="senha" name="senha" placeholder="Digite sua SENHA:">
+                    <input type="text" id="senhaConfirmar" name="senhaConfirmar" placeholder="Confirme sua SENHA:">
+                    
+                    <div>
+                      
+                    </div>
+
+                    <button class="" id="signInBtn">Confirmar</button>
+                  </form>
+
+
                 </div>
+
+            
+        <div class="login-wrapper">      
+          <div class="sign-in">
+            <form>
+                <img  class="logo" src="../src/logomenor.png" alt="logo raccoon">
+              
+                <h1>Login-in</h1>
+             
+              
+              <input type="text" placeholder="Email" />
+              <input type="password" placeholder="Password" />
+              <button id="loginBtn">Log-in</button>
+              <a href="#" id="esqueceuSenha">Esqueceu a senha?</a>
+
+
+
+              <div class="pezinDoLogin">
+  
+                <button id="register">Cadastre-se</button>
+                <a href="" id="entreEmContato">entre em contato</a>
+
               </div>
-            </div>
-            <!-- CADASTRO -->
-            <div class="cadastro">
-              <h1 class="msg">Cadastre-se</h1>
-              <div class="inputsLogin">
-                <form
-                  class="loginForm"
-                  action=""
-                  method="post"
-                  onsubmit="event.preventDefault()"
-                >
-                  <input
-                    type="text"
-                    name="name"
-                    id="name"
-                    placeholder="Digite seu NOME aqui"
-                  />
-                  <input
-                    type="text"
-                    name="cnpj"
-                    id="cnpj"
-                    placeholder="Digite seu CNPJ aqui"
-                  />
-                  <input
-                    type="password"
-                    name="pass"
-                    id="pass"
-                    placeholder="Digite sua SENHA aqui"
-                  />
-                  <input
-                    type="password"
-                    name="pass"
-                    id="pass"
-                    placeholder="Confirme sua SENHA aqui"
-                  />
-                  <div class="planos">
-                    <div class="cardPlanos">
-                      <p>Basico</p>
-                      <p>R$ 19.99/M</p>
-                    </div>
-                    <div class="cardPlanos">
-                      <p>Padrão</p>
-                      <p>R$ 29.99/M</p>
-                    </div>
-                    <div class="cardPlanos">
-                      <p>Premium</p>
-                      <p>R$ 49.99/M</p>
-                    </div>
-                  </div>
-                  <input
-                    type="submit"
-                    name="login"
-                    id="cadastro"
-                    value="Cadastro"
-                  />
-                </form>
-              </div>
-            </div>
-          </div>
-          <div class="toggle-buttons">
-            <div class="toggle-slider"></div>
-            <button class="toggle-btn" id="loginBtn">Login</button>
-            <button class="toggle-btn" id="cadastroBtn">Cadastro</button>
+
+              
+            </form>
           </div>
         </div>
-      </section>
-    </main>
-    <script src="../js/typeAnimation.js"></script>
-    <script src="../js/login-cadastro.js"></script>
-  </body>
+
+          <div class="toogle-container">
+            
+            <div class="toogle">
+              <div class="toogle-panel toogle-left">
+                
+
+                <div class="slider">
+
+                    <h1>Planos:</h1>
+        
+                    <p class="text">Conheça nossos planos e selecione o que melhor se encaixa no perfil de sua empresa:</p>
+        
+                    <div id="item1" class="item">
+                        <h1 class="titulo1">Básico:</h1>
+                        <p class="titulo1">Conheça nossos planos e selecione o que melhor se encaixa no perfil de sua empresa:</p>
+                        <h1 class="valor" >R$35,00 /mês</h1>
+                       
+                    </div>
+        
+                    <div  id="item2" class="item">
+                        <h1 class="titulo1">Medio:</h1>
+                        <p class="titulo1">Conheça nossos planos e selecione o que melhor se encaixa no perfil de sua empresa:</p>
+                        <h1 class="valor">R$35,00 /mês</h1>
+                       
+                    </div>
+        
+                    <div id="item3" class="item" >
+                        <h1 class="titulo1">Avançado:</h1>
+                        <p class="titulo1">Conheça nossos planos e selecione o que melhor se encaixa no perfil de sua empresa:</p>
+                        <h1 class="valor" >R$35,00 /mês</h1>
+                       
+                    </div>
+        
+                    <button id="next"> > </button>
+                    <button id="prev"> < </button>
+                    
+                </div>
+
+                
+              </div>
+
+
+              <div class="toogle-panel toogle-right">
+               
+                    <div id="boasVindasContainer">
+                        <h1 class="raccoon" id="boasVindasH">
+                            <span id="texto"></span>
+                            <span id="cursor">|</span>
+                        </h1>
+                    </div>
+                    
+                    
+                  </div>
+
+            </div>
+    </div>
+     
+          <script src="../js/login.js" ></script>
+          <script src="../js/typeAnimation.js"></script>
+</body>
 </html>

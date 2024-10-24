@@ -1,0 +1,576 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  body {
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  /* .login-wrapper {
+
+  } */
+ 
+
+  .container {
+    
+   
+    
+    position: relative;
+    overflow: hidden;
+    width: 100em;
+    height: 100em;
+    max-width: 100%;
+    min-height: 480px;
+  }
+
+
+  .container p {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin: 20px 0;
+}
+
+
+
+
+
+.container a {
+    color: #333;
+    font-size: 13px;
+    
+    margin: 15px 0 10px;
+}
+.container button {
+    background-color: #000000;
+    color: #fff;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#register{
+    background-color: #a5e85d;
+    color: #ffffff;
+    
+}
+
+.container button.hidden {
+    background-color: transparent;
+    border-color: #fff;
+}
+
+.container form {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+}
+
+.container input {
+    background-color: #eee;
+    border: none;
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+}
+.sign-up, .sign-in {
+    
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+    
+}
+.valor{
+    
+    color: black;
+}
+
+.sign-in {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    width: 50%;
+    z-index: 2;
+    
+    
+}
+.sign-in form {
+    width: 70%;
+    height: 75%;
+    border-radius: 20px;
+    
+    box-shadow: 2px 2px 40px 3px rgb(0 0 0 / 30%);
+}
+
+
+
+.container.active .sign-in {
+    transform: translateX(100%);
+}
+.sign-up{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    width: 50%;
+    z-index: 1;
+    opacity: 0;
+}
+
+.sign-up form {
+    width: 70%;
+    height: 75%;
+    border-radius: 20px;
+    box-shadow: 2px 2px 40px 3px rgb(0 0 0 / 30%);
+}
+
+.container.active .sign-up{
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: move 0.6s;
+
+}
+
+@keyframes move{
+    0%, 49.99%{
+        opacity: 0;
+        z-index: 1;
+    }
+    50%, 100%{
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+.toogle-container{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    border-radius:  30px 0px 0px 30px;
+    z-index: 1000;
+    transition: all 0.6s ease-in-out;
+}
+
+.container.active .toogle-container{
+    transform: translateX(-100%);
+    border-radius:  0px 30px 30px 0px;
+
+}
+
+.toogle{
+    background-color: #000000;
+    height: 100%;
+    background: linear-gradient(to right, #000000,#000000);
+    color: #fff;
+    position: relative;
+    left: -100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: all 0.6 ease-in-out;
+
+}
+
+.container.active .toogle{
+    transform: translateX(50%);
+}
+
+.toogle-panel{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 30px;
+    text-align: center;
+    top: 0;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+    
+}
+.toogle-left{
+    transform: translateX(-200%);
+}
+.container.active .toogle-left{
+    transform: translateX(0);
+
+}
+.toogle-right{
+    right: 0;
+    transform: translateX(0);
+}
+.container.active .toogle-right{
+    transform: translateX(200%);
+}
+.sing-in img{
+    margin: 0;  
+    padding: 0;
+	width: 8em;
+	height: 8em;
+}
+
+.sign-in input{
+    
+    width: 25em;
+}
+.sign-up input{
+    width: 30em;
+}
+
+.hidden{
+    margin-top: 20em;
+
+}
+
+.slider{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 50vw;
+    height: 80vh;
+    overflow: hidden;
+    background-color: #000000;
+    border-radius: 0px 30px 30px 0px;   
+    
+}
+
+.item{
+    position: absolute;
+    width: 23em;
+    height: 300px;
+    text-align: justify;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    transition:  0.5s;
+    left: calc(50% - 11.5em);
+    top: 10em;
+    border: 4px solid rgb(255, 255, 255);
+    
+}
+.item:hover{
+    scale: 1.1;
+}
+
+.selecionada {
+    border-color: #a5e85d; 
+}
+
+
+#texto{
+    color: rgb(255, 255, 255);
+    font-size: 2em;
+   
+}
+.titulo1{
+    color: rgb(0, 0, 0);
+    font-size: 2em;
+    margin: 0;
+    margin-top: 2em;
+    
+}
+#boasVindasContainer {
+    position: relative;
+    left: 1%;
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+}
+#raccoon{
+
+    font-size: 3.5em;
+}
+
+.oo {
+    font-size: 1em;
+    font-weight: bold;
+    color: #a5e85d;
+}
+
+#next{
+    position: absolute;
+    margin-left: 1em;
+    top: 80%;
+   
+}
+#prev{
+    position: absolute;
+    margin-right: 2em;
+    top: 80%;
+    
+}
+#prev, #next{
+    color: #84ff00;
+    background: none;
+    border: none;
+    font-size: xxx-large;
+    font-family: monospace;
+    font-weight: bold;
+    opacity: 0.5;
+    transition: opacity 0.5s;
+    height: 1em;
+    width: 1em;
+}
+#prev:hover,
+#next:hover{
+    opacity: 1;
+}
+
+
+#boasVindasContainer {
+    
+	width: 500px;
+}
+
+#boasVindasText {
+	font-size: 24px;
+	white-space: pre-wrap;
+	margin: 0;
+	padding: 0;
+	line-height: 1.2;
+}
+#cursor {
+	position: relative;
+	bottom: 0.12em;
+	font-weight: 300;
+	font-size: 60px;
+	animation: pisca 0.8s step-end infinite;
+}
+
+
+@keyframes pisca {
+	from,
+	to {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+}
+
+
+
+
+
+
+/* MODAL INICIO */
+
+
+#modalAberturaDeCaixa, #modalConfig {
+    position: fixed;
+    background-color: #cccccce8;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+#modalEsqueceuSenha, #modalEntreContato {
+    position: fixed;
+    background-color: #cccccce8;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+}
+
+.bloco{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    height: 35em;
+    width: 50em;
+    border-radius: 2em;
+    box-shadow: 2px 2px 40px 3px rgb(0 0 0 / 20%);
+    gap: 1em;
+    
+}
+
+#btn:hover{
+     background-color: black;
+    color: white
+}
+
+.logo{
+    width: 8em;
+}
+
+.dentro{
+     
+    display: flex;
+    gap: 1em;
+    
+    
+    flex-direction: column;
+    align-items: center;
+}
+
+.dentro h1{
+    font-size: 2.5em;
+}
+
+.dentro input:not(.inpRecovery){
+    border-radius: 5px;
+	width: 22vw;
+	height: 6vh;
+}
+#botaoLoginFunc{
+    
+    background-color: blueviolet;
+    width: 22em;
+    
+    border-radius: 0.5em;
+    background-color: black;
+    color: white;
+    border: none;
+    transition: background-color  200ms ease-in-out, color 150ms ease-in-out, scale 300ms ease-in-out;
+}
+#botaoLoginFunc:hover{
+    background-color: #a5e85d;
+   color: rgb(0, 0, 0)
+}
+
+/* MODAL FIM */
+
+.botvoltar{
+    display: flex;
+    justify-content: center;
+    width: 4em;
+    margin-left: 2em;
+    background: none;
+    border: none;
+    z-index: 1;
+}
+.arrow{
+    display: flex;
+    height: 4em;
+    width: 4em;
+    transition: scale 200ms ease-in-out;    
+    
+}
+.arrow:hover {
+    scale: 1.1;
+}
+
+.pezinDoLogin{
+    margin-top: 4em;
+    width: 35em;
+    display: flex;
+    gap: 10em;
+}
+
+.pezinDoLogin button{
+    margin-left: 3em;
+    width: 15em;
+}
+.pezinDoLogin a{
+    margin-top: 2em;
+}
+
+.enviarRecovery {
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 0;
+    width: 25vw;
+    height: 6vh;
+}
+.recoveryText {
+    width: 24em;
+}
+.recoveryText h1 {
+    font-size: 30px;
+    margin-bottom: 0.5em;
+}
+.recoveryText p {
+    font-size: 15px;
+}
+
+.inpRecovery {
+    border-radius: 5px;
+	width: 25vw;
+	height: 6vh;
+    padding: 8px;
+}
+
+.botvoltarmodal{
+    width: 4em;
+    background: none;
+    border: none;
+    z-index: 1;
+    position: relative;
+    top: 8vh;
+    margin-left: 1em;
+}
+#input1{
+    width: 29em;
+    resize: none;
+    padding: 8px;
+    box-sizing: border-box;
+    border: #3c3c3c 2px solid;
+    border-radius: 8px;
+}
+
+.recoveryText1 {
+    margin-top: -1em;
+    width: 24em;
+}
+.recoveryText1 h1 {
+    
+    width: 30em;
+    font-size: 30px;
+    
+}
+.botvoltarmodal2{
+    width: 4em;
+    background: none;
+    border: none;
+    z-index: 1;
+    position: relative;
+    margin: 0;
+    margin-bottom: 4em;
+    margin-left: 1em;
+    
+    
+}
+.logo1{
+    margin-top: 3em;
+    width: 8em;
+}

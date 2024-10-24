@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/relatorioVendas.css">
+    <title>Document</title>
+</head>
+<body>
+        <main>
+
+            <div   id="perfil">
+                <img class="logo" src="../src/logoraccooncirculo.png" alt="logo da pagina um guaxinin fofinho">
+                
+                <h1>R <br> A<br>C<br>C<br><span class="oo">O</span><br><span class="oo">O</span><br>N</h1> 
+                
+                
+                <button id="botSaida"> 
+
+                    <img class="saida" src="../src/exit.png" alt="saida">
+
+                </button>
+            
+            </div>
+
+            
+            <section id="pesquisa">
+
+                <div class="tabelapesquisa"> 
+                    
+                    <div class="id">
+                        
+                        <form class="formulario">
+                            <h1>Vendas:</h1>
+
+                            <label for="nomeproduto" class="barrapesquisa"> Data: </label>
+
+                            <div class="codigos">
+
+                                <input type="date"
+                                name="nomeproduto"
+                                id="nomeproduto"
+                                class="inpRel"
+                                
+                                >
+
+                                <button class="botlupa">
+                                    <img class="lupa"   src="../src/search.png" alt="lupa">
+                                </button>
+                                
+                            </div>
+
+                            <select name="inteligente" id="int" class="inpRel">
+                                <option value="" selected disabled hidden>Pesquisa inteligente</option>
+                                <option value="op1">Codigo de barras</option>
+                                <option value="op2">Categoria</option>
+
+                            </select>
+
+                        </form>
+                        <div class="pezin">
+                            <button id="botVoltar" class="botvoltar">
+                                <img class="arrow" src="../src/arrow.png" alt="voltar">
+                            </button>
+                            
+                            <input type="button" class="fechamento1" name="fechamento" id="fechamento" value="Fechamento">
+                        </div>
+
+                    </div>
+                </div>
+                
+
+            </section>
+
+            
+        <section id="listadeprodutos">
+            
+            <div class="listagemprodutos" >
+                <table>
+                    <thead>
+
+                        <th>Nome</th>
+                        <th>CPF</th>
+                        
+                        <th>Valor</th>
+
+                    </thead>
+                    
+                    <tbody>
+                        <tr>
+                            <td>Gabriela</td>
+                            <td>44873215841</td>
+                            <td>100,00</td>
+                        </tr>
+                      
+
+                        <tr>
+                            <td>Gabriela</td>
+                            <td>44873215841</td>
+                            <td>100,00</td>
+                           
+                        </tr>
+
+                        <tr>
+                            <td>Gabriela</td>
+                            <td>44873215841</td>
+                            <td>100,00</td>
+                            
+                        </tr>
+
+                        <tr>
+                            <td>Gabriela</td>
+                            <td>44873215841</td>
+                            <td>100,00</td>
+                           
+                        </tr>
+
+                        <tr>
+                            <td>Gabriela</td>
+                            <td>44873215841</td>
+                            <td>100,00</td>
+                            
+                        </tr>
+
+                        <tr>
+                            <td>Gabriela</td>
+                            <td>44873215841</td>
+                            <td>100,00</td>
+                           
+                        </tr>
+                        <tr>
+                            <td>Gabriela</td>
+                            <td>44873215841</td>
+                            <td>100,00</td>
+                           
+                        </tr>
+
+                        <tr>
+                            <td>Gabriela</td>
+                            <td>44873215841</td>
+                            <td>100,00</td>
+                           
+                        </tr>
+
+                        <tr>
+                            <td>Gabriela</td>
+                            <td>44873215841</td>
+                            <td>100,00</td>
+                            
+                        </tr>
+
+                        <tr>
+                            <td>Gabriela</td>
+                            <td>44873215841</td>
+                            <td>100,00</td>
+                            
+                        </tr>
+
+                        <tr>
+                            <td>Gabriela</td>
+                            <td>44873215841</td>
+                            <td>100,00</td>
+                        </tr>
+
+
+                    </tbody>
+
+
+                </table>
+        
+            </div>
+
+            <div class="vendaTotal">
+                
+
+                <h2>Valor Vendas: R$ 2000,00</h2>
+                <h2>Total Vendas: 25</h2>
+                <h2 class="cancelada">Canceladas: R$ 2000,00</h2>
+
+            </div>
+          
+        </section>
+
+        
+      <!-- MODAL INICIO  -->
+      <div id="modalConfig" style="display: none;">
+        <div class="bloco">
+            <div class="dentro">
+                
+                <div  id="fechamentoModal" class="dentro">   
+                 
+                    <h1>Relatorio Fechamento</h1>
+    
+                    <ul class="infoFechamentoUl">
+                        <li>Operador: <span>Manu</span></li>
+                        <li>Codigo Operador: <span>#F8F8F8</span></li>
+                        <li>Data: <span>23/10/2024</span></li>
+                    </ul>
+                    <div class="listagemfechamento">
+    
+                        <table>
+                            <thead>
+                                <th>credito</th>
+                                <th>debito</th>
+                                <th>dinheiro</th>
+                                <th>pix</th>
+                                
+                                <th>CashBack</th>
+                                
+                            </thead>
+    
+                            <tbody>
+                                <tr>
+                                    <td>1.050,35</td>
+                                    <td>1.289,00</td>
+                                    <td>485,25</td>
+                                    <td>670,00</td>
+                                    <td>R$ 22.55"></td>
+
+                                </tr>
+                            </tbody>
+    
+    
+    
+    
+                        </table>
+    
+                    </div>
+    
+                
+                    </div>
+                    
+                    <div class="botActionsFechamento">
+                        <input type="button" name="f" class="imprimirFechamento" value="Imprimir">
+                        <input type="button" name="f" class="fecharCaixa" value="Fechar o caixa">
+                    </div>
+                    <div class="pezinCashback">
+                        <button class="botVoltarModal">
+                            <img class="arrow" src="../src/arrow.png" alt="voltar">
+                        </button>
+                        <div class="valorTotal">
+                            <h2>Valor: R$0,15</h2>
+                        </div>
+                    </div>
+                            
+    
+        
+                
+                
+                
+                
+            
+            
+
+            </div>
+           
+        </div>
+    </div>
+    <!-- MODAL FIM -->
+
+
+
+        </main>
+
+
+
+
+
+<!-- <script src="../js/searchproduto.js"></script> -->
+<script src="../js/relatorioVendas.js"></script>
+
+
+</body>
+</html>
