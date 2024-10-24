@@ -32,14 +32,14 @@ if (isset($segments[0])) {
             default => http_response_code(404)
         },
 
-        'funcionario' => match($segments[1]) {
-            'login' => FuncionarioController::login(file_get_contents('php://input')),
-            'create' => FuncionarioController::create(file_get_contents('php://input')),
-            'collect' => FuncionarioController::collect($_GET['id_funcionario']),
-            'modify' => FuncionarioController::modify(file_get_contents('php://input')),
-            'delete' => FuncionarioController::delete($_GET['id_empresa']),
-            default => http_response_code(404)
-        },
+//        'funcionario' => match($segments[1]) {
+//            'login' => FuncionarioController::login(file_get_contents('php://input')),
+//            'create' => FuncionarioController::create(file_get_contents('php://input')),
+//            'collect' => FuncionarioController::collect($_GET['id_funcionario']),
+//            'modify' => FuncionarioController::modify(file_get_contents('php://input')),
+//            'delete' => FuncionarioController::delete($_GET['id_empresa']),
+//            default => http_response_code(404)
+//        },
 
         default => http_response_code(404) 
 
