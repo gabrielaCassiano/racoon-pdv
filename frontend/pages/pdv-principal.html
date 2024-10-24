@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/mainPage.css">
+    <link rel="stylesheet" href="../styles/menu.css">
+    <link rel="script" href="../js/pdv-principal.js">
+    <script type="module" src="../js/aberturaDeCaixa.js"></script>
+    <title>Raccoon - Main</title>
+</head>
+<body>
+
+    <!-- MODAL INICIO  -->
+
+        <div id="modalCancelar" style="display: none;">
+            <div id="blocoCancelar">    
+                <h1>Deseja realmente cancelar essa venda? :/</h1>
+                
+                <div class="botsCancelar">
+                    <input type="button" id="btnCancelarModalSim" name="btnCancelarModalSim" value="Sim">
+                    <input type="button" id="btnCancelarModalNao" name="btnCancelarModalNao" value="Não">
+                </div>
+            </div>
+        </div>
+
+    <!-- MODAL FIM -->
+
+    <!-- MODAL INICIO  -->
+    <div id="modalAberturaDeCaixa" style="display: none;">
+        <div class="bloco">
+            <div class="dentro">
+                
+        
+                <h1>Abertura De Caixa </h1>
+                <div class="inputAbertura">
+                    <label for="fundoDeCaixa">Fundo do caixa</label>
+                    <input type="text" id="fundoDeCaixa" name="fundoDeCaixa" placeholder="Fundo do caixa">
+                </div>
+                <div class="inputAbertura">
+                    <label for="numeroCadastrado">Numero de Cadastro</label>
+                    <input type="text" id="numeroCadastrado" name="numeroCadastrado" placeholder="Numero de Cadastro"> 
+                </div>
+               
+
+                <input type="button" id="botaoLoginFunc" name="botao" value="Abrir">
+
+                <button class="botvoltar">
+                    <img class="arrow" src="../src/arrow.png" alt="voltar">
+                </button>
+
+
+            </div>
+           
+        </div>
+    </div>
+    <!-- MODAL FIM -->
+
+        <!-- MODAL INICIO  -->
+        <div id="modalConfig" style="display: none;">
+            <div class="bloco blocoConfig">
+                <div class="dentro optConfig">
+                    
+                    <h1>MENU</h1>
+                    <button id="perfilRedirectBtn">Perfil</button>
+                    <button id="produtoRedirectBtn">Produtos</button>
+                    <button id="relatorioRedirectBtn">Relatorio de Vendas</button>
+                    
+                
+                    
+                </div>
+
+                <button class="botvoltar">
+                    <img class="arrow" src="../src/arrow.png" alt="voltar">
+                </button>
+               
+            </div>
+        </div>
+        <!-- MODAL FIM -->
+    <main>
+        <div   id="perfil">
+            <img class="logo" src="../src/logoraccooncirculo.png" alt="logo da pagina um guaxinin fofinho">
+            
+            <h1>R <br> A<br>C<br>C<br><span class="oo">O</span><br><span class="oo">O</span><br>N</h1> 
+            <button id="botSaida">
+                <img class="saida" src="../src/exit.png" alt="saida">
+            </button>
+        </div>
+
+        <section id="venda" >
+
+            <div class="valores card">
+                
+            <form>
+                <label for="produto" class="word"> Produto: </label>
+                <div class="busca">
+                    <input 
+                    type="text" 
+                    name="produto"
+                    id="produto"
+                    placeholder="digite o produto"
+                    />
+                    <img class="lupa" id="buscarProduto"  src="../src/search.png" alt="lupa">
+                </div>
+        
+                <div class="inp">       
+                    <input 
+                        type="text" 
+                        name="quantidade" 
+                        id="quantidade"
+                        placeholder="digite a quantidade"
+                    />
+                    <label for="quantidade" class="word"> Quantidade </label>
+                </div>
+        
+                <div class="inp">
+                    <input 
+                        type="text" 
+                        name="unitario"
+                        id="unitario"
+                        placeholder="valor unitário"
+                    />
+                    <label for="unitario" class="word"> Unitario </label>
+                </div>
+        
+    
+            </form>
+                
+            </div>
+    
+            <div class="opcao card" id="optPdv" style="display: none;">
+
+                <input  class="b1 scale" id="payBtn" type="button" value="PAGAMENTO" >
+                
+                <input class="b2 scale" id="btnCancelar" type="button" value="Cancelar" >
+
+                <input class="b3 scale btnConfig" type="button" value="Configurações"  >
+
+            </div>
+            <div class="opcao card abertura" id="optOpen">
+
+                <input class="b4 scale" type="button" id="btnAbrirCaixa" value="ABRIR CAIXA" >
+                <input class="b3 scale btnConfig" type="button" value="Configurações" >
+
+            </div>
+    
+        </section>
+        
+
+
+        <section id="infoProdutos">
+            
+            <div class="listagem" >
+
+                <table>
+                    <thead>
+
+                        <th>Id</th>
+                        <th>Produto</th>
+                        <th>Qtde</th>
+                        <th>Unitário</th>
+                        <th>Total</th>
+
+                    </thead>
+                    
+                    <tbody id="listagemProdutos">
+                        <!-- <tr>
+                            <td>9999</td>
+                            <td>TESTE</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>                        -->
+
+                    </tbody>
+
+
+                </table>
+        
+            </div>
+
+
+
+            <div class="valor">
+                <table>
+                    <thead>
+                        <th>Itens:</th>
+                        <th>Subtotal:</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>R$ 12.99</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="../js/pdv-principal.js"></script>
+    <script src="../js/signUp.js"></script>
+    
+</body>
+</html>

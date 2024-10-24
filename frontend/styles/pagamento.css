@@ -1,0 +1,485 @@
+html, body {
+    background-color: #ecedf8;
+    
+}
+
+.scale:hover{
+    scale: 1.05;
+}
+
+main {
+    display: flex;
+    gap: 3em;
+
+    width: 100vw;
+    max-width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+}
+
+#perfil {
+    width: 7em;
+    height: 100vh;
+
+    
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    border-radius: 0 30px 30px 0;
+
+    background-color: #000000;
+    color: white;
+ 
+    box-shadow: 2px 2px 40px 3px rgb(0 0 0 / 20%);
+}
+
+#perfil .logo{
+    margin-top: 1em;
+    height: 10em;
+}
+
+
+
+.oo {
+    font-weight: bold;
+	color: #a5e85d;
+}
+
+#botSaida {
+    height: 6em;
+    margin-top: 7vh;
+    background: none;
+    border: none;
+}
+.saida {
+    height: 4em;
+}
+.saida:hover{
+    scale: 1.2;
+}
+#cl{ 
+    display: flex;
+    align-items: space-evenly;
+    gap: 0.3vw;
+    margin-top: 2em;
+}
+.cliente {
+    height: 20vh;
+    width: 55vw;
+    background-color:  rgb(255, 255, 255);
+    border-radius: 20px;
+    box-shadow: 2px 2px 40px 3px rgb(0 0 0 / 30%);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#cpfInput {
+    border: 1px solid #c1c2c9;
+    border-radius: 8px;
+    background-color: none;
+    width: 25vw;
+    padding: 12px;
+}
+#cpfInput::placeholder {
+    color: #9b9e97;
+}
+.cpfDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3em;
+}
+
+.metodosDePagamento{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+
+    border-radius: 20px;
+    height: 66vh;
+    width: calc(55vw - 2em);
+
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 2px 40px 3px rgb(0 0 0 / 30%);
+    padding: 1em;
+}
+.botoes {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(3, 1fr);
+}
+.btn{
+    margin-top: 1px;
+    height: 3em;
+    background-color: #d3ffa4;
+    border: none;
+    border-radius: 20px;
+    transition: background-color  200ms ease-in-out, color 150ms ease-in-out,scale 300ms ease-in-out;
+    
+}
+.btn:hover{
+    background-color: #000000;
+    color: white;
+
+}
+.cashBtn {
+    background-color: rgb(250, 250, 250);
+    border: 3px solid #d3ffa4 ;
+    color: rgb(13, 24, 1);
+}
+.esq , .dir {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.info, .tabelaPagamentos{
+
+    background-color:  rgb(255, 255, 255);
+    height: 50vh;
+    width: 30vw;
+    box-shadow: 2px 2px 40px 3px rgb(0 0 0 / 30%);
+    border-radius: 20px;
+    margin-left: 1em;
+}
+
+.tabelaPagamentos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    justify-content: center;
+    height: 38vh;
+}
+.valorInsideDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+#valorInput {
+    width: 20vw;
+    padding: 8px;
+    border: 1px solid #c1c2c9;
+    border-radius: 8px;
+    background-color: none;
+}
+#valorInput::placeholder {
+    color: #9b9e97;
+}
+.btnConfirmPay {
+    width: 20vw;
+    padding: 10px;
+    background-color: #d3ffa4;
+    border: none;
+    border-radius: 20px;
+}
+.infoTable {
+    display: flex;
+    align-items: center;
+    gap: 10em;
+}
+
+.infoTable thead tr, .infoTable tbody tr{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
+}
+.info{
+    display: flex;
+    justify-content: center;
+
+    
+}
+.plus img{
+    position: relative;
+    top: 14px;
+    margin-left: 1em;
+    height: 2.5em;
+    width: 2.5em;
+    
+}
+.btnCadastrar {
+    background: none;
+    border: none;
+    outline: none;
+}
+.botvoltar {
+    background-color: inherit;
+    border: none;
+    outline: none;
+}
+
+.botvoltar img{
+    
+    margin-left: 1em;
+    height: 4em;
+    width: 4em;
+
+}
+
+
+.arrow img {
+    position: relative;
+    top: 14px;
+    margin-left: 1em;
+    height: 3em;
+    width: 3em;
+}
+.histpag{
+
+    height: 10em;
+    width: 50em;
+
+}
+
+.listagem{
+    background-color: none;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+    
+    
+}
+
+.listagem::-webkit-scrollbar {
+    width: 10px;
+
+}
+.listagem::-webkit-scrollbar-thumb {
+    background-color: #b3e47e;
+    border-radius: 5px;
+}
+
+
+.listagem table {
+    width: 90%;
+    border-collapse: separate;
+    border-spacing: 0 20px;
+}
+
+.listagem tbody td {
+    padding: 0.5em;
+    text-align: center;
+    border-bottom: 1px solid #ccc
+}
+.listagem thead th{
+    padding: 0.5em;
+    border-bottom: 2px solid black;
+}
+
+.listagem tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+
+
+/* MODAL INICIO */
+
+.inputAbertura {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+#modalAberturaDeCaixa, #modalConfig, #modalCashBack {
+    position: fixed;
+    background-color: #cccccce8;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.bloco{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    height: 35em;
+    width: 50em;
+    border-radius: 2em;
+    box-shadow: 2px 2px 40px 3px rgb(0 0 0 / 20%);
+    gap: 1em;
+    
+}
+
+#btn:hover{
+     background-color: black;
+    color: white
+}
+
+.logo{
+    width: 10em;
+}
+
+.dentro{
+     
+   
+    gap: 1em;
+    
+    
+    flex-direction: column;
+    
+}
+.inputs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.inputs input{
+    height: 2.5em;
+    width: 21em;
+    border-radius: 0.5em;
+}
+
+.inputs button{
+    height: 2.5em;
+    background-color: #000000;
+    color: white;
+    border-radius: 0.5em;
+
+    width: 21em;
+}
+.dentro1 h1{
+    margin: 0em;
+    font-size: 2.3em;
+}
+
+.dentro input{
+    border-radius: 5px;
+	width: 22vw;
+	height: 6vh;
+}
+#botaoLoginFunc{
+    width: 22em;
+    
+    border-radius: 0.5em;
+    background-color: black;
+    color: white;
+    border: none;
+    transition: background-color  200ms ease-in-out, color 150ms ease-in-out, scale 300ms ease-in-out;
+}
+#botaoLoginFunc:hover{
+    background-color: #a5e85d;
+   color: rgb(0, 0, 0)
+}
+.dentro1{
+    height: 20em;
+}
+
+/* MODAL FIM */
+
+
+
+#listadeprodutos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1vh;
+
+}
+
+
+.listagemprodutos{
+    width: 50em;
+    height: 45vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+
+
+    
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+.listagemprodutos::-webkit-scrollbar {
+    width: 10px;
+
+}
+.listagemprodutos::-webkit-scrollbar-thumb {
+    background-color: #b3e47e;
+    border-radius: 5px;
+}
+
+
+.listagemprodutos table {
+    width: 90%;
+    border-collapse: separate;
+    border-spacing: 0 20px;
+}
+
+.listagemprodutos tbody td {
+    padding: 0.5em;
+    text-align: center;
+    border-bottom: 1px solid #ccc
+}
+.listagemprodutos thead th{
+    padding: 0.5em;
+    border-bottom: 2px solid black;
+}
+
+.listagemprodutos tbody tr:last-child td {
+    border-bottom: none;
+}
+#selecionar{
+    height: 1em;
+    width: 1em;
+}
+.pezinCashback{
+    display: flex;
+    margin-top: 1em;
+    justify-content: space-between;
+}
+
+
+.valorTotal {
+    display: flex;
+    align-items: center;
+    gap: 5em;
+    border-radius: 1em;
+    
+    
+    
+    height: 5em;
+    width: 30em;
+   
+    margin-right: 3em;
+}
+
+
+
+.valorTotal input{
+  
+    border-radius: 0.5em;
+    color: white;
+    background-color: #000000;
+    height: 3em;
+    width: 13em;
+    margin-left: 1.5em;
+}
+
+#botvoltarCliente{
+    margin-top: 3em;
+}

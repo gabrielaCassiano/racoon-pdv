@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/pagamento.css">
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <title>Document</title>
+</head>
+
+<body>
+        <!-- MODAL INICIO  -->
+        <div id="modalConfig" style="display: none;">
+            <div class="bloco">
+                <div class="dentro1">   
+                    <div class="inputs">
+                        <h1>Cadastro de cliente:</h1>
+                        <p>Efetue o cadastro do cliente  para que o acesso <br> ao cash-back via reciclagem seja liberado.</p>
+                        <input type="text" class="cpfInp" placeholder="Nome cliente"> 
+                        <input type="text" class="cpfInp" placeholder="Cpf Cliente"> 
+                        <button class="cadastrarCpf">
+                            Cadastrar cliente
+                        </button> 
+                    </div>
+    
+                    <button  id="botvoltarCliente" class="botvoltar">
+                        <img class="arrow" src="../src/arrow.png" alt="voltar">
+                    </button>
+    
+                </div>
+               
+            </div>
+        </div>
+        <!-- MODAL FIM -->
+
+        <!-- MODAL INICIO  -->
+        <div id="modalCashBack" style="display: none;">
+            <div class="bloco">
+                <div  id="listadeprodutos" class="dentro">   
+                 
+                <h1>Embalagens Cashback</h1>
+
+                <div class="listagemprodutos">
+
+                    <table>
+                        <thead>
+                            <th>produto</th>
+                            <th></th>
+                            <th>codigo</th>
+                            <th></th>
+                            
+                            <th>CashBack</th>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>coca cola 2l</td>
+                                <td></td>
+                                <td>000000000</td>
+                                <td></td>
+                                
+                                <td>R$ 0.15 <input type="checkbox" name="selecionar" id="selecionar"></td>
+
+                            </tr>
+
+                            <tr>
+                                <td>coca cola 2l</td>
+                                <td></td>
+                                <td>000000000</td>
+                                <td></td>
+                                
+                                <td>R$ 0.15 <input type="checkbox" name="selecionar" id="selecionar"></td>
+
+                            </tr>
+
+
+                            <tr>
+                                <td>coca cola 2l</td>
+                                <td></td>
+                                <td>000000000</td>
+                                <td></td>
+                               
+                                <td>R$ 0.15 <input type="checkbox" name="selecionar" id="selecionar"></td>
+
+                            </tr>
+
+
+                            <tr>
+                                <td>coca cola 2l</td>
+                                <td></td>
+                                <td>000000000</td>
+                                <td></td>
+                                
+                                <td>R$ 0.15 <input type="checkbox" name="selecionar" id="selecionar"></td>
+
+                            </tr>
+
+                            <tr>
+                                <td>coca cola 2l</td>
+                                <td></td>
+                                <td>000000000</td>
+                                <td></td>
+                                
+                                <td>R$ 0.15 <input type="checkbox" name="selecionar" id="selecionar"></td>
+
+                            </tr>
+
+                            <tr>
+                                <td>coca cola 2l</td>
+                                <td></td>
+                                <td>000000000</td>
+                                <td></td>
+                                
+                                <td>R$ 0.15 <input type="checkbox" name="selecionar" id="selecionar"></td>
+
+                            </tr>
+
+                        </tbody>
+
+
+
+
+                    </table>
+
+                </div>
+
+            
+                </div>
+
+                <div class="pezinCashback">
+
+                    <button class="botvoltar">
+                        <img class="arrow" src="../src/arrow.png" alt="voltar">
+                    </button>
+                    
+                    <div class="valorTotal">
+                        <input type="button" name="confirmarCashback" id="confirmarCashback" value="Confirmar">
+                        <h2>Valor: R$0,15</h2>
+                    </div>
+                </div>
+                        
+
+            </div>    
+
+            </div>
+        </div>
+        <!-- MODAL FIM -->
+
+    <main style="display: flex;">
+        <div   id="perfil">
+            <img class="logo" src="../src/logoraccooncirculo.png" alt="logo da pagina um guaxinin fofinho">
+            
+            <h1>R <br> A<br>C<br>C<br><span class="oo">O</span><br><span class="oo">O</span><br>N</h1> 
+            <button id="botSaida">
+                <img class="saida" src="../src/exit.png" alt="saida">
+            </button>
+        </div>
+
+        <section id="cl">
+            <div class="esq">
+
+                <div class="cliente">
+                    <div class="cpfDiv">
+                        <label for="produto" class="clientecpf"> CPF: </label>
+                        <input
+                        type="text" 
+                        name="cpf"
+                        id="cpfInput"
+                        placeholder="Digite o cpf do cliente"
+                        />
+                    </div>
+                    <div class="plus">
+
+                        <button class="btnCadastrar" >
+                            <img src="../src/plus.png" alt="adicionar">
+                        </button>
+                    </div> 
+
+                    <div class="arrow"  id="botvoltar">
+
+                        <img src="../src/arrow.png" alt="adicionar">
+                    </div> 
+                </div>
+    
+                <div class="metodosDePagamento">
+                    <div class="botoes">
+                        <button class="btn">  
+                            Dinheiro
+                        </button>
+                        <button class="btn">  
+                            Debito
+                        </button>
+                        <button class="btn">  
+                            Credito
+                        </button>
+                        <button class="btn">  
+                            Voucher
+                        </button>
+                        <button class="btn">  
+                            Pix
+                        </button>
+                        <button id="cashbackBtn" class="btn cashBtn">  
+                            CashBack
+                        </button>
+                    </div>
+                    
+                    <div class="listagem" >
+
+                        <table>
+                            <thead>
+        
+                                <th>Metodo:</th>
+                                <th>Valor pago:</th>
+                                <th>Data:</th>
+                                <th>Troco:</th>
+        
+                            </thead>
+                            
+                            <tbody>
+                                <tr>
+                                    <td>Debito</td>
+                                    <td>R$ 23.00</td>
+                                    <td>03/09/2024</td>
+                                    <td>R$ 00.00</td>
+                                </tr>
+                            </tbody>
+        
+        
+                        </table>
+                
+                    </div>
+
+                </div>
+
+              
+             
+
+            </div>
+            
+            <div class="dir">
+                <div class="info">
+
+                  <table class="infoTable">
+
+                    <thead>
+                        <tr>
+                            <th>Total Venda:</th>
+                            <th>Desconto CashBack:</th>
+                            <th>Restante:</th>
+                            <th>Troco:</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>R$ 25.00</td>
+                            <td>R$ 2.00</td>
+                            <td>R$ 23.00</td>
+                            <td>R$ 00.00</td>
+                        </tr>
+                    </tbody>
+
+
+
+                  </table>
+                    
+                    
+                    
+                </div>
+
+                <div class="tabelaPagamentos">
+                        <div class="valorInsideDiv">
+                            <label for="produto" class="valorTxt"> VALOR: </label>
+                            <input
+                            type="text" 
+                            name="valor"
+                            id="valorInput"
+                            placeholder="Digite o valor"
+                            />
+                        </div>
+
+                       
+                        <button id="btnConfirmar" class="btnConfirmPay">  
+                            Confirmar pagamento
+                        </button>              
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        
+        
+    </main>
+
+    <!-- <script src="../js/searchproduto.js"></script> -->
+    <script src="../js/pagamento.js"></script>
+    <script src="../js/signUp.js"></script>
+    
+</body>
+</html>

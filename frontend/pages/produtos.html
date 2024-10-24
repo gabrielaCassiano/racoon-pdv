@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/Searchprodutos.css">
+    <title>Document</title>
+</head>
+<body>
+    
+      <!-- MODAL INICIO  -->
+      <div id="modalConfig" style="display: none;">
+        <div class="bloco">
+            <div class="dentro">
+                
+        
+                <form class="modalCadastro">
+
+                    <h1>Cadastro Produto</h1>
+               
+                    <div class="busca">
+                        <input 
+                        type="text" 
+                        name="nome"
+                        id="nome"
+                        placeholder="digite o nome"
+                        />
+                        
+                    </div>
+                    
+                    <div class="inp">       
+                        <input 
+                            type="text" 
+                            name="codigo" 
+                            id="codigo"
+                            placeholder="digite o codigo"
+                        />
+                        
+                    </div>
+                    <div class="inp">
+                        <input 
+                            type="text" 
+                            name="preco"
+                            id="preco"
+                            placeholder="codigoDeBarra"
+                        />
+                       
+                    </div>
+            
+            
+                    <div class="inp">
+                        <input 
+                            type="text" 
+                            name="codigoDeBarra"
+                            id="codigoDeBarra"
+                            placeholder="Preço"
+                        />
+                        
+                    </div>
+
+                    <div class="inp">
+                        <input 
+                            type="text" 
+                            name="codigoDeBarra"
+                            id="codigoDeBarra"
+                            placeholder="Valor CashBack"
+                        />
+                        
+                    </div>
+                    
+                    <div>
+                        <select name="Categoria" id="cat">
+                            <option value="" selected disabled hidden>Selecione uma categoria</option>
+                            <option value="op1">Mercearia</option>
+                            <option value="op2">Doces</option>
+                            <option value="op2">Carne</option>
+                        </select>
+                        
+                       
+                    </div>
+                    
+                    
+                    <input type="button" name="btnConf" id="btnConf" value="Confirmar">
+        
+                    
+                </form>
+                
+                <button class="botvoltar">
+                    <img class="arrow" src="../src/arrow.png" alt="voltar">
+                </button>
+                
+            
+            
+
+            </div>
+           
+        </div>
+    </div>
+    <!-- MODAL FIM -->
+
+
+    
+        <main>
+
+            <div   id="perfil">
+                <img class="logo" src="../src/logoraccooncirculo.png" alt="logo da pagina um guaxinin fofinho">
+                
+                <h1>R <br> A<br>C<br>C<br><span class="oo">O</span><br><span class="oo">O</span><br>N</h1> 
+                
+                
+                <button id="botSaida"> 
+
+                    <img class="saida" src="../src/exit.png" alt="saida">
+
+                </button>
+            
+            </div>
+
+            
+            <section id="pesquisa">
+
+                <div class="tabelapesquisa"> 
+                    
+                    <div class="id">
+                        
+                        <form class="formulario">
+                            <h1>Produto:</h1>
+
+                            <label for="nomeproduto" class="barrapesquisa"> Nome/Codigo: </label>
+
+                            <div class="codigos">
+
+                                <input type="text"
+                                name="nomeproduto"
+                                id="nomeproduto"
+                                placeholder="digite o codigo"
+                                >
+
+                                <button class="botlupa">
+                                    <img class="lupa"   src="../src/search.png" alt="lupa">
+                                </button>
+                                
+                            </div>
+
+                            <select name="inteligente" id="int">
+                                <option value="" selected disabled hidden>Pesquisa inteligente</option>
+                                <option value="op1">Codigo de barras</option>
+                                <option value="op2">Categoria</option>
+
+                            </select>
+
+                        </form>
+                        <div class="pezin">
+                            <button id="botvoltarPage">
+                                <img class="arrow1" src="../src/arrow.png" alt="voltar">
+                            </button>
+
+                            <input type="button" class="btnCadastrar" name="btn" value="cadastrar produto">
+                        </div>
+
+                    </div>
+                </div>
+                
+
+            </section>
+
+            
+        <section id="listadeprodutos">
+            
+            <div class="listagemprodutos" >
+                <table>
+                    <thead>
+
+                        <th>Nome</th>
+                        <th>Categortia</th>
+                        <th>Codigo</th>
+                        <th>Codgiodebarras</th>
+                        <th>Preco</th>
+                        <th>CashBack</th>
+
+                    </thead>
+                    
+                    <tbody>
+                        <tr>
+                            <td>Coca Cola Zero 2L</td>
+                            <td>Mercearia</td>
+                            <td>01</td>
+                            <td>1653148565344</td>
+                            <td>12.99</td>
+                            <td>0.15</td>
+                        </tr>
+
+                        <tr>
+                            <td>Coca Cola Zero 2L</td>
+                            <td>Mercearia</td>
+                            <td>01</td>
+                            <td>1653148565344</td>
+                            <td>12.99</td>
+                            <td>0.15</td>
+                        </tr>
+
+                        <tr>
+                            <td>Coca Cola Zero 2L</td>
+                            <td>Mercearia</td>
+                            <td>01</td>
+                            <td>1653148565344</td>
+                            <td>12.99</td>
+                            <td>0.15</td>
+                        </tr>
+
+                        <tr>
+                            <td>Coca Cola Zero 2L</td>
+                            <td>Mercearia</td>
+                            <td>01</td>
+                            <td>1653148565344</td>
+                            <td>12.99</td>
+                            <td>0.15</td>
+                        </tr>
+
+                        <tr>
+                            <td>Coca Cola Zero 2L</td>
+                            <td>Mercearia</td>
+                            <td>01</td>
+                            <td>1653148565344</td>
+                            <td>12.99</td>
+                            <td>0.15</td>
+                        </tr>
+
+                        <tr>
+                            <td>Coca Cola Zero 2L</td>
+                            <td>Mercearia</td>
+                            <td>01</td>
+                            <td>1653148565344</td>
+                            <td>12.99</td>
+                            <td>0.15</td>
+                        </tr>
+                        <tr>
+                            <td>Coca Cola Zero 2L</td>
+                            <td>Mercearia</td>
+                            <td>01</td>
+                            <td>1653148565344</td>
+                            <td>12.99</td>
+                            <td>0.15</td>
+                        </tr>
+                        <tr>
+                            <td>Coca Cola Zero 2L</td>
+                            <td>Mercearia</td>
+                            <td>01</td>
+                            <td>1653148565344</td>
+                            <td>12.99</td>
+                            <td>0.15</td>
+                        </tr>
+                        <tr>
+                            <td>Coca Cola Zero 2L</td>
+                            <td>Mercearia</td>
+                            <td>01</td>
+                            <td>1653148565344</td>
+                            <td>12.99</td>
+                            <td>0.15</td>
+                        </tr>
+                        <tr>
+                            <td>Coca Cola Zero 2L</td>
+                            <td>Mercearia</td>
+                            <td>01</td>
+                            <td>1653148565344</td>
+                            <td>12.99</td>
+                            <td>0.15</td>
+                        </tr>
+
+                        <tr>
+                            <td>Coca Cola Zero 2L</td>
+                            <td>Mercearia</td>
+                            <td>01</td>
+                            <td>1653148565344</td>
+                            <td>12.99</td>
+                            <td>0.15</td>
+                        </tr>
+
+
+                    </tbody>
+
+
+                </table>
+        
+            </div>
+
+          
+        </section>
+
+
+        </main>
+
+
+
+
+
+    <script src="../js/searchproduto.js"></script>
+    <script src="../js/signUp.js"></script>
+
+</body>
+</html>
