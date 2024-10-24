@@ -7,6 +7,8 @@ const modalEsqueceuSenha = document.getElementById('modalEsqueceuSenha');
 const entreEmContato = document.getElementById('entreEmContato');
 const modalEntreContato = document.getElementById('modalEntreContato');
 const botvoltarmodal = document.querySelectorAll(".botvoltarmodal")
+const botvoltarmodal3 = document.getElementById('botvoltarmodal3')
+
 
 for(let i = 0; i < botvoltarmodal.length; i++){
     botvoltarmodal[i].addEventListener('click', () => {
@@ -21,6 +23,9 @@ for(let i = 0; i < botvoltarmodal.length; i++){
     })
 }
 
+botvoltarmodal3.addEventListener("click", () => {
+    window.location.href ="../pages/index.html"
+})
 
 registerbtn.addEventListener('click', (event) => {
    event.preventDefault()

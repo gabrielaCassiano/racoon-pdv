@@ -291,7 +291,7 @@ main {
     align-items: start;
 }
 
-#modalAberturaDeCaixa, #modalConfig {
+#modalAberturaDeCaixa, #modalConfig, #modalCancelar {
     position: fixed;
     background-color: #cccccce8;
     top: 0;
@@ -416,3 +416,21 @@ main {
     align-items: center;
 }
 
+/* Modal Cancelar */    
+#blocoCancelar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    height: 15em;
+    width: 20em;
+    border-radius: 2em;
+    box-shadow: 2px 2px 40px 3px rgba(255, 0, 0, 0.2);
+    gap: 1em;
+    padding: 24px;
+    
+}
+
+
+/* Modal Cancelar Fim*/

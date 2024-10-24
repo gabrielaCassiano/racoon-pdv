@@ -9,7 +9,15 @@ const payBtn = document.getElementById("payBtn")
 const perfilRedirectBtn = document.getElementById("perfilRedirectBtn")
 const produtoRedirectBtn = document.getElementById("produtoRedirectBtn")
 const relatorioRedirectBtn = document.getElementById("relatorioRedirectBtn")
-const fechamentoRedirectBtn = document.getElementById("fechamentoRedirectBtn")
+const modalCancelar = document.getElementById("modalCancelar")
+const btnCancelar = document.getElementById("btnCancelar")
+
+btnCancelar.addEventListener('click', () => {
+    let modalStateCancelar = modalCancelar.style.display
+    if (modalStateCancelar == 'none') {
+        modalCancelar.style.display = 'flex'
+    }
+})
 
 
 

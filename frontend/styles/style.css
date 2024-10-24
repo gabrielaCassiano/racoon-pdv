@@ -539,3 +539,38 @@
     top: 8vh;
     margin-left: 1em;
 }
+#input1{
+    width: 29em;
+    resize: none;
+    padding: 8px;
+    box-sizing: border-box;
+    border: #3c3c3c 2px solid;
+    border-radius: 8px;
+}
+
+.recoveryText1 {
+    margin-top: -1em;
+    width: 24em;
+}
+.recoveryText1 h1 {
+    
+    width: 30em;
+    font-size: 30px;
+    
+}
+.botvoltarmodal2{
+    width: 4em;
+    background: none;
+    border: none;
+    z-index: 1;
+    position: relative;
+    margin: 0;
+    margin-bottom: 4em;
+    margin-left: 1em;
+    
+    
+}
+.logo1{
+    margin-top: 3em;
+    width: 8em;
+}

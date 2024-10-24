@@ -11,6 +11,22 @@
     <title>Raccoon - Main</title>
 </head>
 <body>
+
+    <!-- MODAL INICIO  -->
+
+        <div id="modalCancelar" style="display: none;">
+            <div id="blocoCancelar">    
+                <h1>Deseja realmente cancelar essa venda? :/</h1>
+                
+                <div class="botsCancelar">
+                    <input type="button" id="btnCancelarModalSim" name="btnCancelarModalSim" value="Sim">
+                    <input type="button" id="btnCancelarModalNao" name="btnCancelarModalNao" value="Não">
+                </div>
+            </div>
+        </div>
+
+    <!-- MODAL FIM -->
+
     <!-- MODAL INICIO  -->
     <div id="modalAberturaDeCaixa" style="display: none;">
         <div class="bloco">
@@ -117,7 +133,7 @@
 
                 <input  class="b1 scale" id="payBtn" type="button" value="PAGAMENTO" >
                 
-                <input class="b2 scale" type="button" value="Cancelar" >
+                <input class="b2 scale" id="btnCancelar" type="button" value="Cancelar" >
 
                 <input class="b3 scale btnConfig" type="button" value="Configurações"  >
 
