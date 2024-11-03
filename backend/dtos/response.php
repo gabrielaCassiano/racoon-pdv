@@ -1,26 +1,22 @@
 <?php 
 
+require 'enums/status.php';
+
 class ResponseClass {
 
-    public static function answerWithBody($message, $code) {
+    public static function answerWithBody($message, Status $status) {
         header('Content-Type: application/json');
-        http_response_code($code);
-        echo $message;
+        http_response_code($status->value);
+        echo json_encode($message);
     }
 
-    public static function answer($message, $code) {
+    public static function answer($message, Status $status) {
         header('Content-Type: application/json');
-        http_response_code($code);
+        http_response_code($status->value);
         echo json_encode(['message' => $message]);
     } 
 
-    public static function validate() {
-
-        return new ResponseClass();
-
-    }
-
-    public function ifNull(...$values) {
+    public static function ifNull(...$values) {
 
         for ($i = 0 ; $i < count($values) ; $i+=2) {
 
@@ -29,7 +25,10 @@ class ResponseClass {
             
             if ($value == null) {
 
-                ResponseClass::answer("A variavel $key nao pode ser null", 400);
+                ResponseClass::answer(
+                    "A variavel $key nao pode ser null", 
+                    Status::BAD_REQUEST
+                );
 
                 return false;
 

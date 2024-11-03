@@ -3,17 +3,39 @@
 require_once '../backend/dtos/response.php';
 require_once '../backend/repository/empresa_repository.php';
 require_once '../backend/utils/update.php';
+require_once '../backend/enums/status.php';
 
 class EmpresaController {
 
-    public static function login($request) {
+    public static function route($segment) {
+    
+        return match ($segment) {
+            'login' => self::login(
+                json_encode(file_get_contents('php://input'))
+            ),
+            'create' => self::create(
+                json_encode(file_get_contents('php://input'))
+            ),
+            'collect' => self::collect(
+                $_GET['id_empresa']
+            ),
+            'modify' => self::modify(
+                json_encode(file_get_contents('php://input'))
+            ),
+            'delete' => self::delete(
+                $_GET['id_empresa']
+            ),
+            default => http_response_code(Status::NOT_FOUND->value)
+        };
 
-        $body = json_decode($request);
+    }
 
-        $esta_valido = ResponseClass::validate()->ifNull(
-            "request", $body,
-            "cnpj", $body->cnpj,
-            "senha", $body->senha
+    private static function login($request) {
+
+        $esta_valido = ResponseClass::ifNull(
+            "request", $request,
+            "cnpj", $request->cnpj,
+            "senha", $request->senha
         );
 
         if (!$esta_valido) {
@@ -22,43 +44,37 @@ class EmpresaController {
 
         }
 
-        $id_empresa = EmpresaRepository::login(
-            $body->cnpj, 
-            $body->senha
+        $empresa = EmpresaRepository::login(
+            $request->cnpj, 
+            $request->senha
         );
 
-        if (!$id_empresa) {
+        if (!$empresa) {
 
             ResponseClass::answer(
                 "Cnpj ou senha incorretos", 
-                401
+                Status::UNAUTHORIZED
             );
             return;
 
         }
 
         ResponseClass::answerWithBody(
-            json_encode(
-                [
-                    'id_empresa' => $id_empresa
-                ]
-            ),
-            201
+            $empresa,
+            Status::OK
         );
 
     }
 
-    public static function create($request) {
+    private static function create($request) {
 
-        $body = json_decode($request);
-
-        $esta_valido = ResponseClass::validate()->ifNull(
-            "request", $body,
-            "nome_empresa", $body->nome_empresa,
-            "nome_criador", $body->nome_criador,
-            "cnpj", $body->cnpj,
-            "cpf", $body->cpf,
-            "senha", $body->senha
+        $esta_valido = ResponseClass::ifNull(
+            "request", $request,
+            "nome_empresa", $request->nome_empresa,
+            "nome_criador", $request->nome_criador,
+            "cnpj", $request->cnpj,
+            "cpf", $request->cpf,
+            "senha", $request->senha
         );
 
         if (!$esta_valido) {
@@ -67,54 +83,52 @@ class EmpresaController {
 
         }
 
-        $id_empresa = EmpresaRepository::login(
-            $body->cnpj, 
-            $body->senha
+        $empresa = EmpresaRepository::login(
+            $request->cnpj, 
+            $request->senha
         );
 
-        if ($id_empresa) {
+        if ($empresa) {
 
             ResponseClass::answer(
                 "Cnpj ou senha ja utilizados", 
-                409
+                Status::CONFLICT
             );
             return;
 
         }
 
         $created = EmpresaRepository::create(
-            $body->nome_empresa,
-            $body->nome_criador,
-            $body->cnpj,
-            $body->cpf,
-            $body->senha
+            $request->nome_empresa,
+            $request->nome_criador,
+            $request->cnpj,
+            $request->cpf,
+            $request->senha
         );
 
         if (!$created) {
 
             ResponseClass::answer(
                 "Algum erro ocorreu enquanto o usuario era criado",
-                500
+                Status::INTERNAL_SERVER_ERROR
             );
             return;
 
         }
 
         ResponseClass::answerWithBody(
-            json_encode(
-                EmpresaRepository::login(
-                    $body->cnpj,
-                    $body->senha
-                )
+            EmpresaRepository::login(
+                $request->cnpj,
+                $request->senha
             ),
-            201
+            Status::CREATED
         );
 
     }
 
-    public static function collect($id_empresa) {
+    private static function collect($id_empresa) {
 
-        $esta_valido = ResponseClass::validate()->ifNull(
+        $esta_valido = ResponseClass::ifNull(
             "id_empresa", $id_empresa
         );
 
@@ -130,7 +144,7 @@ class EmpresaController {
 
             ResponseClass::answer(
                 "Nenhuma empresa foi encontrado com este id",
-                404
+                Status::NOT_FOUND
             );
 
             return;
@@ -138,18 +152,16 @@ class EmpresaController {
         }
 
         ResponseClass::answerWithBody(
-            json_encode($empresa),
-            200
+            $empresa,
+            Status::OK
         );
 
     }
 
-    public static function modify($request) {
+    private static function modify($request) {
 
-        $body = json_decode($request);
-
-        $esta_valido = ResponseClass::validate()->ifNull(
-            "id_empresa", $body->id_empresa
+        $esta_valido = ResponseClass::ifNull(
+            "id_empresa", $request->id_empresa
         );
 
         if (!$esta_valido) {
@@ -159,31 +171,31 @@ class EmpresaController {
         }
 
         $empresa = EmpresaRepository::one(
-            $body->id_empresa
+            $request->id_empresa
         );
 
         if (!$empresa) {
 
             ResponseClass::answer(
                 "Nenhuma empresa foi encontrado com este id",
-                404
+                Status::NOT_FOUND
             );
 
         }
 
-        if ((isset($body->cnpj) && $body->cnpj !== null) || (isset($body->senha) && $body->senha !== null)) {
+        if ((isset($request->cnpj) && $request->cnpj !== null) || (isset($request->senha) && $request->senha !== null)) {
 
             $count = EmpresaRepository::validate(
-                $body->id_empresa,
-                isset($body->cnpj) ? $body->cnpj : null,
-                isset($body->senha) ? $body->senha : null
+                $request->id_empresa,
+                isset($request->cnpj) ? $request->cnpj : null,
+                isset($request->senha) ? $request->senha : null
             );
 
             if ($count['contagem'] > 0) {
 
                 ResponseClass::answer(
                     "Os campos cnpj ou senha ja estao sendo utilizados",
-                    401
+                    Status::UNAUTHORIZED
                 );
 
                 return;
@@ -191,14 +203,18 @@ class EmpresaController {
 
         }
 
+        Utils::format(
+            "nome_empresa = :nome_empresa", $request->nome_empresa
+        );
+
         $funcionou = EmpresaRepository::modify(
-            $body,
+            $request,
             Utils::format(
-                isset($body->nome_empresa) ? "nome_empresa = :nome_empresa,\n" : "", $body->nome_empresa ?? "",
-                isset($body->nome_criador) ? "nome_criador = :nome_criador,\n" : "", $body->nome_criador ?? "",
-                isset($body->cnpj) ? "cnpj = :cnpj,\n" : "", $body->cnpj ?? "",
-                isset($body->cpf) ? "cpf = :cpf,\n" : "", $body->cpf ?? "",
-                isset($body->senha) ? "senha = :senha,\n" : "", $body->senha ?? "",
+                "nome_empresa = :nome_empresa", $request->nome_empresa,
+                "nome_criador = :nome_criador", $request->nome_criador,
+                "cnpj = :cnpj", $request->cnpj,
+                "cpf = :cpf", $request->cpf,
+                "senha = :senha", $request->senha,
                 "modificado = UTC_TIMESTAMP()", "UTC_TIMESTAMP()"
             )
         );
@@ -207,7 +223,7 @@ class EmpresaController {
 
             ResponseClass::answer(
                 "Algum erro ocorreu enquanto a empresa era modificada",
-                500
+                Status::INTERNAL_SERVER_ERROR
             );
 
             return;
@@ -215,19 +231,17 @@ class EmpresaController {
         }
 
         ResponseClass::answerWithBody(
-            json_encode(
-                EmpresaRepository::one(
-                    $body->id_empresa
-                )
+            EmpresaRepository::one(
+                $request->id_empresa
             ),
-            200
+            Status::OK
         );
 
     }
 
-    public static function delete($id_empresa) {
+    private static function delete($id_empresa) {
 
-        $esta_valido = ResponseClass::validate()->ifNull(
+        $esta_valido = ResponseClass::ifNull(
             "id_empresa", $id_empresa
         );
 
@@ -243,7 +257,7 @@ class EmpresaController {
 
             ResponseClass::answer(
                 "Nenhuma empresa foi encontrado com este id",
-                404
+                Status::NOT_FOUND
             );
 
             return;
@@ -258,7 +272,7 @@ class EmpresaController {
 
             ResponseClass::answer(
                 "Algum erro ocorreu enquanto a empresa era deletada",
-                500
+                Status::INTERNAL_SERVER_ERROR
             );
 
             return;
@@ -267,7 +281,7 @@ class EmpresaController {
 
         ResponseClass::answer(
             "Empresa deletada com sucesso",
-            200
+            Status::OK
         );
 
     }
