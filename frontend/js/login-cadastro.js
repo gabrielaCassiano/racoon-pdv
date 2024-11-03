@@ -36,3 +36,57 @@ voltar.addEventListener('click', function() {
         Esconder.style.display = 'none';
     }
 });
+
+async function apiCall(cnpj, password) {
+
+    return fetch(
+        'http://localhost:8000/empresa/login', 
+        {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(
+                {
+                    'cnpj': cnpj,
+                    'senha': password
+                }
+            )
+        }
+    )
+    .then(
+        response => response.ok ? response.json() : Promise.reject(`Error: ${response.status}`)  
+    )
+    .catch(
+        error => {
+            console.error('Fetch error:', error);
+            throw error; 
+        }
+    );
+}
+
+document.querySelector('#loginForm').addEventListener('submit', function(event) {
+
+    console.log("HHehehehehe");
+
+    event.preventDefault();
+
+    let cnpj = document.getElementById('cnpj').value;
+    let pass = document.getElementById('pass').value;
+
+    console.log(cnpj + ' | ' + pass);
+
+    apiCall(cnpj, pass)
+        .then(
+            json => {
+                console.log('Login successful:', json); 
+            }
+        )
+        .catch(
+            error => {
+                console.error('Login failed:', error); 
+            }
+        )
+    ;
+});
+
