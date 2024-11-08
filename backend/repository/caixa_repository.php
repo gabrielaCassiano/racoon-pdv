@@ -133,7 +133,7 @@ class CaixaRepository {
         $stmt->bindParam(":id_funcionario", $id_funcionario);
         $stmt->bindParam(":valor_inicial", $valor_inicial);
 
-        return $stmt->execute();
+        return $stmt->execute();    
 
     }
 

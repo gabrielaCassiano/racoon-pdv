@@ -6,7 +6,6 @@ require_once '../backend/utils/update.php';
 class FuncionarioRepository {
 
     public static function modify($request, $update_statement) {
-
         global $pdo;
 
         $stmt = $pdo->prepare("
@@ -28,11 +27,9 @@ class FuncionarioRepository {
         );
 
         return $stmt->execute();
-
     }
 
     public static function delete($id_funcionario) {
-
         global $pdo;
 
         $stmt = $pdo->prepare("
@@ -47,11 +44,9 @@ class FuncionarioRepository {
         $stmt->bindParam(":id_funcionario", $id_funcionario);
 
         return $stmt->execute();
-
     }
 
     public static function create($id_empresa, $nome, $cpf, $senha) {
-
         global $pdo;
 
         $stmt = $pdo->prepare("
@@ -77,11 +72,9 @@ class FuncionarioRepository {
         $stmt->bindParam(":senha", $senha);
 
         return $stmt->execute();
-
     }
 
     public static function one($id_funcionario) {
-
         global $pdo;
 
         $stmt = $pdo->prepare("
@@ -95,18 +88,17 @@ class FuncionarioRepository {
             FROM 
                 funcionario
             WHERE 
-                id_funcionario = :id_funcionario
+                id = :id_funcionario
                 AND excluido IS NULL
         ");
 
         $stmt->bindParam(":id_funcionario", $id_funcionario);
+        $stmt->execute();
 
-        return $stmt->fetchAll();
-
+        return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
     public static function all($id_empresa) {
-
         global $pdo;
 
         $stmt = $pdo->prepare("
@@ -125,13 +117,12 @@ class FuncionarioRepository {
         ");
 
         $stmt->bindParam(":id_empresa", $id_empresa);
+        $stmt->execute();
 
-        return $stmt->fetchAll();
-
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public static function login($cpf, $senha) {
-
         global $pdo;
 
         $stmt = $pdo->prepare("
@@ -141,23 +132,21 @@ class FuncionarioRepository {
                 nome,
                 cpf,
                 senha,
-                criado,
-                atualizado
+                criado
             FROM 
                 funcionario
             WHERE 
-                cpf = :cpf,
+                cpf = :cpf
                 AND senha = :senha
                 AND excluido IS NULL
         ");
 
         $stmt->bindParam(":cpf", $cpf);
         $stmt->bindParam(":senha", $senha);
+        $stmt->execute();
 
-        return $stmt->fetch();
-
+        return $stmt->fetch(PDO::FETCH_ASSOC);
     }
-
 }
 
 ?>

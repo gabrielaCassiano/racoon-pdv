@@ -26,7 +26,6 @@
         </div>
       </div>
       <!-- MODAL FIM -->
-
       <!-- MODAL INICIO  -->
       <div id="modalEntreContato" style="display: none;">
         <div class="bloco">
@@ -34,70 +33,12 @@
               <img  class="logo1" src="../src/logomenor.png" alt="logo raccoon">
               <div class="recoveryText1">
                 <h1>Precisa entrar em contato?</h1>
-                
-              </div>
-
-              <div class="inputsLogin">
-
-                <form class="loginForm" id="loginForm" >
-
-                  <input type="text" name="cnpj" id="cnpj" placeholder="Digite seu CNPJ aqui" />
-                  <input type="password" name="pass" id="pass" placeholder="Digite sua SENHA aqui" />
-                  <input type="submit" name="login" id="login" value="Login" />
-
-                </form>
-
-                <div class="PwRecover">
-                  <a href="#">
-                    Esqueceu sua senha?
-                   </a>
-                </div>
 
               </div>
-
-            </div>
-            <!-- CADASTRO -->
-            <div class="cadastro">
-              <h1 class="msg">Cadastre-se</h1>
-              <div class="inputsLogin">
-                <form
-                  class="loginForm"
-                  action=""
-                  method="post"
-                  onsubmit="event.preventDefault()"
-                >
-                  <input
-                    type="text"
-                    name="name"
-                    id="name"
-                    placeholder="Digite seu NOME aqui"
-                  />
-                  <input
-                    type="text"
-                    name="cnpj"
-                    id="cnpj"
-                    placeholder="Digite seu CNPJ aqui"
-                  />
-                  <input
-                    type="password"
-                    name="pass"
-                    id="pass"
-                    placeholder="Digite sua SENHA aqui"
-                  />
-                  <input
-                    type="password"
-                    name="pass"
-                    id="pass"
-                    placeholder="Confirme sua SENHA aqui"
-                  />
-                  <div class="planos">
-                    <div class="cardPlanos">
-                      <p>Basico</p>
-                      <p>R$ 19.99/M</p>
               <input type="email" class="inpRecovery" id="emailm" name="email" placeholder="Digite o seu Email:">
               <input type="text" class="inpRecovery" id="name" name="name" placeholder="Digite o seu Nome:">
               <textarea id="input1" name="input1" rows="7" maxlength="350" placeholder="Descreva o motivo do contato:"></textarea>
-              
+
               <button class="enviarRecovery">Enviar</button> 
             </div>    
             <button id="botvoltarmodal3" class="botvoltarmodal2">
@@ -126,13 +67,10 @@
                     <div>
                       
                     </div>
-
                     <button class="" id="signInBtn">Confirmar</button>
+                    <button class="" id="voltarLogin"></button>
                   </form>
-
-
                 </div>
-
             
         <div class="login-wrapper">      
           <div class="sign-in">
@@ -142,33 +80,25 @@
                 <h1>Login-in</h1>
              
               
-              <input type="text" placeholder="Email" />
-              <input type="password" placeholder="Password" />
+              <input id="cnpjLogin" type="text" placeholder="Email" />
+              <input id="passLogin" type="password" placeholder="Password" />
               <button id="loginBtn">Log-in</button>
               <a href="#" id="esqueceuSenha">Esqueceu a senha?</a>
-
-
-
               <div class="pezinDoLogin">
   
                 <button id="register">Cadastre-se</button>
                 <a href="" id="entreEmContato">entre em contato</a>
-
               </div>
-
               
             </form>
           </div>
         </div>
-
           <div class="toogle-container">
             
             <div class="toogle">
               <div class="toogle-panel toogle-left">
                 
-
                 <div class="slider">
-
                     <h1>Planos:</h1>
         
                     <p class="text">Conheça nossos planos e selecione o que melhor se encaixa no perfil de sua empresa:</p>
@@ -198,11 +128,8 @@
                     <button id="prev"> < </button>
                     
                 </div>
-
                 
               </div>
-
-
               <div class="toogle-panel toogle-right">
                
                     <div id="boasVindasContainer">
@@ -214,11 +141,12 @@
                     
                     
                   </div>
-
             </div>
     </div>
      
-          <script src="../js/login.js" ></script>
+          <script src="../js/index.js" ></script>
+          <script src="../js/empresaLoginCadastro.jsx" ></script>
           <script src="../js/typeAnimation.js"></script>
+          <script src="../js/animPlanos.js"></script>
 </body>
 </html>

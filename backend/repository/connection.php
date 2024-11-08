@@ -3,7 +3,8 @@
 $host = '127.0.0.1';
 $db = 'racoon';
 $user = 'root';
-$pass = 'my-secret-pw';
+$pass = 'pw';
+// $pass = '';
 
 try {
 
@@ -12,7 +13,7 @@ try {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 } catch (PDOException $e) {
-
+    echo "Erro na conexão: " . $e->getMessage();
 }
 
 ?>

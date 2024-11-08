@@ -1,0 +1,121 @@
+[06-Nov-2024 20:40:37 Europe/Berlin] PHP Warning:  Attempt to read property "nome_empresa" on string in C:\xampp\htdocs\backend\controller\empresa_controller.php on line 73
+[06-Nov-2024 20:40:37 Europe/Berlin] PHP Warning:  Attempt to read property "nome_criador" on string in C:\xampp\htdocs\backend\controller\empresa_controller.php on line 74
+[06-Nov-2024 20:40:37 Europe/Berlin] PHP Warning:  Attempt to read property "cnpj" on string in C:\xampp\htdocs\backend\controller\empresa_controller.php on line 75
+[06-Nov-2024 20:40:37 Europe/Berlin] PHP Warning:  Attempt to read property "cpf" on string in C:\xampp\htdocs\backend\controller\empresa_controller.php on line 76
+[06-Nov-2024 20:40:37 Europe/Berlin] PHP Warning:  Attempt to read property "senha" on string in C:\xampp\htdocs\backend\controller\empresa_controller.php on line 77
+[06-Nov-2024 21:58:24 Europe/Berlin] PHP Warning:  Attempt to read property "nome_empresa" on string in C:\xampp\htdocs\backend\controller\empresa_controller.php on line 73
+[06-Nov-2024 21:58:24 Europe/Berlin] PHP Warning:  Attempt to read property "nome_criador" on string in C:\xampp\htdocs\backend\controller\empresa_controller.php on line 74
+[06-Nov-2024 21:58:24 Europe/Berlin] PHP Warning:  Attempt to read property "cnpj" on string in C:\xampp\htdocs\backend\controller\empresa_controller.php on line 75
+[06-Nov-2024 21:58:24 Europe/Berlin] PHP Warning:  Attempt to read property "cpf" on string in C:\xampp\htdocs\backend\controller\empresa_controller.php on line 76
+[06-Nov-2024 21:58:24 Europe/Berlin] PHP Warning:  Attempt to read property "senha" on string in C:\xampp\htdocs\backend\controller\empresa_controller.php on line 77
+[06-Nov-2024 21:58:58 Europe/Berlin] PHP Warning:  Attempt to read property "nome_empresa" on string in C:\xampp\htdocs\backend\controller\empresa_controller.php on line 73
+[06-Nov-2024 21:58:58 Europe/Berlin] PHP Warning:  Attempt to read property "nome_criador" on string in C:\xampp\htdocs\backend\controller\empresa_controller.php on line 74
+[06-Nov-2024 21:58:58 Europe/Berlin] PHP Warning:  Attempt to read property "cnpj" on string in C:\xampp\htdocs\backend\controller\empresa_controller.php on line 75
+[06-Nov-2024 21:58:58 Europe/Berlin] PHP Warning:  Attempt to read property "cpf" on string in C:\xampp\htdocs\backend\controller\empresa_controller.php on line 76
+[06-Nov-2024 21:58:58 Europe/Berlin] PHP Warning:  Attempt to read property "senha" on string in C:\xampp\htdocs\backend\controller\empresa_controller.php on line 77
+[07-Nov-2024 18:38:56 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'senha1233' for key 'senha' in C:\xampp\htdocs\backend\repository\empresa_repository.php:203
+Stack trace:
+#0 C:\xampp\htdocs\backend\repository\empresa_repository.php(203): PDOStatement->execute()
+#1 C:\xampp\htdocs\backend\controller\empresa_controller.php(98): EmpresaRepository::create('Emprsdesa Teste', 'Fasdulano', '12315678020199', '12340628909', 'senha1233')
+#2 C:\xampp\htdocs\backend\controller\empresa_controller.php(15): EmpresaController::create(Object(stdClass))
+#3 C:\xampp\htdocs\backend\index.php(31): EmpresaController::route('create')
+#4 {main}
+  thrown in C:\xampp\htdocs\backend\repository\empresa_repository.php on line 203
+[08-Nov-2024 16:30:57 Europe/Berlin] PHP Warning:  Attempt to read property "id_empresa" on string in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 218
+[08-Nov-2024 16:30:57 Europe/Berlin] PHP Warning:  Attempt to read property "nome" on string in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 219
+[08-Nov-2024 16:30:57 Europe/Berlin] PHP Warning:  Attempt to read property "cpf" on string in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 220
+[08-Nov-2024 16:30:57 Europe/Berlin] PHP Warning:  Attempt to read property "senha" on string in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 221
+[08-Nov-2024 16:31:28 Europe/Berlin] PHP Warning:  Attempt to read property "id_empresa" on string in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 218
+[08-Nov-2024 16:31:28 Europe/Berlin] PHP Warning:  Attempt to read property "nome" on string in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 219
+[08-Nov-2024 16:31:28 Europe/Berlin] PHP Warning:  Attempt to read property "cpf" on string in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 220
+[08-Nov-2024 16:31:28 Europe/Berlin] PHP Warning:  Attempt to read property "senha" on string in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 221
+[08-Nov-2024 16:40:28 Europe/Berlin] PHP Warning:  Attempt to read property "id_empresa" on string in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 218
+[08-Nov-2024 16:40:28 Europe/Berlin] PHP Warning:  Attempt to read property "nome" on string in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 219
+[08-Nov-2024 16:40:28 Europe/Berlin] PHP Warning:  Attempt to read property "cpf" on string in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 220
+[08-Nov-2024 16:40:28 Europe/Berlin] PHP Warning:  Attempt to read property "senha" on string in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 221
+[08-Nov-2024 16:42:48 Europe/Berlin] PHP Warning:  Attempt to read property "id_empresa" on string in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 218
+[08-Nov-2024 16:42:48 Europe/Berlin] PHP Warning:  Attempt to read property "nome" on string in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 219
+[08-Nov-2024 16:42:48 Europe/Berlin] PHP Warning:  Attempt to read property "cpf" on string in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 220
+[08-Nov-2024 16:42:48 Europe/Berlin] PHP Warning:  Attempt to read property "senha" on string in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 221
+[08-Nov-2024 16:46:02 Europe/Berlin] PHP Warning:  Attempt to read property "id_empresa" on string in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 218
+[08-Nov-2024 16:46:02 Europe/Berlin] PHP Warning:  Attempt to read property "nome" on string in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 219
+[08-Nov-2024 16:46:02 Europe/Berlin] PHP Warning:  Attempt to read property "cpf" on string in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 220
+[08-Nov-2024 16:46:02 Europe/Berlin] PHP Warning:  Attempt to read property "senha" on string in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 221
+[08-Nov-2024 16:59:19 Europe/Berlin] PHP Warning:  Attempt to read property "id_empresa" on string in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 218
+[08-Nov-2024 16:59:19 Europe/Berlin] PHP Warning:  Attempt to read property "nome" on string in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 219
+[08-Nov-2024 16:59:19 Europe/Berlin] PHP Warning:  Attempt to read property "cpf" on string in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 220
+[08-Nov-2024 16:59:19 Europe/Berlin] PHP Warning:  Attempt to read property "senha" on string in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 221
+[08-Nov-2024 17:05:08 Europe/Berlin] PHP Warning:  Attempt to read property "id_empresa" on string in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 218
+[08-Nov-2024 17:05:08 Europe/Berlin] PHP Warning:  Attempt to read property "nome" on string in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 219
+[08-Nov-2024 17:05:08 Europe/Berlin] PHP Warning:  Attempt to read property "cpf" on string in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 220
+[08-Nov-2024 17:05:08 Europe/Berlin] PHP Warning:  Attempt to read property "senha" on string in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 221
+[08-Nov-2024 17:07:02 Europe/Berlin] PHP Warning:  Attempt to read property "id_empresa" on string in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 218
+[08-Nov-2024 17:07:02 Europe/Berlin] PHP Warning:  Attempt to read property "nome" on string in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 219
+[08-Nov-2024 17:07:02 Europe/Berlin] PHP Warning:  Attempt to read property "cpf" on string in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 220
+[08-Nov-2024 17:07:02 Europe/Berlin] PHP Warning:  Attempt to read property "senha" on string in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 221
+[08-Nov-2024 17:07:13 Europe/Berlin] PHP Warning:  Attempt to read property "id_empresa" on string in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 218
+[08-Nov-2024 17:07:13 Europe/Berlin] PHP Warning:  Attempt to read property "nome" on string in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 219
+[08-Nov-2024 17:07:13 Europe/Berlin] PHP Warning:  Attempt to read property "cpf" on string in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 220
+[08-Nov-2024 17:07:13 Europe/Berlin] PHP Warning:  Attempt to read property "senha" on string in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 221
+[08-Nov-2024 17:07:29 Europe/Berlin] PHP Warning:  Attempt to read property "id_empresa" on string in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 218
+[08-Nov-2024 17:07:29 Europe/Berlin] PHP Warning:  Attempt to read property "nome" on string in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 219
+[08-Nov-2024 17:07:29 Europe/Berlin] PHP Warning:  Attempt to read property "cpf" on string in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 220
+[08-Nov-2024 17:07:29 Europe/Berlin] PHP Warning:  Attempt to read property "senha" on string in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 221
+[08-Nov-2024 17:10:33 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$id_empresa in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 218
+[08-Nov-2024 17:10:33 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$nome in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 219
+[08-Nov-2024 17:10:33 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$cpf in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 220
+[08-Nov-2024 17:11:30 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$id_empresa in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 218
+[08-Nov-2024 17:11:30 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$nome in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 219
+[08-Nov-2024 17:11:30 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$cpf in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 220
+[08-Nov-2024 17:11:30 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$senha in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 221
+[08-Nov-2024 17:21:24 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$id_empresa in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 218
+[08-Nov-2024 17:21:24 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$cpf in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 220
+[08-Nov-2024 17:21:58 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$cpf in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 220
+[08-Nov-2024 17:22:11 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'racoon.empresas_ativas' doesn't exist in C:\xampp\htdocs\backend\repository\empresa_repository.php:116
+Stack trace:
+#0 C:\xampp\htdocs\backend\repository\empresa_repository.php(116): PDOStatement->execute()
+#1 C:\xampp\htdocs\backend\controller\funcionario_controller.php(230): EmpresaRepository::one('1')
+#2 C:\xampp\htdocs\backend\controller\funcionario_controller.php(15): FuncionarioController::create(Object(stdClass))
+#3 C:\xampp\htdocs\backend\index.php(33): FuncionarioController::route('create')
+#4 {main}
+  thrown in C:\xampp\htdocs\backend\repository\empresa_repository.php on line 116
+[08-Nov-2024 17:22:33 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'racoon.empresas_ativas' doesn't exist in C:\xampp\htdocs\backend\repository\empresa_repository.php:116
+Stack trace:
+#0 C:\xampp\htdocs\backend\repository\empresa_repository.php(116): PDOStatement->execute()
+#1 C:\xampp\htdocs\backend\controller\funcionario_controller.php(230): EmpresaRepository::one('1')
+#2 C:\xampp\htdocs\backend\controller\funcionario_controller.php(15): FuncionarioController::create(Object(stdClass))
+#3 C:\xampp\htdocs\backend\index.php(33): FuncionarioController::route('create')
+#4 {main}
+  thrown in C:\xampp\htdocs\backend\repository\empresa_repository.php on line 116
+[08-Nov-2024 17:23:53 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$cpf in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 220
+[08-Nov-2024 17:26:01 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'racoon.empresas_ativas' doesn't exist in C:\xampp\htdocs\backend\repository\empresa_repository.php:116
+Stack trace:
+#0 C:\xampp\htdocs\backend\repository\empresa_repository.php(116): PDOStatement->execute()
+#1 C:\xampp\htdocs\backend\controller\funcionario_controller.php(230): EmpresaRepository::one('1')
+#2 C:\xampp\htdocs\backend\controller\funcionario_controller.php(15): FuncionarioController::create(Object(stdClass))
+#3 C:\xampp\htdocs\backend\index.php(33): FuncionarioController::route('create')
+#4 {main}
+  thrown in C:\xampp\htdocs\backend\repository\empresa_repository.php on line 116
+[08-Nov-2024 18:21:06 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: json_decode(): Argument #1 ($json) must be of type string, stdClass given in C:\xampp\htdocs\backend\controller\funcionario_controller.php:215
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\funcionario_controller.php(215): json_decode(Object(stdClass))
+#1 C:\xampp\htdocs\backend\controller\funcionario_controller.php(15): FuncionarioController::create(Object(stdClass))
+#2 C:\xampp\htdocs\backend\index.php(33): FuncionarioController::route('create')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 215
+[08-Nov-2024 18:21:35 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'atualizado' in 'field list' in C:\xampp\htdocs\backend\repository\funcionario_repository.php:147
+Stack trace:
+#0 C:\xampp\htdocs\backend\repository\funcionario_repository.php(147): PDOStatement->execute()
+#1 C:\xampp\htdocs\backend\controller\funcionario_controller.php(270): FuncionarioRepository::login('1111111111', 'senha12233')
+#2 C:\xampp\htdocs\backend\controller\funcionario_controller.php(15): FuncionarioController::create(Object(stdClass))
+#3 C:\xampp\htdocs\backend\index.php(33): FuncionarioController::route('create')
+#4 {main}
+  thrown in C:\xampp\htdocs\backend\repository\funcionario_repository.php on line 147
+[08-Nov-2024 18:22:25 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'atualizado' in 'field list' in C:\xampp\htdocs\backend\repository\funcionario_repository.php:147
+Stack trace:
+#0 C:\xampp\htdocs\backend\repository\funcionario_repository.php(147): PDOStatement->execute()
+#1 C:\xampp\htdocs\backend\controller\funcionario_controller.php(270): FuncionarioRepository::login('1111111111', 'senha12233')
+#2 C:\xampp\htdocs\backend\controller\funcionario_controller.php(15): FuncionarioController::create(Object(stdClass))
+#3 C:\xampp\htdocs\backend\index.php(33): FuncionarioController::route('create')
+#4 {main}
+  thrown in C:\xampp\htdocs\backend\repository\funcionario_repository.php on line 147

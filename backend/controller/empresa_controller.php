@@ -8,28 +8,25 @@ require_once '../backend/enums/status.php';
 class EmpresaController {
 
     public static function route($segment) {
-    
         return match ($segment) {
             'login' => self::login(
-                json_encode(file_get_contents('php://input'))
+                json_decode(file_get_contents('php://input'))
             ),
             'create' => self::create(
-                json_encode(file_get_contents('php://input'))
+                json_decode(file_get_contents('php://input'))
             ),
             'collect' => self::collect(
                 $_GET['id_empresa']
             ),
             'modify' => self::modify(
-                json_encode(file_get_contents('php://input'))
+                json_decode(file_get_contents('php://input'))
             ),
             'delete' => self::delete(
                 $_GET['id_empresa']
             ),
             default => http_response_code(Status::NOT_FOUND->value)
         };
-
     }
-
     private static function login($request) {
 
         $esta_valido = ResponseClass::ifNull(

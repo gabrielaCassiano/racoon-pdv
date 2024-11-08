@@ -12,16 +12,16 @@ class ClienteController {
         return match($segment) {
             'create' => self::create(
                 json_encode(file_get_contents('php://input'))
-            ), //TODO Test
+            ),
             'modify' => self::modify(
                 json_encode(file_get_contents('php://input'))
-            ), //TODO Test
+            ),
             'delete' => self::delete(
                 $_GET['id_cliente']
-            ), //TODO Test
+            ),
             'collect' => self::collect(
                 $_GET['id_cliente'], $_GET['nome_ou_cpf']
-            ), //TODO Test
+            ),
             default => http_response_code(Status::NOT_FOUND->value)
         };
 

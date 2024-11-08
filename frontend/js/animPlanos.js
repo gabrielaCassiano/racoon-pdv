@@ -50,3 +50,30 @@ prev.onclick = function() {
         loadShow();
     }
 }
+
+
+
+const divs = document.querySelectorAll('.item');
+        let divSelecionada = null; 
+
+        function desmarcarTodas() {
+            divs.forEach(div => {
+                div.classList.remove('selecionada');
+            });
+        }
+
+        
+        divs.forEach(div => {
+            div.addEventListener('click', () => {
+               
+                if (div === divSelecionada) {
+                    div.classList.remove('selecionada');
+                    divSelecionada = null; 
+                } else {
+                    
+                    desmarcarTodas();
+                    div.classList.add('selecionada');
+                    divSelecionada = div; 
+                }
+            });
+        });

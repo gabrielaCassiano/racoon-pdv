@@ -12,8 +12,20 @@
           <div id="modalEditar" style="display: none;">
             <div class="bloco">
                 <div class="dentro">
-                  <img  class="logo" src="../src/logomenor.png" alt="logo raccoon">
-                  <button class="enviarEditar">Enviar</button> 
+                    <h1>Cadastro funcionario</h1>
+                  <form class="funcionarioCadastro" action="">
+                    <input type="text" id="nomeFuncionario" name="nomeFuncionario" placeholder="nome funcionario">
+                    <input type="text"  id="cpfFuncionario" name="cpfFuncionario" placeholder="cpf">
+                    <input type="text" id="codigoFuncionario" name="codigoFuncionario" placeholder="codigo">
+                    <select name="Categoria" id="cat">
+                        <option value="" selected disabled hidden>Selecione uma função </option>
+                        <option value="op1">operador de caixa</option>
+                        <option value="op2">repositor</option>
+                        <option value="op2">lider de frente</option>
+                    </select>
+
+                  </form>
+                  <button id="btnCadastroFuncionario" class="enviarEditar">Enviar</button> 
                 </div>    
                 <button class="botvoltarmodal">
                   <img class="arrow" src="../src/arrow.png" alt="voltar">
@@ -26,9 +38,29 @@
             <div id="modalPlano" style="display: none;">
                 <div class="bloco">
                     <div class="dentro">
-                    <button class="enviarPlano">Enviar</button> 
-                    </div>    
-                    <button class="botvoltarmodal">
+                        <h1>Altualizar Plano</h1>
+                        <div class="planosAtualizar">
+                            <h2>Básico</h2>
+                            <p>Conheça nossos planos e selecione o que melhor se encaixa no perfil de sua empresa: R$ 35,00</p>
+                           
+                        </div>
+                        <div class="planosAtualizar" >
+                            <h2>Médio</h2>
+                            <p>Conheça nossos planos e selecione o que melhor se encaixa no perfil de sua empresa: R$ 35,00</p>
+                            
+                        </div>
+                        <div class="planosAtualizar">
+                            <h2>Avançado</h2>
+                            <p>Conheça nossos planos e selecione o que melhor se encaixa no perfil de sua empresa: R$ 35,00</p>
+
+                        </div>
+                        <button class="enviarPlano">Enviar</button> 
+                    </div> 
+
+                   
+                        <button id="btnplanos" class="botvoltarmodal">
+
+                
                     <img class="arrow" src="../src/arrow.png" alt="voltar">
                 </button>         
                 </div>
@@ -39,8 +71,23 @@
             <div id="modalCadastrarFunc" style="display: none;">
                 <div class="bloco">
                     <div class="dentro">
+                        <div class="editarPerfilImg">
+                            <img class="fotoFofo" src="../src/perfilFofo.png" alt="">
 
-                      <button class="enviarCadastrarFunc">Enviar</button> 
+                            <p>EMPRESA PERVOS</p>
+                            <input type="button" id="editarFoto" name="editarFoto" value="Editar Foto">
+                        </div>
+
+                        <div class="editarPerfilImg2">
+                            <h2>Editar Informações</h2>
+                            <input type="text" name="" id="" placeholder="Novo Nome">
+                            <input type="text" name="" id="">
+                            <input type="text" name="" id="">
+                           
+                            <button class="enviarCadastrarFunc">Enviar</button> 
+                        </div>
+
+
                     </div>    
                     <button class="botvoltarmodal">
                       <img class="arrow" src="../src/arrow.png" alt="voltar">
@@ -249,5 +296,6 @@
 
     <script src="../js/perfilEmpresa.js"></script>
     <script src="../js/signUp.js"></script>
+    <script src="../js/cadastrarFuncionario.jsx"></script>
 </body>
 </html>

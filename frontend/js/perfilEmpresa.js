@@ -50,3 +50,29 @@ cadastrarF.addEventListener('click', (event) => {
         modalEditar.style.display = 'flex'
     }
 })
+
+
+const divs = document.querySelectorAll('.planosAtualizar');
+        let divSelecionada = null; 
+
+        function desmarcarTodas() {
+            divs.forEach(div => {
+                div.classList.remove('selecionada');
+            });
+        }
+
+        
+        divs.forEach(div => {
+            div.addEventListener('click', () => {
+               
+                if (div === divSelecionada) {
+                    div.classList.remove('selecionada');
+                    divSelecionada = null; 
+                } else {
+                    
+                    desmarcarTodas();
+                    div.classList.add('selecionada');
+                    divSelecionada = div; 
+                }
+            });
+        });

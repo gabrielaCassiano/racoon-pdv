@@ -10,17 +10,17 @@ class FuncionarioController {
 
         return match($segment) {
             'login' => self::login(
-                json_encode(file_get_contents('php://input'))
+                json_decode(file_get_contents('php://input'))
             ),//TODO test
             'create' => self::create(
-                json_encode(file_get_contents('php://input'))
+                json_decode(file_get_contents('php://input'))
             ),//TODO test
             'collect' => self::collect(
                 $_GET['id_empresa'], 
                 $_GET['id_funcionario']
             ),//TODO test
             'modify' => self::modify(
-                json_encode(file_get_contents('php://input'))
+                json_decode(file_get_contents('php://input'))
             ),//TODO test
             'delete' => self::delete(
                 $_GET['id_empresa']
@@ -213,6 +213,16 @@ class FuncionarioController {
 
     private static function create($request) {
 
+    
+        if (is_null($request)) {
+            return ResponseClass::answer(
+                "Erro ao decodificar o JSON",
+                Status::BAD_REQUEST
+            );
+        }
+    
+        // var_dump($request);
+    
         $esta_valido = ResponseClass::ifNull(
             "request", $request,
             "id_empresa", $request->id_empresa,
@@ -220,62 +230,56 @@ class FuncionarioController {
             "cpf", $request->cpf,
             "senha", $request->senha
         );
-
+    
         if (!$esta_valido) {
-
-            return;
-
+            return ResponseClass::answer(
+                "Dados insuficientes no request",
+                Status::BAD_REQUEST
+            );
         }
-
+    
         $empresa = EmpresaRepository::one($request->id_empresa);
-
         if (!$empresa) {
-
-            ResponseClass::answer(
-                "Nenhuma empresa foi encontrado com este id",
+            return ResponseClass::answer(
+                "Nenhuma empresa encontrada com este ID",
                 Status::NOT_FOUND
             );
-
-            return;
-
         }
-
-        $funcionou = FuncionarioRepository::create(
-            $request->id_empresa,
-            $request->nome,
-            $request->cpf,
-            $request->senha
-        );
-
-        if (!$funcionou) {
-
+    
+        try {
+            $funcionou = FuncionarioRepository::create(
+                $request->id_empresa,
+                $request->nome,
+                $request->cpf,
+                $request->senha
+            );
+    
+            if (!$funcionou) {
+                return ResponseClass::answer(
+                    "Erro ao criar o funcionário",
+                    Status::INTERNAL_SERVER_ERROR
+                );
+            }
+        } catch (Exception $e) {
             return ResponseClass::answer(
-                "Algum erro ocorreu enquanto o funcionario era criado",
+                "Erro: " . $e->getMessage(),
                 Status::INTERNAL_SERVER_ERROR
             );
-
         }
-
-        $funcionario = FuncionarioRepository::login(
-            $request->cpf, 
-            $request->senha
-        );
-
+    
+        $funcionario = FuncionarioRepository::login($request->cpf, $request->senha);
         if (!$funcionario) {
-
             return ResponseClass::answer(
-                "Algum erro ocorreu enquanto o funcionario era coletado",
+                "Erro ao coletar o funcionário após criação",
                 Status::INTERNAL_SERVER_ERROR
             );
-
         }
-
+    
         return ResponseClass::answerWithBody(
             $funcionario,
             Status::CREATED
         );
-
-    } 
+    }
 
 }
 

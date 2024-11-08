@@ -90,7 +90,43 @@ class EmpresaRepository {
 
         return $stmt->fetch(PDO::FETCH_ASSOC);
 
+
+
     }
+
+
+    // public static function one($id_empresa) {
+    //     global $pdo;
+    
+    //     $stmt = $pdo->prepare("
+    //         SELECT 
+    //             id,
+    //             nome_empresa,
+    //             nome_criador,
+    //             cnpj,
+    //             cpf,
+    //             criado
+    //         FROM 
+    //             empresas_ativas
+    //         WHERE 
+    //             id = :id_empresa
+    //     ");
+    
+    //     $stmt->bindParam(":id_empresa", $id_empresa);
+    //     $stmt->execute();
+    
+    //     return $stmt->fetch(PDO::FETCH_ASSOC);
+    // }
+    
+
+
+
+
+
+
+
+
+
 
     public static function validate($id_empresa, $cnpj, $senha) {
 
