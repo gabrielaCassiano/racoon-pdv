@@ -24,15 +24,15 @@ $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
 $segments = explode('/', trim($uri, '/'));  
 
-if (isset($segments[0])) {
+if (isset($segments[1])) {
 
-    match ($segments[0]) {
+    match ($segments[1]) {
 
-        'empresa' => EmpresaController::route($segments[1]), //TEST
-        'produto' => ProdutoController::route($segments[1]), //TEST
-        'funcionario' => FuncionarioController::route($segments[1]), //TEST
-        'cliente' => ClienteController::route($segments[1]), //TEST
-        'caixa' => CaixaController::routes($segments[1]),
+        'empresa' => EmpresaController::route($segments[2]), //TEST
+        'produto' => ProdutoController::route($segments[2]), //TEST
+        'funcionario' => FuncionarioController::route($segments[2]), //TEST
+        'cliente' => ClienteController::route($segments[2]), //TEST
+        'caixa' => CaixaController::routes($segments[2]),
 //        'compras' => match($segments[1]) {
 //            'create',
 //            'collect',

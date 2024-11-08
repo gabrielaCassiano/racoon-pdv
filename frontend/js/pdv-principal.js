@@ -12,38 +12,20 @@ const relatorioRedirectBtn = document.getElementById("relatorioRedirectBtn")
 const modalCancelar = document.getElementById("modalCancelar")
 const btnCancelar = document.getElementById("btnCancelar")
 
+const btnLoginFuncionario = document.getElementById("botaoLoginFunc")
+const optionsPdv = document.getElementById("optPdv")
+const optionsOpen = document.getElementById("optOpen")
+
+const btnBuscarProduto = document.getElementById("buscarProduto")
+const listagemProdutos = document.getElementById("listagemProdutos")
+const inpProduto = document.getElementById("produto")
+
 btnCancelar.addEventListener('click', () => {
     let modalStateCancelar = modalCancelar.style.display
     if (modalStateCancelar == 'none') {
         modalCancelar.style.display = 'flex'
     }
 })
-
-
-
-import { mockFetch } from './mocks/mockProducts.js'
-const fetchData = mockFetch;
-
-const btnBuscarProduto = document.getElementById("buscarProduto")
-const listagemProdutos = document.getElementById("listagemProdutos")
-const inpProduto = document.getElementById("produto")
-
-btnBuscarProduto.addEventListener('click', () => {
-    let valueProd = String(inpProduto.value)
-    console.log(valueProd)
-    fetchData(`/api/products/${valueProd}`, {method: 'GET'})
-        .then(response => response.json())
-        .then(data => listagemProdutos.innerHTML += `<tr>
-                                                        <td>${data.id}</td>
-                                                        <td>${data.name}</td>
-                                                        <td>${data.qtd}</td>
-                                                        <td>${data.preco}</td>
-                                                        <td>${data.preco}</td>
-                                                    </tr>`)
-        .catch(error => console.error('Erro na chamada /api/products: ', error))
-})
- 
-
 
 perfilRedirectBtn.addEventListener('click', () => {
 
@@ -77,6 +59,11 @@ btnAbrirCaixa.addEventListener('click', () => {
     if (modalStateAbrirCaixa == 'none') {
         modalAbrirCaixa.style.display = 'flex'
     }
+})
+btnLoginFuncionario.addEventListener('click', () => {
+    modalAbrirCaixa.style.display = 'none'
+    optionsPdv.style.display = 'flex'
+    optionsOpen.style.display = 'none'
 })
 // MODAL FIM
 // MODAL INICIO

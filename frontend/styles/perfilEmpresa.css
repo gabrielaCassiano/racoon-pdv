@@ -142,8 +142,6 @@ main {
 
 
 
-
-
 .pezin img{
     margin: 0;
     height: 3.5em;
@@ -260,7 +258,7 @@ main {
     justify-content: center;
     flex-direction: column;
     background-color: rgb(255, 255, 255);
-    height: 35em;
+    height: 37em;
     width: 50em;
     border-radius: 2em;
     box-shadow: 2px 2px 40px 3px rgb(0 0 0 / 20%);
@@ -281,8 +279,16 @@ main {
     align-items: center;
 }
 
+.funcionarioCadastro{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
 .dentro h1{
     font-size: 2.5em;
+}
+.dentro{
+    margin-top: 3em;
 }
 
 .dentro input{
@@ -299,19 +305,104 @@ main {
 .enviarEditar, .enviarPlano, .enviarCadastrarFunc{
     
     background-color: blueviolet;
-    width: 22em;
-    
+    width: 23em;
+    height: 3em;
     border-radius: 0.5em;
     background-color: black;
     color: white;
     border: none;
+    transition:  0.5s;
     transition: background-color  200ms ease-in-out, color 150ms ease-in-out, scale 300ms ease-in-out;
+}
+.enviarPlano:hover{
+    background-color: #a5e85d;
+    color: #000000;
+}
+.editarPerfilImg{
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    gap: 2em;
+    
+    box-shadow: 2px 2px 30px 3px rgb(0 0 0 / 20%);
+    border-radius: 1em;
+    height: 8em;
+    width: 40em;
+}
+.editarPerfilImg2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    gap: 0.5em;
+  
+    
+    box-shadow: 2px 2px 30px 3px rgb(0 0 0 / 20%);
+    border-radius: 1em;
+    height: 20em;
+    width: 40em;
+}
+.editarPerfilImg input{
+    margin-left: 9em;
+}
+
+#editarFoto{
+    
+    width: 8em;
+}
+.editarPerfilImg img{
+    margin-left: 1em;
+}
+.fotoFofo{
+    
+    height: 6em;
+    width: 6em;
+}
+#btnplanos{
+    margin-bottom: 2em;
+}
+.btnsPlanos{
+    display: flex;
+    background-color: #b3e47e;
 }
 #botaoLoginFunc:hover{
     background-color: #a5e85d;
    color: rgb(0, 0, 0)
 }
+.enviarEditar:hover{
+    background-color: #a5e85d;
+    color: rgb(0, 0, 0)
+}
+.planosAtualizar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 1em;
+    height: 6.5em;
+    width: 30em;
+    border: solid 2px;
+    transition:  0.5s;
+}
+.planosAtualizar:hover{
+    scale: 1.1;
+}
+.selecionada {
+    border-color: #a5e85d; 
+}
 
+.planosAtualizar h2{
+    
+    margin: 0;
+}
+.planosAtualizar p{
+    color: #000000;
+    margin-left: 0.5em;
+}
+.dentro h1{
+    margin: 0;
+}
 
 .botvoltarmodal{
     display: flex;
