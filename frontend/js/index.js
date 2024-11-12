@@ -1,6 +1,6 @@
 const container = document.getElementById('container');
 const registerbtn = document.getElementById('register');
-const loginbtn = document.getElementById('loginBtn');
+// const loginbtn = document.getElementById('loginBtn');
 // const signInBtn = document.getElementById('signInBtn');
 const esqueceuSenha = document.getElementById('esqueceuSenha');
 const modalEsqueceuSenha = document.getElementById('modalEsqueceuSenha');

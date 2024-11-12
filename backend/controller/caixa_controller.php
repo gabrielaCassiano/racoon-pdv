@@ -14,10 +14,10 @@ class CaixaController {
 
         return match($segment) {
             'open' => self::open(
-                json_encode(file_get_contents('php://input')) 
+                json_decode(file_get_contents('php://input')) 
             ),
             'close' => self::close(
-                json_encode(file_get_contents('php://input')) 
+                json_decode(file_get_contents('php://input')) 
             ),
             'collect' => self::collect(
                 $_GET['id_caixa'], $_GET['id_empresa']

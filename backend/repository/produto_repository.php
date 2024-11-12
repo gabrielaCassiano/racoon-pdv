@@ -4,14 +4,14 @@ require_once '../backend/utils/update.php';
 
 class ProdutoRepository {
 
-    public static function create($id_empresa, $id_categoria, $nome, $codigo_barras, $valor, $porcentagem_cashback) {
+    public static function create($id_empresa, $categoria, $nome, $codigo_barras, $valor, $porcentagem_cashback) {
 
         global $pdo;
 
         $stmt = $pdo->prepare("
-            INSERT INTO produto (
+            INSERT INTO produto (   
                 id_empresa, 
-                id_categoria, 
+                categoria, 
                 nome, 
                 codigo_barras, 
                 valor,
@@ -20,7 +20,7 @@ class ProdutoRepository {
             )
             VALUES (
                 :id_empresa,
-                :id_categoria,
+                :categoria,
                 :nome,
                 :codigo_barras,
                 :valor,
@@ -30,7 +30,7 @@ class ProdutoRepository {
         ");
 
         $stmt->bindParam(":id_empresa", $id_empresa);
-        $stmt->bindParam(":id_categoria", $id_categoria);
+        $stmt->bindParam(":categoria", $categoria);
         $stmt->bindParam(":nome", $nome);
         $stmt->bindParam(":codigo_barras", $codigo_barras);
         $stmt->bindParam(":valor", $valor);
@@ -40,63 +40,144 @@ class ProdutoRepository {
 
     }
 
-    public static function one($id) {
+    // public static function one($id) {
 
-        global $pdo;
+    //     global $pdo;
 
-        $stmt = $pdo->prepare("
-            SELECT 
-                id,
-                id_empresa, 
-                id_categoria, 
-                nome, 
-                codigo_barras, 
-                valor,
-                porcentagem_cashback,
-                criado 
-            FROM
-                produto 
-            WHERE 
-                id = :id
-                AND excluido IS NULL
-        ");
+    //     $stmt = $pdo->prepare("
+    //         SELECT 
+    //             id,
+    //             id_empresa, 
+    //             categoria, 
+    //             nome, 
+    //             codigo_barras, 
+    //             valor,
+    //             porcentagem_cashback,
+    //             criado 
+    //         FROM
+    //             produto 
+    //         WHERE 
+    //             id = :id
+    //             AND excluido IS NULL
+    //     ");
 
-        $stmt->bindParam(":id", $id);
+    //     $stmt->bindParam(":id", $id);
 
-        //In case of erro 
-        //return $stmt->fetch(PDO::FETCH_ASSOC);
-        return $stmt->fetchAll();
+    //     //In case of erro 
+    //     //return $stmt->fetch(PDO::FETCH_ASSOC);
+    //     return $stmt->fetchAll();
 
-    }
+    // }
 
-    public static function all($id_empresa) {
+    // public static function all($id_empresa) {
 
-        global $pdo;
+    //     global $pdo;
 
-        $stmt = $pdo->prepare("
-            SELECT 
-                id,
-                id_empresa, 
-                id_categoria, 
-                nome, 
-                codigo_barras, 
-                valor,
-                porcentagem_cashback,
-                criado 
-            FROM
-                produto 
-            WHERE 
-                id_empresa = :id_empresa
-                AND excluido IS NULL
-        ");
+    //     $stmt = $pdo->prepare("
+    //         SELECT 
+    //             id,
+    //             id_empresa, 
+    //             categoria, 
+    //             nome, 
+    //             codigo_barras, 
+    //             valor,
+    //             porcentagem_cashback,
+    //             criado 
+    //         FROM
+    //             produto 
+    //         WHERE 
+    //             id_empresa = :id_empresa
+    //             AND excluido IS NULL
+    //     ");
 
-        $stmt->bindParam(":id_empresa", $id_empresa);
+    //     $stmt->bindParam(":id_empresa", $id_empresa);
 
-        //In case of erro 
-        //return $stmt->fetch(PDO::FETCH_ASSOC);
-        return $stmt->fetchAll();
+    //     //In case of erro 
+    //     //return $stmt->fetch(PDO::FETCH_ASSOC);
+    //     return $stmt->fetchAll();
 
-    }
+    // }
+
+
+   
+
+        public static function one($codigo_barras) {
+            global $pdo;
+    
+            $stmt = $pdo->prepare("
+                SELECT 
+                    id,
+                    id_empresa, 
+                    categoria, 
+                    nome, 
+                    codigo_barras, 
+                    valor,
+                    porcentagem_cashback,
+                    criado 
+                FROM
+                    produto 
+                WHERE 
+                    codigo_barras = :codigo
+                    AND excluido IS NULL
+            ");
+            $stmt->bindParam(":codigo", $codigo_barras);
+            $stmt->execute();
+    
+            return $stmt->fetch(PDO::FETCH_ASSOC);
+        }
+    
+        public static function all($id_empresa) {
+            global $pdo;
+    
+            $stmt = $pdo->prepare("
+                SELECT 
+                    id,
+                    id_empresa, 
+                    categoria, 
+                    nome, 
+                    codigo_barras, 
+                    valor,
+                    porcentagem_cashback,
+                    criado 
+                FROM
+                    produto 
+                WHERE 
+                    id_empresa = :id_empresa
+                    AND excluido IS NULL
+            ");
+            $stmt->bindParam(":id_empresa", $id_empresa);
+            $stmt->execute();
+    
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     public static function collect($id_empresa, $codigo_barras) {
 
@@ -106,7 +187,7 @@ class ProdutoRepository {
             SELECT 
                 id,
                 id_empresa, 
-                id_categoria, 
+                categoria, 
                 nome, 
                 codigo_barras, 
                 valor,
@@ -122,10 +203,10 @@ class ProdutoRepository {
 
         $stmt->bindParam(":id_empresa", $id_empresa);
         $stmt->bindParam(":codigo_barras", $codigo_barras);
-
+        $stmt->execute();
         //In case of erro 
-        //return $stmt->fetch(PDO::FETCH_ASSOC);
-        return $stmt->fetch();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+        // return $stmt->fetch();
 
     }
 
@@ -167,7 +248,7 @@ class ProdutoRepository {
             $stmt,
             ":id", "",
             ":id_empresa", $body->id_empresa,
-            ":id_categoria", $body->id_categoria,
+            ":categoria", $body->categoria,
             ":nome", $body->nome,
             ":codigo_barras", $body->codigo_barras,
             ":valor", $body->valor,

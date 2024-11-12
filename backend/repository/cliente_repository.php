@@ -108,9 +108,9 @@ class ClienteRepository {
             SELECT
                 id,
                 nome,
-                cpf,        
+                cpf,     
                 criado,
-                atualizado
+                atualizado   
             FROM 
                 cliente
             WHERE 
@@ -119,8 +119,9 @@ class ClienteRepository {
         ");
 
         $stmt->bindParam(":cpf", $cpf);
+        $stmt->execute();
 
-        return $stmt->fetch();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
 
     }
 

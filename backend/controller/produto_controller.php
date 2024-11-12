@@ -11,16 +11,16 @@ class ProdutoController {
 
         return match($segment) {
             'create' => self::create(
-                json_encode(file_get_contents('php://input'))
+                json_decode(file_get_contents('php://input'))
             ),//TODO test
             'collect' => self::collect(
-                $_GET['id_empresa'], $_GET['id_produto']
+                $_GET['id_empresa'], $_GET['codigo_barras'] ?? null
             ),//TODO test
             'modify' => self::modify(
-                json_encode(file_get_contents('php://input'))
+                json_decode(file_get_contents('php://input'))
             ),//TODO test 
             'delete' => self::delete(
-                $_GET['id_produto']
+                $_GET['codigo_barras']
             ),//TODO test
             default => http_response_code(Status::NOT_FOUND->value)
         };
@@ -32,7 +32,7 @@ class ProdutoController {
         $esta_valido = ResponseClass::ifNull(
             "request", $request,
             "id_empresa", $request->id_empresa,
-            "id_categoria", $request->id_categoria,
+            "categoria", $request->categoria,
             "nome", $request->nome,
             "codigo_barras", $request->codigo_barras,
             "valor", $request->valor,
@@ -47,7 +47,7 @@ class ProdutoController {
 
         $foi_inserido = ProdutoRepository::create(
             $request->id_empresa,
-            $request->id_categoria,
+            $request->categoria,
             $request->nome,
             $request->codigo_barras,
             $request->valor,
@@ -69,7 +69,7 @@ class ProdutoController {
             $request->id_empresa,
             $request->codigo_barras
         );
-
+        
         if (!$produto) {
 
             ResponseClass::answer(
@@ -86,34 +86,72 @@ class ProdutoController {
 
     }
 
-    private static function collect($id_empresa, $id_produto) {
+    // private static function collect($id_empresa, $codigo_barras) {
 
-        $produtos = null;
+    //     $produtos = null;
 
-        if ($id_empresa != null) {
+    //     if ($id_empresa != null) {
 
-            $produtos = ProdutoRepository::all($id_empresa);
+    //         $produtos = ProdutoRepository::all($id_empresa);
 
-        } else if ($id_produto != null) {
+    //     } else if ($codigo_barras != null) {
 
-            $produtos = ProdutoRepository::one($id_produto);
+    //         $produtos = ProdutoRepository::one($codigo_barras);
 
-        }
+    //     }
 
-        if (!$produtos) {
+    //     if (!$produtos) {
 
+    //         return ResponseClass::answer(
+    //             "Nenhum produto foi encontrado",
+    //             Status::NO_CONTENT
+    //         );
+
+    //     }
+
+    //     return ResponseClass::answerWithBody(
+    //         $produtos,
+    //         Status::OK
+    //     );
+
+    // }
+
+
+    private static function collect($id_empresa, $codigo_barras) {
+        header('Content-Type: application/json; charset=utf-8');
+        
+        if (!$id_empresa) {
             return ResponseClass::answer(
-                "Nenhum produto foi encontrado",
+                "ID da empresa é necessário",
+                Status::BAD_REQUEST
+            );
+        }
+    
+        // Verificar se o 'codigo_barras' foi passado como parâmetro
+        $codigo_barras = isset($_GET['codigo_barras']) ? $_GET['codigo_barras'] : null;
+    
+        if ($codigo_barras) {
+            $produto = ProdutoRepository::one($codigo_barras);
+            if (!$produto) {
+                return ResponseClass::answer(
+                    "Nenhum produto encontrado",
+                    Status::NO_CONTENT
+                );
+            }
+            return ResponseClass::answerWithBody([$produto], Status::OK);
+        }
+    
+        // Buscar todos os produtos de uma empresa
+        $produtos = ProdutoRepository::all($id_empresa);
+    
+        if (empty($produtos)) {
+            return ResponseClass::answer(
+                "Nenhum produto encontrado",
                 Status::NO_CONTENT
             );
-
         }
-
-        return ResponseClass::answerWithBody(
-            $produtos,
-            Status::OK
-        );
-
+    
+        return ResponseClass::answerWithBody($produtos, Status::OK);
     }
 
     private static function modify($request) {
@@ -146,7 +184,7 @@ class ProdutoController {
             $request,
             Utils::format(
                 "id_empresa = :id_empresa", $request->id_empresa,
-                "id_categoria = :id_categoria", $request->id_categoria,
+                "categoria = :categoria", $request->categoria,
                 "nome = :nome", $request->nome,
                 "codigo_barras = :codigo_barras", $request->codigo_barras,
                 "valor = :valor", $request->valor,
@@ -171,7 +209,7 @@ class ProdutoController {
         if (!$produto) {
 
             return ResponseClass::answer(
-                "Algum erro ocorreu enquanto o produto era coletado",
+                "Algum erro ocorreu enquanto os produto era coletado",
                 Status::INTERNAL_SERVER_ERROR
             );
 
@@ -184,10 +222,10 @@ class ProdutoController {
 
     }
 
-    private static function delete($id_produto) {
+    private static function delete($codigo_barras) {
 
         $esta_valido = ResponseClass::ifNull(
-            "id_produto", $id_produto
+            "codigo_barras", $codigo_barras
         );
 
         if (!$esta_valido) {
@@ -196,7 +234,7 @@ class ProdutoController {
 
         }
 
-        $produto = ProdutoRepository::one($id_produto);
+        $produto = ProdutoRepository::one($codigo_barras);
 
         if (!$produto) {
 
@@ -207,9 +245,9 @@ class ProdutoController {
 
         }
 
-        ProdutoRepository::delete($id_produto);
+        ProdutoRepository::delete($codigo_barras);
 
-        $produto = ProdutoRepository::one($id_produto);
+        $produto = ProdutoRepository::one($codigo_barras);
 
         if ($produto) {
 
