@@ -8,236 +8,89 @@ require_once '../backend/enums/status.php';
 class ClienteController {
 
     public static function route($segment) {
-
         return match($segment) {
-            'create' => self::create(
-                json_encode(file_get_contents('php://input'))
-            ),
-            'modify' => self::modify(
-                json_encode(file_get_contents('php://input'))
-            ),
-            'delete' => self::delete(
-                $_GET['id_cliente']
-            ),
-            'collect' => self::collect(
-                $_GET['id_cliente'], $_GET['nome_ou_cpf']
-            ),
+            'create' => self::create(json_decode(file_get_contents('php://input'))),
+            'modify' => self::modify(json_decode(file_get_contents('php://input'))),
+            'delete' => self::delete($_GET['id_cliente']),
+            'collect' => self::collect($_GET['id_cliente'], $_GET['nome_ou_cpf']),
             default => http_response_code(Status::NOT_FOUND->value)
         };
-
     }
 
     private static function collect($id_cliente, $nome_ou_cpf) {
-
-        $cliente = null;
-
-        if ($id_cliente != null) {
-
-            $cliente = ClienteRepository::one(
-                $id_cliente
-            );
-
-        } else {
-
-            $id_cliente = ClienteRepository::all(
-                $nome_ou_cpf
-            );
-
-        }
-
+        $cliente = $id_cliente ? ClienteRepository::one($id_cliente) : ClienteRepository::all($nome_ou_cpf);
         if (!$cliente) {
-
-            return ResponseClass::answer(
-                "Nenhum cliente foi encontrado",
-                Status::NO_CONTENT
-            );
-
+            return ResponseClass::answer("Nenhum cliente foi encontrado", Status::NO_CONTENT);
         }
-
-        return ResponseClass::answerWithBody(
-            $cliente,
-            Status::OK
-        );
-
+        return ResponseClass::answerWithBody($cliente, Status::OK);
     }
 
     private static function delete($id_cliente) {
+        $esta_valido = ResponseClass::ifNull("id_cliente", $id_cliente);
+        if (!$esta_valido) return;
 
-        $esta_valido = ResponseClass::ifNull(
-            "id_cliente", $id_cliente
-        );
-
-        if (!$esta_valido) {
-
-            return;
-
-        }
-
-        $cliente = ClienteRepository::one(
-            $id_cliente
-        );
-
+        $cliente = ClienteRepository::one($id_cliente);
         if (!$cliente) {
-
-            return ResponseClass::answer(
-                "Nenhum usuario encontrado com este id",
-                Status::NOT_FOUND
-            );
-
+            return ResponseClass::answer("Nenhum usuario encontrado com este id", Status::NOT_FOUND);
         }
 
         $funcionou = ClienteRepository::delete($id_cliente);
-
         if (!$funcionou) {
-
-            return ResponseClass::answer(
-                "Algum erro ocorreu enquanto o cliente era deletado",
-                Status::INTERNAL_SERVER_ERROR
-            );
-
+            return ResponseClass::answer("Algum erro ocorreu enquanto o cliente era deletado", Status::INTERNAL_SERVER_ERROR);
         }
 
         $cliente = ClienteRepository::one($id_cliente);
-
         if ($cliente) {
-
-            return ResponseClass::answer(
-                "Algum erro ocorreu enquanto o cliente era deletado",
-                Status::INTERNAL_SERVER_ERROR
-            );
-
+            return ResponseClass::answer("Algum erro ocorreu enquanto o cliente era deletado", Status::INTERNAL_SERVER_ERROR);
         }
 
-        return ResponseClass::answer(
-            "Usuario cliente com sucesso",
-            Status::OK
-        );
-
+        return ResponseClass::answer("Cliente deletado com sucesso", Status::OK);
     }
 
     private static function modify($request) {
+        $esta_valido = ResponseClass::ifNull("request", $request, "id", $request->id, "cpf", $request->cpf, "nome", $request->nome);
+        if (!$esta_valido) return;
 
-        $esta_valido = ResponseClass::ifNull(
-            "request", $request,
-            "id", $request->id,
-            "cpf", $request->cpf,
-            "nome", $request->nome
-        );
-
-        if (!$esta_valido) {
-
-            return;
-
-        }
-
-        $cliente = ClienteRepository::one(
-            $request->id
-        );
-
+        $cliente = ClienteRepository::one($request->id);
         if (!$cliente) {
-
-            return ResponseClass::answer(
-                "Nenhum cliente foi encontraco com este id",
-                404
-            );
-
+            return ResponseClass::answer("Nenhum cliente foi encontrado com este id", Status::NOT_FOUND);
         }
 
-        $funcionou = ClienteRepository::modify(
-            $request,
-            Utils::format(
-                "nome = :nome", $request->nome,
-                "cpf = :cpf", $request->cpf,
-                "atualizado = UTC_TIMESTAMP()", ""
-            )
-        );
-
+        $funcionou = ClienteRepository::modify($request, Utils::format("nome = :nome", $request->nome, "cpf = :cpf", $request->cpf, "atualizado = UTC_TIMESTAMP()", ""));
         if (!$funcionou) {
-
-            return ResponseClass::answer(
-                "Algum erro ocorreu enquanto o cliente era atualizado",
-                500
-            );
-
+            return ResponseClass::answer("Algum erro ocorreu enquanto o cliente era atualizado", Status::INTERNAL_SERVER_ERROR);
         }
 
-        $cliente = ClienteRepository::one(
-            $request->id
-        );
-
+        $cliente = ClienteRepository::one($request->id);
         if (!$cliente) {
-
-            return ResponseClass::answer(
-                "Algum erro ocorreu enquanto o cliente era coletado",
-                500
-            );
-
+            return ResponseClass::answer("Algum erro ocorreu enquanto o cliente era coletado", Status::INTERNAL_SERVER_ERROR);
         }
 
-        return ResponseClass::answerWithBody(
-            $cliente,
-            200
-        );
-
+        return ResponseClass::answerWithBody($cliente, Status::OK);
     }
 
     private static function create($request) {
-
-        $esta_valido = ResponseClass::ifNull(
-            "request", $request,
-            "cpf", $request->cpf,
-            "nome", $request->nome
-        );
-
-        if (!$esta_valido) {
-
-            return;
-
-        }
-
+        $esta_valido = ResponseClass::ifNull("request", $request, "cpf", $request->cpf, "nome", $request->nome);
+        if (!$esta_valido) return;
+    
         $cliente = ClienteRepository::collect($request->cpf);
-
-        if (!$cliente) {
-
-            return ResponseClass::answer(
-                "Cliente ja esta cadastrado",
-                409
-            );
-
+        if ($cliente) {
+            return ResponseClass::answer("Cliente ja esta cadastrado", Status::CONFLICT);
         }
-
-        $funcionou = ClienteRepository::create(
-            $request->cpf,
-            $request->nome
-        );
-
+    
+        $funcionou = ClienteRepository::create($request->cpf, $request->nome);
         if (!$funcionou) {
-
-            return ResponseClass::answer(
-                "Algum erro ocorreu enquanto o cliente era criado",
-                500
-            );
-
+            return ResponseClass::answer("Algum erro ocorreu enquanto o cliente era criado", Status::INTERNAL_SERVER_ERROR);
         }
-
+        
         $cliente = ClienteRepository::collect($request->cpf);
-
         if (!$cliente) {
-
-            return ResponseClass::answer(
-                "Algum erro ocorreu enquanto o cliente era criado",
-                500
-            );
-
+            return ResponseClass::answer("Algum erro ocorreu enquanto o cliente era coletado", Status::INTERNAL_SERVER_ERROR);
         }
-
-        return ResponseClass::answerWithBody(
-            $cliente,
-            201
-        );
-
+        
+        return ResponseClass::answerWithBody($cliente, Status::CREATED);
     }
-
+    
 }
 
 ?>

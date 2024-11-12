@@ -61,13 +61,15 @@
                     <input type="text" id="cnpj" name="cnpj" placeholder="Digite o CNPJ da sua empresa:">
                     <input type="text" id="cpf" name="cpf" placeholder="Digite o seu CPF:">
                     <input type="text" id="email" name="email" placeholder="Digite o seu Email:">
-                    <input type="text" id="senha" name="senha" placeholder="Digite sua SENHA:">
-                    <input type="text" id="senhaConfirmar" name="senhaConfirmar" placeholder="Confirme sua SENHA:">
+                    <input type="password" id="senha" name="senha" placeholder="Digite sua SENHA:">
+                    <input type="password" id="senhaConfirmar" name="senhaConfirmar" placeholder="Confirme sua SENHA:">
                     
                     <div>
                       
                     </div>
-                    <button class="" id="signInBtn">Confirmar</button>
+                    <div style="position: relative;">
+                      <button class="" id="signInBtn">Confirmar</button>
+                    </div>
                     <button class="" id="voltarLogin"></button>
                   </form>
                 </div>
@@ -145,7 +147,7 @@
     </div>
      
           <script src="../js/index.js" ></script>
-          <script src="../js/empresaLoginCadastro.jsx" ></script>
+          <script src="../js/empresaLoginCadastro.js" type="module"></script>
           <script src="../js/typeAnimation.js"></script>
           <script src="../js/animPlanos.js"></script>
 </body>

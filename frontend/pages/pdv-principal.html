@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../styles/mainPage.css">
     <link rel="stylesheet" href="../styles/menu.css">
     <link rel="script" href="../js/pdv-principal.js">
-    <script type="module" src="../js/aberturaDeCaixa.js"></script>
+    <!-- <script type="module" src="../js/aberturaDeCaixa.js"></script> -->
     <title>Raccoon - Main</title>
 </head>
 <body>
@@ -100,6 +100,7 @@
                     name="produto"
                     id="produto"
                     placeholder="digite o produto"
+                    autofocus
                     />
                     <img class="lupa" id="buscarProduto"  src="../src/search.png" alt="lupa">
                 </div>
@@ -190,8 +191,8 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>1</td>
-                            <td>R$ 12.99</td>
+                            <td id="qtdItensDisplay">0</td>
+                            <td id="valorItensDisplay">R$ 0</td>
                         </tr>
                     </tbody>
                 </table>
@@ -202,6 +203,8 @@
     <!-- <script type="module" src="../js/pdv-principal.js"></script> -->
     <script src="../js/signUp.js"></script>
     <script src="../js/pdv-principal.js"></script>
+    <script src="../js/abrirCaixa.jsx"></script>
+    <script src="../js/executarVenda.jsx"></script>
     
 </body>
 </html>

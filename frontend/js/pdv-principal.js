@@ -1,4 +1,16 @@
-console.log('Arquivo pdv-principal.js carregado!');
+// localStorage.setItem('caixaAberto', 'false')
+// const estadoCaixa = localStorage.getItem('caixaAberto') === "true";
+
+// const optionsPdv = document.getElementById("optPdv")
+// const optionsOpen = document.getElementById("optOpen")
+// console.log(estadoCaixa)
+// if(estadoCaixa ){
+//     optionsPdv.style.display = 'flex'
+//     optionsOpen.style.display = 'none'
+// }
+
+
+
 
 const btnAbrirCaixa = document.getElementById("btnAbrirCaixa")
 const btnConfig = document.querySelectorAll(".btnConfig")
@@ -12,9 +24,7 @@ const relatorioRedirectBtn = document.getElementById("relatorioRedirectBtn")
 const modalCancelar = document.getElementById("modalCancelar")
 const btnCancelar = document.getElementById("btnCancelar")
 
-const btnLoginFuncionario = document.getElementById("botaoLoginFunc")
-const optionsPdv = document.getElementById("optPdv")
-const optionsOpen = document.getElementById("optOpen")
+// const btnLoginFuncionario = document.getElementById("botaoLoginFunc")
 
 const btnBuscarProduto = document.getElementById("buscarProduto")
 const listagemProdutos = document.getElementById("listagemProdutos")
@@ -60,11 +70,12 @@ btnAbrirCaixa.addEventListener('click', () => {
         modalAbrirCaixa.style.display = 'flex'
     }
 })
-btnLoginFuncionario.addEventListener('click', () => {
-    modalAbrirCaixa.style.display = 'none'
-    optionsPdv.style.display = 'flex'
-    optionsOpen.style.display = 'none'
-})
+// btnLoginFuncionario.addEventListener('click', () => {
+//     modalAbrirCaixa.style.display = 'none'
+//     optionsPdv.style.display = 'flex'
+//     optionsOpen.style.display = 'none'
+//     localStorage.setItem('caixaAberto', 'true')
+// })
 // MODAL FIM
 // MODAL INICIO
 const modalConfig = document.getElementById("modalConfig")

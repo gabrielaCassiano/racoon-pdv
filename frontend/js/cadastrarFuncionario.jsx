@@ -36,3 +36,51 @@ cadastrarFuncionarioBtn.addEventListener('click', async (event) => {
         console.error('Erro em Cadastrar Funcionário:', error);
     }
 });
+
+
+
+
+//teste funcionarios na tabela ai ai 
+
+
+
+async function fetchFuncionarios() {
+    try {
+        const id_empresa = 1;
+        const response = await fetch(`http://localhost:8080/backend/funcionario/collect?id_empresa=${id_empresa}`);
+        
+        if (!response.ok) {
+            console.error("Erro na resposta do servidor:", response.statusText);
+            return;
+        }
+
+        const data = await response.json();
+
+        if (!data.data || data.data.length === 0) {
+            console.error("Nenhum funcionário encontrado");
+            return;
+        }
+
+        const funcionarios = data.data;
+        const tbody = document.getElementById('funcionarios-body');
+        tbody.innerHTML = '';
+
+        funcionarios.forEach(funcionario => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${funcionario.nome}</td>
+                <td>Função Exemplo</td>
+               
+                <td>${funcionario.cpf}</td>
+                <td>${funcionario.senha}</td>
+            `;
+            tbody.appendChild(row);
+        });
+    } catch (error) {
+        console.error("Erro ao buscar funcionários:", error);
+    }
+}
+
+window.onload = fetchFuncionarios;
+
+

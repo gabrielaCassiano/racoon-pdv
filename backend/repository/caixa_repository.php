@@ -50,6 +50,7 @@ class CaixaRepository {
         ");
 
         $stmt->bindParam("id", $id_caixa);
+        $stmt->execute();
 
         return $stmt->fetchAll();
 
@@ -72,13 +73,14 @@ class CaixaRepository {
                 caixa
             WHERE 
                 id_empresa = :id_empresa
-                AND aberto >= hoje
+                AND aberto >= :hoje
         ");
 
         $stmt->bindParam("id_empresa", $id_empresa);
         $stmt->bindParam("hoje", $hoje);
+        $stmt->execute();
 
-        return $stmt->fetch();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
 
     }
 

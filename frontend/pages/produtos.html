@@ -42,7 +42,7 @@
                         <input 
                             type="text" 
                             name="preco"
-                            id="preco"
+                            id="codigoDeBarra"
                             placeholder="codigoDeBarra"
                         />
                        
@@ -53,7 +53,7 @@
                         <input 
                             type="text" 
                             name="codigoDeBarra"
-                            id="codigoDeBarra"
+                            id="preco"
                             placeholder="Preço"
                         />
                         
@@ -63,7 +63,7 @@
                         <input 
                             type="text" 
                             name="codigoDeBarra"
-                            id="codigoDeBarra"
+                            id="cashBack"
                             placeholder="Valor CashBack"
                         />
                         
@@ -72,9 +72,9 @@
                     <div>
                         <select name="Categoria" id="cat">
                             <option value="" selected disabled hidden>Selecione uma categoria</option>
-                            <option value="op1">Mercearia</option>
-                            <option value="op2">Doces</option>
-                            <option value="op2">Carne</option>
+                            <option value="Mercearia">Mercearia</option>
+                            <option value="Doces">Doces</option>
+                            <option value="Carne">Carne</option>
                         </select>
                         
                        
@@ -138,7 +138,7 @@
                                 >
 
                                 <button class="botlupa">
-                                    <img class="lupa"   src="../src/search.png" alt="lupa">
+                                    <img class="lupa" id="lupa"  src="../src/search.png" alt="lupa">
                                 </button>
                                 
                             </div>
@@ -173,111 +173,18 @@
                     <thead>
 
                         <th>Nome</th>
-                        <th>Categortia</th>
-                        <th>Codigo</th>
+                        <th>Categoria</th>
+                        
                         <th>Codgiodebarras</th>
-                        <th>Preco</th>
+                        <th>Preço</th>
                         <th>CashBack</th>
 
                     </thead>
                     
-                    <tbody>
-                        <tr>
-                            <td>Coca Cola Zero 2L</td>
-                            <td>Mercearia</td>
-                            <td>01</td>
-                            <td>1653148565344</td>
-                            <td>12.99</td>
-                            <td>0.15</td>
-                        </tr>
-
-                        <tr>
-                            <td>Coca Cola Zero 2L</td>
-                            <td>Mercearia</td>
-                            <td>01</td>
-                            <td>1653148565344</td>
-                            <td>12.99</td>
-                            <td>0.15</td>
-                        </tr>
-
-                        <tr>
-                            <td>Coca Cola Zero 2L</td>
-                            <td>Mercearia</td>
-                            <td>01</td>
-                            <td>1653148565344</td>
-                            <td>12.99</td>
-                            <td>0.15</td>
-                        </tr>
-
-                        <tr>
-                            <td>Coca Cola Zero 2L</td>
-                            <td>Mercearia</td>
-                            <td>01</td>
-                            <td>1653148565344</td>
-                            <td>12.99</td>
-                            <td>0.15</td>
-                        </tr>
-
-                        <tr>
-                            <td>Coca Cola Zero 2L</td>
-                            <td>Mercearia</td>
-                            <td>01</td>
-                            <td>1653148565344</td>
-                            <td>12.99</td>
-                            <td>0.15</td>
-                        </tr>
-
-                        <tr>
-                            <td>Coca Cola Zero 2L</td>
-                            <td>Mercearia</td>
-                            <td>01</td>
-                            <td>1653148565344</td>
-                            <td>12.99</td>
-                            <td>0.15</td>
-                        </tr>
-                        <tr>
-                            <td>Coca Cola Zero 2L</td>
-                            <td>Mercearia</td>
-                            <td>01</td>
-                            <td>1653148565344</td>
-                            <td>12.99</td>
-                            <td>0.15</td>
-                        </tr>
-                        <tr>
-                            <td>Coca Cola Zero 2L</td>
-                            <td>Mercearia</td>
-                            <td>01</td>
-                            <td>1653148565344</td>
-                            <td>12.99</td>
-                            <td>0.15</td>
-                        </tr>
-                        <tr>
-                            <td>Coca Cola Zero 2L</td>
-                            <td>Mercearia</td>
-                            <td>01</td>
-                            <td>1653148565344</td>
-                            <td>12.99</td>
-                            <td>0.15</td>
-                        </tr>
-                        <tr>
-                            <td>Coca Cola Zero 2L</td>
-                            <td>Mercearia</td>
-                            <td>01</td>
-                            <td>1653148565344</td>
-                            <td>12.99</td>
-                            <td>0.15</td>
-                        </tr>
-
-                        <tr>
-                            <td>Coca Cola Zero 2L</td>
-                            <td>Mercearia</td>
-                            <td>01</td>
-                            <td>1653148565344</td>
-                            <td>12.99</td>
-                            <td>0.15</td>
-                        </tr>
-
-
+                    <tbody id="produtos-body">
+                     
+                      
+                      
                     </tbody>
 
 
@@ -297,6 +204,7 @@
 
     <script src="../js/searchproduto.js"></script>
     <script src="../js/signUp.js"></script>
+    <script src="../js/cadastrarProdutos.jsx"></script>
 
 </body>
 </html>

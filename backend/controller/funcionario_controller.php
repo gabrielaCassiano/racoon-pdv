@@ -17,7 +17,7 @@ class FuncionarioController {
             ),//TODO test
             'collect' => self::collect(
                 $_GET['id_empresa'], 
-                $_GET['id_funcionario']
+                // $_GET['id_funcionario']
             ),//TODO test
             'modify' => self::modify(
                 json_decode(file_get_contents('php://input'))
@@ -135,46 +135,123 @@ class FuncionarioController {
 
     }
 
-    private static function collect($id_empresa, $id_funcionario) {
+    // private static function collect($id_empresa, $id_funcionario) {
 
-        $esta_valido = ResponseClass::ifNull(
-            "id_empresa", $id_empresa,
-            "id_funcionario", $id_funcionario
-        );
+    //     $esta_valido = ResponseClass::ifNull(
+    //         "id_empresa", $id_empresa,
+    //         "id_funcionario", $id_funcionario
+    //     );
 
-        if (!$esta_valido) {
+    //     if (!$esta_valido) {
 
+    //         return;
+
+    //     }
+
+    //     $funcionario = null;
+
+    //     if ($id_empresa != null) {
+
+    //         $funcionario = FuncionarioRepository::all($id_empresa);
+
+    //     } else if ($id_funcionario) {
+
+    //         $funcionario = FuncionarioRepository::one($id_funcionario);
+
+    //     }
+
+    //     if (!$funcionario) {
+
+    //         return ResponseClass::answer(
+    //             "Nenhum funcionario foi encontrado",
+    //             Status::NO_CONTENT
+    //         );
+
+    //     }
+
+    //     return ResponseClass::answerWithBody(
+    //         $funcionario,
+    //         Status::OK
+    //     );
+
+    // }
+
+
+    private static function collect($id_empresa) {
+        header('Content-Type: application/json; charset=utf-8');
+    
+        if (!$id_empresa) {
+            echo json_encode([
+                "message" => "ID da empresa é necessário",
+                "status" => Status::BAD_REQUEST->value
+            ]);
             return;
-
         }
 
-        $funcionario = null;
-
-        if ($id_empresa != null) {
-
-            $funcionario = FuncionarioRepository::all($id_empresa);
-
-        } else if ($id_funcionario) {
-
+        $id_funcionario = isset($_GET['id_funcionario']) ? $_GET['id_funcionario'] : null;
+    
+        if ($id_funcionario) {
             $funcionario = FuncionarioRepository::one($id_funcionario);
-
+            if (!$funcionario) {
+                echo json_encode([
+                    "message" => "Nenhum funcionário encontrado",
+                    "status" => Status::NO_CONTENT->value
+                ]);
+                return;
+            }
+            echo json_encode([
+                "status" => Status::OK->value,
+                "data" => [$funcionario]
+            ]);
+            return;
         }
-
-        if (!$funcionario) {
-
-            return ResponseClass::answer(
-                "Nenhum funcionario foi encontrado",
-                Status::NO_CONTENT
-            );
-
+    
+        $funcionarios = FuncionarioRepository::all($id_empresa);
+    
+        if (empty($funcionarios)) {
+            echo json_encode([
+                "message" => "Nenhum funcionário encontrado",
+                "status" => Status::NO_CONTENT->value
+            ]);
+            return;
         }
-
-        return ResponseClass::answerWithBody(
-            $funcionario,
-            Status::OK
-        );
-
+    
+        echo json_encode([
+            "status" => Status::OK->value,
+            "data" => $funcionarios
+        ]);
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 
     private static function login($request) {
 

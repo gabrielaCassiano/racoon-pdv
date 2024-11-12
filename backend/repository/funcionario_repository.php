@@ -98,9 +98,34 @@ class FuncionarioRepository {
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
+    // public static function all($id_empresa) {
+    //     global $pdo;
+
+    //     $stmt = $pdo->prepare("
+    //         SELECT
+    //             id,
+    //             id_empresa,
+    //             nome,
+    //             cpf,
+    //             senha,
+    //             criado 
+    //         FROM 
+    //             funcionario
+    //         WHERE 
+    //             id_empresa = :id_empresa
+    //             AND excluido IS NULL
+    //     ");
+
+    //     $stmt->bindParam(":id_empresa", $id_empresa);
+    //     $stmt->execute();
+
+    //     return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    // }
+
+
     public static function all($id_empresa) {
         global $pdo;
-
+    
         $stmt = $pdo->prepare("
             SELECT
                 id,
@@ -108,19 +133,19 @@ class FuncionarioRepository {
                 nome,
                 cpf,
                 senha,
-                criado 
+                criado
             FROM 
                 funcionario
             WHERE 
                 id_empresa = :id_empresa
                 AND excluido IS NULL
         ");
-
         $stmt->bindParam(":id_empresa", $id_empresa);
         $stmt->execute();
-
+    
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
 
     public static function login($cpf, $senha) {
         global $pdo;
