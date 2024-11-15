@@ -12,7 +12,7 @@ class ClienteController {
             'create' => self::create(json_decode(file_get_contents('php://input'))),
             'modify' => self::modify(json_decode(file_get_contents('php://input'))),
             'delete' => self::delete($_GET['id_cliente']),
-            'collect' => self::collect($_GET['id_cliente'], $_GET['nome_ou_cpf']),
+            'collect' => self::collect($_GET['id_cliente'] ?? null, $_GET['nome_ou_cpf']) ?? null,
             default => http_response_code(Status::NOT_FOUND->value)
         };
     }

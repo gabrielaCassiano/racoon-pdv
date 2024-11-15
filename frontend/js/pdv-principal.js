@@ -1,39 +1,21 @@
-// localStorage.setItem('caixaAberto', 'false')
-// const estadoCaixa = localStorage.getItem('caixaAberto') === "true";
-
-// const optionsPdv = document.getElementById("optPdv")
-// const optionsOpen = document.getElementById("optOpen")
-// console.log(estadoCaixa)
-// if(estadoCaixa ){
-//     optionsPdv.style.display = 'flex'
-//     optionsOpen.style.display = 'none'
-// }
-
-
-
-
 const btnAbrirCaixa = document.getElementById("btnAbrirCaixa")
 const btnConfig = document.querySelectorAll(".btnConfig")
 const btnVoltar = document.querySelectorAll(".botvoltar")
 
 
-const payBtn = document.getElementById("payBtn")
+// const payBtn = document.getElementById("payBtn")
 const perfilRedirectBtn = document.getElementById("perfilRedirectBtn")
 const produtoRedirectBtn = document.getElementById("produtoRedirectBtn")
 const relatorioRedirectBtn = document.getElementById("relatorioRedirectBtn")
 const modalCancelar = document.getElementById("modalCancelar")
-const btnCancelar = document.getElementById("btnCancelar")
+const btnCancelar = document.getElementById("btnCancelar") 
 
-// const btnLoginFuncionario = document.getElementById("botaoLoginFunc")
-
-const btnBuscarProduto = document.getElementById("buscarProduto")
-const listagemProdutos = document.getElementById("listagemProdutos")
-const inpProduto = document.getElementById("produto")
 
 btnCancelar.addEventListener('click', () => {
     let modalStateCancelar = modalCancelar.style.display
     if (modalStateCancelar == 'none') {
         modalCancelar.style.display = 'flex'
+
     }
 })
 
@@ -53,10 +35,7 @@ relatorioRedirectBtn.addEventListener('click', () => {
 })
 
 
-payBtn.addEventListener('click', () => {
 
-    window.location.href ="../pages/pagamento.html"
-})
 
 
 
@@ -70,12 +49,6 @@ btnAbrirCaixa.addEventListener('click', () => {
         modalAbrirCaixa.style.display = 'flex'
     }
 })
-// btnLoginFuncionario.addEventListener('click', () => {
-//     modalAbrirCaixa.style.display = 'none'
-//     optionsPdv.style.display = 'flex'
-//     optionsOpen.style.display = 'none'
-//     localStorage.setItem('caixaAberto', 'true')
-// })
 // MODAL FIM
 // MODAL INICIO
 const modalConfig = document.getElementById("modalConfig")

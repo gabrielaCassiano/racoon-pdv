@@ -1,4 +1,5 @@
 import { CaixaDeErro } from '../components/caixaDeErro.js';
+import { updateState } from '../lib/state.js';
 
 const signInBtn = document.getElementById('signInBtn');
 const loginBtn = document.getElementById('loginBtn');
@@ -26,10 +27,14 @@ loginBtn.addEventListener('click', async (event) => {
             console.error('Erro no logiasdasdn:', error);
         }
         const data = await response.json()
+        console.log(data)
+        updateState('id_empresa',data.id)
         if(data) {
             window.location.href = "../pages/pdv-principal.html"
         }
     } catch (error) {
+        const box = new CaixaDeErro('<p>CNPJ ou SENHA invalidos</p>');
+        box.show(loginBtn);
         console.error('Erro no login:', error);
     }
 

@@ -383,3 +383,8 @@ button{
     width: 22.5em;
     height: 2em;
 }
+#btnCadastrar{
+    background-color: #ffffff;
+    color: #000000;
+    border: solid 1px;
+}

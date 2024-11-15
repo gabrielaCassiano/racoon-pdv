@@ -221,37 +221,28 @@ class FuncionarioController {
             "data" => $funcionarios
         ]);
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     private static function login($request) {
 

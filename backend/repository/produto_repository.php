@@ -151,33 +151,6 @@ class ProdutoRepository {
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
 
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     public static function collect($id_empresa, $codigo_barras) {
 

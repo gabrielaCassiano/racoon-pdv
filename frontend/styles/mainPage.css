@@ -434,3 +434,7 @@ main {
 
 
 /* Modal Cancelar Fim*/
+
+.caixa-de-erro {
+    display: block;
+}

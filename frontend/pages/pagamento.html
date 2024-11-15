@@ -44,77 +44,14 @@
 
                     <table>
                         <thead>
-                            <th>produto</th>
-                            <th></th>
-                            <th>codigo</th>
-                            <th></th>
-                            
-                            <th>CashBack</th>
+                            <th>Produto</th>
+                            <th>Quantidade</th>
+                            <th>Unitario</th>
+                            <th>Cashback</th>
+                            <th>Status</th>
                         </thead>
 
-                        <tbody>
-                            <tr>
-                                <td>coca cola 2l</td>
-                                <td></td>
-                                <td>000000000</td>
-                                <td></td>
-                                
-                                <td>R$ 0.15 <input type="checkbox" name="selecionar" id="selecionar"></td>
-
-                            </tr>
-
-                            <tr>
-                                <td>coca cola 2l</td>
-                                <td></td>
-                                <td>000000000</td>
-                                <td></td>
-                                
-                                <td>R$ 0.15 <input type="checkbox" name="selecionar" id="selecionar"></td>
-
-                            </tr>
-
-
-                            <tr>
-                                <td>coca cola 2l</td>
-                                <td></td>
-                                <td>000000000</td>
-                                <td></td>
-                               
-                                <td>R$ 0.15 <input type="checkbox" name="selecionar" id="selecionar"></td>
-
-                            </tr>
-
-
-                            <tr>
-                                <td>coca cola 2l</td>
-                                <td></td>
-                                <td>000000000</td>
-                                <td></td>
-                                
-                                <td>R$ 0.15 <input type="checkbox" name="selecionar" id="selecionar"></td>
-
-                            </tr>
-
-                            <tr>
-                                <td>coca cola 2l</td>
-                                <td></td>
-                                <td>000000000</td>
-                                <td></td>
-                                
-                                <td>R$ 0.15 <input type="checkbox" name="selecionar" id="selecionar"></td>
-
-                            </tr>
-
-                            <tr>
-                                <td>coca cola 2l</td>
-                                <td></td>
-                                <td>000000000</td>
-                                <td></td>
-                                
-                                <td>R$ 0.15 <input type="checkbox" name="selecionar" id="selecionar"></td>
-
-                            </tr>
-
+                        <tbody id="tbodyCash">
                         </tbody>
 
 
@@ -135,7 +72,7 @@
                     
                     <div class="valorTotal">
                         <input type="button" name="confirmarCashback" id="confirmarCashback" value="Confirmar">
-                        <h2>Valor: R$0,15</h2>
+                        <h2>Valor: R$ <span id="valorCashDisplay">0.00</span></h2>
                     </div>
                 </div>
                         
@@ -160,13 +97,15 @@
             <div class="esq">
 
                 <div class="cliente">
-                    <div class="cpfDiv">
+                    <div class="cpfDiv"  style="position: relative;">
                         <label for="produto" class="clientecpf"> CPF: </label>
                         <input
                         type="text" 
                         name="cpf"
                         id="cpfInput"
+                        autocomplete="off"
                         placeholder="Digite o cpf do cliente"
+
                         />
                     </div>
                     <div class="plus">
@@ -184,24 +123,16 @@
     
                 <div class="metodosDePagamento">
                     <div class="botoes">
-                        <button class="btn">  
-                            Dinheiro
-                        </button>
-                        <button class="btn">  
-                            Debito
-                        </button>
-                        <button class="btn">  
-                            Credito
-                        </button>
-                        <button class="btn">  
-                            Voucher
-                        </button>
-                        <button class="btn">  
-                            Pix
-                        </button>
-                        <button id="cashbackBtn" class="btn cashBtn">  
-                            CashBack
-                        </button>
+                        <button class="btn">Dinheiro</button>
+                        <button class="btn">Debito</button>
+                        <button class="btn">Credito</button>
+                        <button class="btn">Voucher</button>
+                        <button class="btn">Pix</button>
+                        <span class="btnSp" >
+                            <button id="cashbackBtn" class="btn cashBtn">  
+                                CashBack
+                            </button>
+                        </span>
                     </div>
                     
                     <div class="listagem" >
@@ -212,17 +143,16 @@
                                 <th>Metodo:</th>
                                 <th>Valor pago:</th>
                                 <th>Data:</th>
-                                <th>Troco:</th>
         
                             </thead>
                             
-                            <tbody>
-                                <tr>
+                            <tbody id="tbodyPagos">
+                                <!-- <tr>
                                     <td>Debito</td>
-                                    <td>R$ 23.00</td>
+                                    <td id="tdValorPago">R$ 23.00</td>
                                     <td>03/09/2024</td>
                                     <td>R$ 00.00</td>
-                                </tr>
+                                </tr> -->
                             </tbody>
         
         
@@ -231,9 +161,6 @@
                     </div>
 
                 </div>
-
-              
-             
 
             </div>
             
@@ -253,18 +180,14 @@
 
                     <tbody>
                         <tr>
-                            <td>R$ 25.00</td>
-                            <td>R$ 2.00</td>
-                            <td>R$ 23.00</td>
-                            <td>R$ 00.00</td>
+                            <td id="tdTotalVenda">R$ 0.00</td>
+                            <td id="tdCashback">R$ 0.00</td>
+                            <td id="tdRestante">R$ 0.00</td>
+                            <td id="tdTroco">R$ 0.00</td>
                         </tr>
                     </tbody>
 
-
-
                   </table>
-                    
-                    
                     
                 </div>
 
@@ -275,7 +198,9 @@
                             type="text" 
                             name="valor"
                             id="valorInput"
+                            autocomplete="off"
                             placeholder="Digite o valor"
+                            autofocus="true"
                             />
                         </div>
 
@@ -287,19 +212,15 @@
 
             </div>
 
-
         </section>
 
-
-
-        
-        
     </main>
 
     <!-- <script src="../js/searchproduto.js"></script> -->
-    <script src="../js/pagamento.js"></script>
+    <script type="module"  src="../js/pagamento.js"></script>
     <script src="../js/signUp.js"></script>
     <script src="../js/cadastrarCliente.jsx"></script>
+    <script type="module" src="../js/buscarCpf.js"></script>
     
 </body>
 </html>

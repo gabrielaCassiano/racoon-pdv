@@ -6,9 +6,8 @@ require_once '../backend/utils/update.php';
 class CaixaRepository {
 
     public static function all($id_empresa) {
-
         global $pdo;
-
+    
         $stmt = $pdo->prepare("
             SELECT
                 id,
@@ -22,12 +21,12 @@ class CaixaRepository {
                 caixa
             WHERE 
                 id_empresa = :id_empresa
+            ORDER BY 
+                aberto DESC
         ");
-
-        $stmt->bindParam("id_empresa", $id_empresa);
-
-        return $stmt->fetchAll();
-
+    
+        $stmt->execute([':id_empresa' => $id_empresa]);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public static function specific($id_caixa) {

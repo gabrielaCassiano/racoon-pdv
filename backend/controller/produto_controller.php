@@ -126,8 +126,7 @@ class ProdutoController {
                 Status::BAD_REQUEST
             );
         }
-    
-        // Verificar se o 'codigo_barras' foi passado como parâmetro
+
         $codigo_barras = isset($_GET['codigo_barras']) ? $_GET['codigo_barras'] : null;
     
         if ($codigo_barras) {
@@ -140,8 +139,7 @@ class ProdutoController {
             }
             return ResponseClass::answerWithBody([$produto], Status::OK);
         }
-    
-        // Buscar todos os produtos de uma empresa
+
         $produtos = ProdutoRepository::all($id_empresa);
     
         if (empty($produtos)) {
@@ -153,6 +151,37 @@ class ProdutoController {
     
         return ResponseClass::answerWithBody($produtos, Status::OK);
     }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     private static function modify($request) {
 

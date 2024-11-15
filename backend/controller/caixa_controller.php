@@ -20,7 +20,7 @@ class CaixaController {
                 json_decode(file_get_contents('php://input')) 
             ),
             'collect' => self::collect(
-                $_GET['id_caixa'], $_GET['id_empresa']
+                $_GET['id_caixa'] ?? null, $_GET['id_empresa']
             ),
             default => http_response_code(Status::NOT_FOUND->value)
         };
@@ -221,16 +221,11 @@ class CaixaController {
 
         $caixa = null;
 
-        if ($id_caixa != null) {
-
-            $caixa = CaixaRepository::specific($id_caixa);
-
-        } else if ($id_empresa != null) {
-
-            $caixa = CaixaRepository::all($id_empresa);
-
+        if ($id_empresa) {
+             $caixa = CaixaRepository::all($id_empresa);
+        } else if ($id_caixa) {
+             $caixa = CaixaRepository::specific($id_caixa);
         }
-
         if ($caixa == null) {
 
             return ResponseClass::answer(

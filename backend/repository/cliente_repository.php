@@ -6,8 +6,9 @@ require_once '../backend/utils/update.php';
 class ClienteRepository {
 
     public static function all($nome_ou_cpf) {
-
         global $pdo;
+
+        $searchTerm = "%" . $nome_ou_cpf . "%";
 
         $stmt = $pdo->prepare("
             SELECT 
@@ -25,13 +26,10 @@ class ClienteRepository {
                 )
                 AND excluido IS NULL
         ");
+        $stmt->execute([':nome_ou_cpf' => $searchTerm]);
 
-        $stmt->bindParam(":nome_ou_cpf", "%" . $nome_ou_cpf . "%");
-
-        return $stmt->fetchAll();
-
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
-
     public static function delete($id_cliente) {
 
         global $pdo;

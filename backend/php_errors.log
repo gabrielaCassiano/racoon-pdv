@@ -481,3 +481,53 @@ Stack trace:
 [12-Nov-2024 17:27:03 Europe/Berlin] PHP Warning:  Undefined array key "nome_ou_cpf" in C:\xampp\htdocs\backend\controller\cliente_controller.php on line 15
 [12-Nov-2024 19:18:33 Europe/Berlin] PHP Warning:  Undefined array key "id_empresa" in C:\xampp\htdocs\backend\controller\produto_controller.php on line 17
 [12-Nov-2024 19:18:49 Europe/Berlin] PHP Warning:  Undefined array key "id_produto" in C:\xampp\htdocs\backend\controller\produto_controller.php on line 17
+[13-Nov-2024 20:32:25 Europe/Berlin] PHP Warning:  Undefined array key "id_cliente" in C:\xampp\htdocs\backend\controller\cliente_controller.php on line 15
+[13-Nov-2024 20:32:25 Europe/Berlin] PHP Fatal error:  Uncaught Error: PDOStatement::bindParam(): Argument #2 ($var) cannot be passed by reference in C:\xampp\htdocs\backend\repository\cliente_repository.php:29
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\cliente_controller.php(21): ClienteRepository::all('123')
+#1 C:\xampp\htdocs\backend\controller\cliente_controller.php(15): ClienteController::collect(NULL, '123')
+#2 C:\xampp\htdocs\backend\index.php(34): ClienteController::route('collect')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\repository\cliente_repository.php on line 29
+[13-Nov-2024 20:32:37 Europe/Berlin] PHP Warning:  Undefined array key "id_cliente" in C:\xampp\htdocs\backend\controller\cliente_controller.php on line 15
+[13-Nov-2024 20:32:37 Europe/Berlin] PHP Fatal error:  Uncaught Error: PDOStatement::bindParam(): Argument #2 ($var) cannot be passed by reference in C:\xampp\htdocs\backend\repository\cliente_repository.php:29
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\cliente_controller.php(21): ClienteRepository::all('124')
+#1 C:\xampp\htdocs\backend\controller\cliente_controller.php(15): ClienteController::collect(NULL, '124')
+#2 C:\xampp\htdocs\backend\index.php(34): ClienteController::route('collect')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\repository\cliente_repository.php on line 29
+[13-Nov-2024 20:32:38 Europe/Berlin] PHP Warning:  Undefined array key "id_cliente" in C:\xampp\htdocs\backend\controller\cliente_controller.php on line 15
+[13-Nov-2024 20:32:38 Europe/Berlin] PHP Fatal error:  Uncaught Error: PDOStatement::bindParam(): Argument #2 ($var) cannot be passed by reference in C:\xampp\htdocs\backend\repository\cliente_repository.php:29
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\cliente_controller.php(21): ClienteRepository::all('1245')
+#1 C:\xampp\htdocs\backend\controller\cliente_controller.php(15): ClienteController::collect(NULL, '1245')
+#2 C:\xampp\htdocs\backend\index.php(34): ClienteController::route('collect')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\repository\cliente_repository.php on line 29
+[13-Nov-2024 20:35:14 Europe/Berlin] PHP Warning:  Undefined array key "id_cliente" in C:\xampp\htdocs\backend\controller\cliente_controller.php on line 15
+[13-Nov-2024 20:35:14 Europe/Berlin] PHP Fatal error:  Uncaught Error: PDOStatement::bindParam(): Argument #2 ($var) cannot be passed by reference in C:\xampp\htdocs\backend\repository\cliente_repository.php:29
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\cliente_controller.php(21): ClienteRepository::all('23')
+#1 C:\xampp\htdocs\backend\controller\cliente_controller.php(15): ClienteController::collect(NULL, '23')
+#2 C:\xampp\htdocs\backend\index.php(34): ClienteController::route('collect')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\repository\cliente_repository.php on line 29
+[13-Nov-2024 20:37:37 Europe/Berlin] PHP Fatal error:  Uncaught Error: PDOStatement::bindParam(): Argument #2 ($var) cannot be passed by reference in C:\xampp\htdocs\backend\repository\cliente_repository.php:29
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\cliente_controller.php(21): ClienteRepository::all('23')
+#1 C:\xampp\htdocs\backend\controller\cliente_controller.php(15): ClienteController::collect(NULL, '23')
+#2 C:\xampp\htdocs\backend\index.php(34): ClienteController::route('collect')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\repository\cliente_repository.php on line 29
+[13-Nov-2024 22:36:56 Europe/Berlin] PHP Warning:  Undefined array key "id_caixa" in C:\xampp\htdocs\backend\controller\caixa_controller.php on line 23
+[14-Nov-2024 18:27:29 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$cpf in C:\xampp\htdocs\backend\controller\cliente_controller.php on line 73
+[14-Nov-2024 18:27:29 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$nome in C:\xampp\htdocs\backend\controller\cliente_controller.php on line 73
+[14-Nov-2024 18:28:01 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$nome in C:\xampp\htdocs\backend\controller\cliente_controller.php on line 73
+[14-Nov-2024 18:28:52 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$cpf_cliente in C:\xampp\htdocs\backend\controller\compras_controller.php on line 31
+[15-Nov-2024 02:54:06 Europe/Berlin] PHP Warning:  require_once(connection.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\backend\controller\compras_controller.php on line 9
+[15-Nov-2024 02:54:06 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'connection.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\backend\controller\compras_controller.php:9
+Stack trace:
+#0 C:\xampp\htdocs\backend\index.php(8): require()
+#1 {main}
+  thrown in C:\xampp\htdocs\backend\controller\compras_controller.php on line 9
