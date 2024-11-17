@@ -1,4 +1,8 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('log_errors', 1);
+error_reporting(E_ALL);
+error_log("=== INÍCIO DO REQUEST ===");
 
 require_once '../backend/dtos/response.php';
 require_once '../backend/repository/produto_repository.php';
@@ -12,14 +16,14 @@ class ProdutoController {
         try {
             return match($segment) {
                 'create' => self::create(
-                    json_decode(file_get_contents('php://input'), true)
+                    json_decode(file_get_contents('php://input'))
                 ),
                 'collect' => self::collect(
                     $_GET['id_empresa'] ?? null,
                     $_GET['codigo_barras'] ?? null
                 ),
                 'modify' => self::modify(
-                    json_decode(file_get_contents('php://input'), true)
+                    json_decode(file_get_contents('php://input'))
                 ),
                 'delete' => self::delete(
                     $_GET['codigo_barras'] ?? null
@@ -34,6 +38,7 @@ class ProdutoController {
 
     private static function create($request) {
 
+        // var_dump($request);
         $esta_valido = ResponseClass::ifNull(
             "request", $request,
             "id_empresa", $request->id_empresa,
@@ -127,72 +132,44 @@ class ProdutoController {
 
 
     private static function modify($request) {
-
         $esta_valido = ResponseClass::ifNull(
             "request", $request,
-            "id", $request->id
+            "codigo_barras", $request->codigo_barras,
+            "id_empresa", $request->id_empresa,
+            "categoria", $request->categoria,
+            "nome", $request->nome,
+            "valor", $request->valor,
+            "porcentagem_cashback", $request->porcentagem_cashback
         );
-
+    
         if (!$esta_valido) {
-
-            return; 
-
+            return ResponseClass::answer("Dados inválidos", Status::BAD_REQUEST);
         }
-
-        $produto = ProdutoRepository::one(
-            $request->id
-        );
-
-        if ($produto) {
-
-            return ResponseClass::answer(
-                "Nenhum produto existe com este id",
-                Status::NOT_FOUND
-            );
-
-        }
-
-        $functionou = ProdutoRepository::modify(
-            $request,
-            Utils::format(
-                "id_empresa = :id_empresa", $request->id_empresa,
-                "categoria = :categoria", $request->categoria,
-                "nome = :nome", $request->nome,
-                "codigo_barras = :codigo_barras", $request->codigo_barras,
-                "valor = :valor", $request->valor,
-                "porcentagem_cashback = :porcentagem_cashback", $request->porcentagem_cashback,
-                "modificado = UTC_TIMESTAMP()", ""
-            )
-        );
-
-        if (!$functionou) {
-
-            return ResponseClass::answer(
-                "Algum erro ocorreu enquanto o produto era atualizado",
-                Status::INTERNAL_SERVER_ERROR
-            );
-
-        }
-
-        $produto = ProdutoRepository::one(
-            $request->id
-        );    
-
+    
+        $produto = ProdutoRepository::one($request->codigo_barras);
         if (!$produto) {
-
-            return ResponseClass::answer(
-                "Algum erro ocorreu enquanto os produto era coletado",
-                Status::INTERNAL_SERVER_ERROR
-            );
-
+            return ResponseClass::answer("Produto não encontrado", Status::NOT_FOUND);
         }
-
-        return ResponseClass::answerWithBody(
-            $produto,
-            Status::OK
-        );
-
+    
+        $update_statement = "id_empresa = :id_empresa, 
+                            categoria = :categoria, 
+                            nome = :nome,
+                            valor = :valor,
+                            porcentagem_cashback = :porcentagem_cashback,
+                            modificado = UTC_TIMESTAMP()";
+    
+        $funcionou = ProdutoRepository::modify($request, $update_statement);
+    
+        if (!$funcionou) {
+            return ResponseClass::answer("Erro ao atualizar produto", Status::INTERNAL_SERVER_ERROR);
+        }
+    
+        $produtoAtualizado = ProdutoRepository::one($request->codigo_barras);
+        return ResponseClass::answerWithBody($produtoAtualizado, Status::OK);
     }
+    
+    
+    
 
     private static function delete($codigo_barras) {
 

@@ -3,6 +3,28 @@ let idii = getState("id_empresa")
 
 const btnConf = document.getElementById('btnConf');
 
+function alertBox(params) {
+    const alertDiv = document.createElement('div');
+    alertDiv.style.cssText = `
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #ffebee;
+        color: #c62828;
+        padding: 10px 20px;
+        border-radius: 4px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        z-index: 1000;
+    `;
+    alertDiv.textContent = `${params}`;
+    document.body.appendChild(alertDiv);
+    
+    setTimeout(() => {
+        alertDiv.remove();
+    }, 3000);
+}
+
 btnConf.addEventListener('click', async (event) => {
     event.preventDefault();
 
@@ -17,7 +39,8 @@ btnConf.addEventListener('click', async (event) => {
         
     };
 
-    console.log('Dados enviados:', dados.categoria);
+    console.log('Dados enviados:', dados);
+
 
     try {
         const response = await fetch('http://localhost:8080/backend/produto/create', {
@@ -138,15 +161,58 @@ function renderProdutos(produtos) {
 
 function abrirModalEdicao() {
     if (!produtoSelecionado) {
-        alert("Por favor, selecione um produto para editar.");
+        alertBox("Por favor, selecione um produto para editar.");
         return;
     }
-    document.getElementById('nome1').value += produtoSelecionado.nome;
+    let nome1 = document.getElementById('nome1').value
+    let codigoDeBarra1 = document.getElementById('codigoDeBarra1').value
+    let preco1 = document.getElementById('preco1').value
+    let cashBack1 = document.getElementById('cashBack1').value
+    let cat1 = document.getElementById('cat1').value
+
+    
+    document.getElementById('nome1').value = produtoSelecionado.nome;
     document.getElementById('codigoDeBarra1').value = produtoSelecionado.codigo_barras;
     document.getElementById('preco1').value = produtoSelecionado.valor.toFixed(2)
     document.getElementById('cashBack1').value = produtoSelecionado.porcentagem_cashback;
     document.getElementById('cat1').value = produtoSelecionado.categoria;
+    
+    
+    const btnConf2 = document.getElementById('btnConf2')
 
+    btnConf2.addEventListener('click', async () => {
+        try {
+            const dados = {
+                id_empresa: String(idii),
+                categoria: document.getElementById('cat1').value,    
+                nome: document.getElementById('nome1').value,
+                codigo_barras: document.getElementById('codigoDeBarra1').value,
+                valor: document.getElementById('preco1').value,
+                porcentagem_cashback: document.getElementById('cashBack1').value,
+            }
+    
+            const response = await fetch('http://localhost:8080/backend/produto/modify', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(dados)
+            });
+
+            if(!response.ok) {
+                throw new Error("error");  
+            }
+            const data = await response.json()
+            console.log(data)
+            window.location.reload()
+
+        } catch (error) {
+            alertBox('Não foi possivel modificar esse produto')
+        }
+
+        
+
+    })
       
     document.getElementById('modalmodifica').style.display = 'flex';
 }

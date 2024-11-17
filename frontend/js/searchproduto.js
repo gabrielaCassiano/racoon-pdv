@@ -36,16 +36,6 @@ for(let i = 0; i < btnVoltar1.length; i++){
 const modalmodifica = document.getElementById("modalmodifica")
 console.log(btnEditar)
   
-  
-
-  
-  
-  
-  
-  
-  
-  
-  
 
 for(let i = 0; i < btnVoltar1.length; i++){
     btnVoltar1[i].addEventListener('click', () => {

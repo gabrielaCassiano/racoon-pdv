@@ -5,6 +5,28 @@ const optionsOpen = document.getElementById("optOpen")
 let idCaixa = null;
 const modalAbrirCaixa = document.getElementById("modalAberturaDeCaixa")
 
+function alertBox(params) {
+    const alertDiv = document.createElement('div');
+    alertDiv.style.cssText = `
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #ffebee;
+        color: #c62828;
+        padding: 10px 20px;
+        border-radius: 4px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        z-index: 1000;
+    `;
+    alertDiv.textContent = `${params}`;
+    document.body.appendChild(alertDiv);
+    
+    setTimeout(() => {
+        alertDiv.remove();
+    }, 3000);
+}
+
 async function estadoCaixa() {
     try {
         console.log(getState("id_funcionario"))
@@ -44,7 +66,7 @@ async function estadoCaixa() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', estadoCaixa);
+document.addEventListener('DOMContentLoaded', estadoCaixa());
 
 loginFuncionarioBtn.addEventListener('click', async (event) => {
     event.preventDefault();
@@ -102,6 +124,6 @@ loginFuncionarioBtn.addEventListener('click', async (event) => {
         }
     } catch (error) {
         console.error('Erro:', error);
-        alert(error.message || 'Erro ao abrir o caixa. Por favor, tente novamente.');
+        alertBox('Erro ao abrir o caixa. Por favor, tente novamente.');
     }
 });

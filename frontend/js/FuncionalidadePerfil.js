@@ -5,6 +5,27 @@ let idii = getState("id_empresa");
 
 let planoSelecionado = null;
 
+function alertBox(params) {
+    const alertDiv = document.createElement('div');
+    alertDiv.style.cssText = `
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #ffebee;
+        color: #c62828;
+        padding: 10px 20px;
+        border-radius: 4px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        z-index: 1000;
+    `;
+    alertDiv.textContent = `${params}`;
+    document.body.appendChild(alertDiv);
+    
+    setTimeout(() => {
+        alertDiv.remove();
+    }, 3000);
+}
 
 const divs = document.querySelectorAll('.item');
 
@@ -35,12 +56,12 @@ enviarPlanoNovoBtn.addEventListener('click', async (event) => {
     event.preventDefault();
 
     if (!planoSelecionado) {
-        alert("Por favor, selecione um plano antes de continuar.");
+        alertBox("Por favor, selecione um plano antes de continuar.");
         return;
     }
 
     if (!idii) {
-        alert("ID da empresa não encontrado.");
+        alertBox("ID da empresa não encontrado.");
         return;
     }
 
@@ -60,14 +81,14 @@ enviarPlanoNovoBtn.addEventListener('click', async (event) => {
 
         if (!response.ok) {
             const errorData = await response.json();
-            alert(`Erro ao atualizar plano: ${errorData.message || response.statusText}`);
+            alertBox(`Erro ao atualizar plano: ${errorData.message || response.statusText}`);
             return;
         }
 
-        alert('Plano atualizado com sucesso!');
+        alertBox('Plano atualizado com sucesso!');
         window.location.reload();
     } catch (error) {
-        alert('Erro ao atualizar plano, tente novamente.');
+        alertBox('Erro ao atualizar plano, tente novamente.');
     }
 });
 
@@ -143,12 +164,12 @@ document.getElementById('enviarEdicao').addEventListener('click', async (event) 
     const cnpjNovo = document.getElementById('cnpjNovo').value;
 
     if (!nomeNovo && !cnpjNovo) {
-        alert("Por favor, preencha pelo menos um campo para atualizar.");
+        alertBox("Por favor, preencha pelo menos um campo para atualizar.");
         return;
     }
 
     if (!idii) {
-        alert("ID da empresa não encontrado.");
+        alertBox("ID da empresa não encontrado.");
         return;
     }
 
@@ -169,14 +190,14 @@ document.getElementById('enviarEdicao').addEventListener('click', async (event) 
 
         if (!response.ok) {
             const errorData = await response.json();
-            alert(`Erro ao atualizar informações: ${errorData.message || response.statusText}`);
+            alertBox(`Erro ao atualizar informações: ${errorData.message || response.statusText}`);
             return;
         }
 
-        alert('Informações da empresa atualizadas com sucesso!');
+        alertBox('Informações da empresa atualizadas com sucesso!');
         window.location.reload();
     } catch (error) {
-        alert('Erro ao atualizar informações, tente novamente.');
+        alertBox('Erro ao atualizar informações, tente novamente.');
     }
 });
 

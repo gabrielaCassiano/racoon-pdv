@@ -120,7 +120,7 @@ class ProdutoRepository {
                     codigo_barras = :codigo
                     AND excluido IS NULL
             ");
-            $stmt->bindParam(":codigo", $codigo_barras);
+            $stmt->bindValue(":codigo", $codigo_barras);
             $stmt->execute();
     
             return $stmt->fetch(PDO::FETCH_ASSOC);
@@ -204,34 +204,37 @@ class ProdutoRepository {
     }
 
     public static function modify($body, $update_statement) {
-
         global $pdo;
-
-        $stmt = $pdo->prepare("
-            UPDATE 
-                produto
-            SET 
-                $update_statement
-            WHERE 
-                id = :id,
-                AND excluido IS NULL
-        ");
-
-        Utils::bind(
-            $stmt,
-            ":id", "",
-            ":id_empresa", $body->id_empresa,
-            ":categoria", $body->categoria,
-            ":nome", $body->nome,
-            ":codigo_barras", $body->codigo_barras,
-            ":valor", $body->valor,
-            ":porcentagem_cashback", $body->porcentagem_cashback
-        );
-
-        return $stmt->execute();
-
+        
+        try {
+            $query = "UPDATE produto 
+                     SET $update_statement 
+                     WHERE codigo_barras = :codigo_barras 
+                     AND excluido IS NULL";
+                    
+            
+            $stmt = $pdo->prepare($query);
+            
+            $stmt->bindParam(":codigo_barras", $body->codigo_barras);
+            $stmt->bindParam(":id_empresa", $body->id_empresa);
+            $stmt->bindParam(":categoria", $body->categoria);
+            $stmt->bindParam(":nome", $body->nome);
+            $stmt->bindParam(":valor", $body->valor);
+            $stmt->bindParam(":porcentagem_cashback", $body->porcentagem_cashback);
+            
+            $result = $stmt->execute();
+            
+            if (!$result) {
+                error_log("Erro PDO: " . json_encode($stmt->errorInfo()));
+            }
+            
+            return $result;
+            
+        } catch (PDOException $e) {
+            error_log("Erro na query: " . $e->getMessage());
+            return false;
+        }
     }
-
 }
 
 ?>

@@ -4,6 +4,28 @@ import { updateState } from '../lib/state.js';
 const signInBtn = document.getElementById('signInBtn');
 const loginBtn = document.getElementById('loginBtn');
 
+function alertBox(params) {
+    const alertDiv = document.createElement('div');
+    alertDiv.style.cssText = `
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #ffebee;
+        color: #c62828;
+        padding: 10px 20px;
+        border-radius: 4px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        z-index: 1000;
+    `;
+    alertDiv.textContent = `${params}`;
+    document.body.appendChild(alertDiv);
+    
+    setTimeout(() => {
+        alertDiv.remove();
+    }, 3000);
+}
+
 loginBtn.addEventListener('click', async (event) => {
     event.preventDefault();
 
@@ -37,78 +59,9 @@ loginBtn.addEventListener('click', async (event) => {
         box.show(loginBtn);
         console.error('Erro no login:', error);
     }
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
+    
       
 });
-
-  
-  
-
-  
-  
-  
-  
-  
-  
-  
-
-  
-
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-  
-  
-  
-  
-  
-
-
-
-  
-  
-
-  
-  
-  
-  
-  
-
-  
-  
-
-  
-  
-  
-  
-  
-
 
 let planoSelecionado = null;
 
@@ -149,7 +102,7 @@ signInBtn.addEventListener('click', async (event) => {
 
       
     if (!planoSelecionado) {
-        alert("Por favor, selecione um plano antes de continuar.");
+        alertBox("Por favor, selecione um plano antes de continuar.");
         return;
     }
 
