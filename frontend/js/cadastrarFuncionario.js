@@ -1,4 +1,8 @@
-let idii = getState("id_empresa")
+let idii = getState("id_empresa");
+
+console.log("ID da empresa:", idii);
+
+
 
 import {getState} from "../lib/state.js";
 const cadastrarFuncionarioBtn = document.getElementById('btnCadastroFuncionario');
@@ -34,21 +38,18 @@ cadastrarFuncionarioBtn.addEventListener('click', async (event) => {
 
         const data = await response.json();
         console.log('Funcionário cadastrado com sucesso:', data);
+        window.location.reload();
     } catch (error) {
         console.error('Erro em Cadastrar Funcionário:', error);
     }
 });
 
 
-
-
-  
-
-
 async function fetchFuncionarios() {
     try {
-       
-        const id_empresa = idii; 
+        const id_empresa = getState("id_empresa"); 
+        console.log("ID da empresa:", id_empresa);
+
         if (!id_empresa) {
             console.error("ID da empresa não encontrado.");
             return;
@@ -56,20 +57,20 @@ async function fetchFuncionarios() {
 
         const response = await fetch(`http://localhost:8080/backend/funcionario/collect?id_empresa=${id_empresa}`);
         
-        
         if (!response.ok) {
             console.error("Erro na resposta do servidor:", response.statusText);
             return;
         }
 
         const data = await response.json();
+        console.log("Dados recebidos:", data);
 
-        if (!data || !data.data || data.data.length === 0) {
-            console.error("Nenhum funcionário encontrado");
+        // Verifique se 'data' é um array vazio
+        if (!data.data || data.data.length === 0) {
+            console.warn("Nenhum funcionário encontrado");
             return;
         }
 
-        
         const funcionarios = data.data;
         const tbody = document.getElementById('funcionarios-body');
         tbody.innerHTML = '';
@@ -78,22 +79,18 @@ async function fetchFuncionarios() {
             const row = document.createElement('tr');
             row.innerHTML = `
                 <td>${funcionario.nome}</td>
-                <td>${funcionario.funcao || 'Função não informada'}</td>
                 <td>${funcionario.cpf}</td>
                 <td>${funcionario.senha || 'N/A'}</td>
             `;
             tbody.appendChild(row);
         });
+
+        console.log("Funcionários carregados com sucesso!");
     } catch (error) {
         console.error("Erro ao buscar funcionários:", error);
     }
 }
 
 
-
-
-window.onload = function() {
-    
-    fetchFuncionarios();
-};
+window.onload = fetchFuncionarios;
 

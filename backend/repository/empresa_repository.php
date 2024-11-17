@@ -76,6 +76,7 @@ class EmpresaRepository {
                 nome_criador,
                 cnpj,
                 cpf,
+                plano,
                 criado
             FROM 
                 empresa 
@@ -93,37 +94,6 @@ class EmpresaRepository {
 
 
     }
-
-
-     
-     
-    
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-    
-     
-     
-    
-     
-     
-    
-
-
-
-
-
-
 
 
 
@@ -185,24 +155,6 @@ class EmpresaRepository {
 
     }
 
-     
-
-     
-
-     
-     
-     
-     
-
-     
-     
-     
-     
-     
-
-     
-
-     
 
     public static function create($nome_empresa, $nome_criador, $cnpj, $cpf, $senha, $plano) {
         global $pdo;

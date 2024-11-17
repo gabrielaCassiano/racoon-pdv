@@ -77,6 +77,10 @@ window.onload = () => {
     renderProdutos(todosProdutos);
 };
 
+document.addEventListener('DOMContentLoaded', ()=>{
+    clearState("produtos")
+})
+
 cancelar();
 
 payBtn.addEventListener('click', () => {

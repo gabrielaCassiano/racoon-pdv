@@ -3,6 +3,28 @@ const tbodyRelatorio = document.getElementById('tbodyRelatorio');
 const vendasValorTotal = document.getElementById('vendasValorTotal');
 const vendasQtdTotal = document.getElementById('vendasQtdTotal');
 
+function alertBox(params) {
+    const alertDiv = document.createElement('div');
+    alertDiv.style.cssText = `
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #ffebee;
+        color: #c62828;
+        padding: 10px 20px;
+        border-radius: 4px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        z-index: 1000;
+    `;
+    alertDiv.textContent = `${params}`;
+    document.body.appendChild(alertDiv);
+    
+    setTimeout(() => {
+        alertDiv.remove();
+    }, 3000);
+}
+
 async function getCaixaAtual(id_empresa) {
     try {
         const response = await fetch(`http://localhost:8080/backend/caixa/collect?id_empresa=${id_empresa}`);
@@ -95,10 +117,11 @@ const atualizarModalFechamento = async () => {
         
         if (responseFuncionario.ok) {
             const funcionario = await responseFuncionario.json();
-            console.log(funcionario)
-            if (funcionario) {
-                nome_funcionario = funcionario.nome;
-                senha_funcionario = funcionario.senha;
+            console.log("Dados do funcionário:", funcionario);
+            if (funcionario?.data?.length > 0) {
+                const primeiroFuncionario = funcionario.data[0];
+                nome_funcionario = primeiroFuncionario.nome;
+                senha_funcionario = primeiroFuncionario.senha;
             }
         }
 
@@ -131,13 +154,13 @@ const atualizarModalFechamento = async () => {
                 }
             });
 
-            if (compra.valor_cashback && compra.status_cashback == 'DISPONIVEL') {
+            if (compra.valor_cashback && compra.status_cashback != 'DISPONIVEL') {
                 totais.cashback += parseFloat(compra.valor_cashback);
             }
         });
 
         document.querySelector('.infoFechamentoUl').innerHTML = `
-            <li>Operador: <span class="dentrinhoDoFechamento">${nome_funcionario}</span></li>
+            <li>Operador:<br> <span class="dentrinhoDoFechamento">${nome_funcionario}</span></li>
             <li>Codigo Operador: <span class="dentrinhoDoFechamento">${senha_funcionario}</span></li>
             <li>Data: <br><span class="dentrinhoDoFechamento">${new Date(caixaAtual.aberto).toLocaleDateString()}</span></li>
         `;
@@ -234,7 +257,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const id_funcionario = getState('id_funcionario');
 
             if (!id_empresa || !id_funcionario) {
-                alert('Dados da empresa ou funcionário não encontrados.');
+                alertBox('Dados da empresa ou funcionário não encontrados.');
                 return;
             }
 
@@ -253,14 +276,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 const data = await response.json();
 
                 if (response.ok) {
-                    alert('Caixa fechado com sucesso!');
+                    alertBox('Caixa fechado com sucesso!');
                     window.location.reload();
                 } else {
-                    alert(`Erro ao fechar o caixa: ${data.message}`);
+                    alertBox(`Erro ao fechar o caixa: ${data.message}`);
                 }
             } catch (error) {
                 console.error('Erro ao fechar o caixa:', error);
-                alert('Ocorreu um erro ao tentar fechar o caixa.');
+                alertBox('Ocorreu um erro ao tentar fechar o caixa.');
             }
         });
     }

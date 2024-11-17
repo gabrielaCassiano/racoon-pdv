@@ -1280,3 +1280,278 @@ Stack trace:
 [17-Nov-2024 17:31:13 Europe/Berlin] PHP Warning:  Undefined array key "id_empresa" in C:\xampp\htdocs\backend\controller\caixa_controller.php on line 23
 [17-Nov-2024 19:46:14 Europe/Berlin] PHP Parse error:  syntax error, unexpected identifier "create", expecting ")" in C:\xampp\htdocs\backend\controller\empresa_controller.php on line 15
 [17-Nov-2024 19:46:14 Europe/Berlin] PHP Parse error:  syntax error, unexpected identifier "create", expecting ")" in C:\xampp\htdocs\backend\controller\empresa_controller.php on line 15
+[17-Nov-2024 21:47:29 Europe/Berlin] PHP Warning:  Attempt to read property "id_empresa" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 39
+[17-Nov-2024 21:47:29 Europe/Berlin] PHP Warning:  Attempt to read property "categoria" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 40
+[17-Nov-2024 21:47:29 Europe/Berlin] PHP Warning:  Attempt to read property "nome" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 41
+[17-Nov-2024 21:47:29 Europe/Berlin] PHP Warning:  Attempt to read property "codigo_barras" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 42
+[17-Nov-2024 21:47:29 Europe/Berlin] PHP Warning:  Attempt to read property "valor" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 43
+[17-Nov-2024 21:47:29 Europe/Berlin] PHP Warning:  Attempt to read property "porcentagem_cashback" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 44
+[17-Nov-2024 21:47:30 Europe/Berlin] PHP Warning:  Attempt to read property "id_empresa" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 39
+[17-Nov-2024 21:47:30 Europe/Berlin] PHP Warning:  Attempt to read property "categoria" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 40
+[17-Nov-2024 21:47:30 Europe/Berlin] PHP Warning:  Attempt to read property "nome" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 41
+[17-Nov-2024 21:47:30 Europe/Berlin] PHP Warning:  Attempt to read property "codigo_barras" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 42
+[17-Nov-2024 21:47:30 Europe/Berlin] PHP Warning:  Attempt to read property "valor" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 43
+[17-Nov-2024 21:47:30 Europe/Berlin] PHP Warning:  Attempt to read property "porcentagem_cashback" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 44
+[17-Nov-2024 21:47:30 Europe/Berlin] PHP Warning:  Attempt to read property "id_empresa" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 39
+[17-Nov-2024 21:47:30 Europe/Berlin] PHP Warning:  Attempt to read property "categoria" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 40
+[17-Nov-2024 21:47:30 Europe/Berlin] PHP Warning:  Attempt to read property "nome" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 41
+[17-Nov-2024 21:47:30 Europe/Berlin] PHP Warning:  Attempt to read property "codigo_barras" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 42
+[17-Nov-2024 21:47:30 Europe/Berlin] PHP Warning:  Attempt to read property "valor" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 43
+[17-Nov-2024 21:47:30 Europe/Berlin] PHP Warning:  Attempt to read property "porcentagem_cashback" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 44
+[17-Nov-2024 21:47:30 Europe/Berlin] PHP Warning:  Attempt to read property "id_empresa" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 39
+[17-Nov-2024 21:47:30 Europe/Berlin] PHP Warning:  Attempt to read property "categoria" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 40
+[17-Nov-2024 21:47:30 Europe/Berlin] PHP Warning:  Attempt to read property "nome" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 41
+[17-Nov-2024 21:47:30 Europe/Berlin] PHP Warning:  Attempt to read property "codigo_barras" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 42
+[17-Nov-2024 21:47:30 Europe/Berlin] PHP Warning:  Attempt to read property "valor" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 43
+[17-Nov-2024 21:47:30 Europe/Berlin] PHP Warning:  Attempt to read property "porcentagem_cashback" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 44
+[17-Nov-2024 21:47:30 Europe/Berlin] PHP Warning:  Attempt to read property "id_empresa" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 39
+[17-Nov-2024 21:47:30 Europe/Berlin] PHP Warning:  Attempt to read property "categoria" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 40
+[17-Nov-2024 21:47:30 Europe/Berlin] PHP Warning:  Attempt to read property "nome" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 41
+[17-Nov-2024 21:47:30 Europe/Berlin] PHP Warning:  Attempt to read property "codigo_barras" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 42
+[17-Nov-2024 21:47:30 Europe/Berlin] PHP Warning:  Attempt to read property "valor" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 43
+[17-Nov-2024 21:47:30 Europe/Berlin] PHP Warning:  Attempt to read property "porcentagem_cashback" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 44
+[17-Nov-2024 21:47:31 Europe/Berlin] PHP Warning:  Attempt to read property "id_empresa" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 39
+[17-Nov-2024 21:47:31 Europe/Berlin] PHP Warning:  Attempt to read property "categoria" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 40
+[17-Nov-2024 21:47:31 Europe/Berlin] PHP Warning:  Attempt to read property "nome" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 41
+[17-Nov-2024 21:47:31 Europe/Berlin] PHP Warning:  Attempt to read property "codigo_barras" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 42
+[17-Nov-2024 21:47:31 Europe/Berlin] PHP Warning:  Attempt to read property "valor" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 43
+[17-Nov-2024 21:47:31 Europe/Berlin] PHP Warning:  Attempt to read property "porcentagem_cashback" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 44
+[17-Nov-2024 21:47:32 Europe/Berlin] PHP Warning:  Attempt to read property "id_empresa" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 39
+[17-Nov-2024 21:47:32 Europe/Berlin] PHP Warning:  Attempt to read property "categoria" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 40
+[17-Nov-2024 21:47:32 Europe/Berlin] PHP Warning:  Attempt to read property "nome" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 41
+[17-Nov-2024 21:47:32 Europe/Berlin] PHP Warning:  Attempt to read property "codigo_barras" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 42
+[17-Nov-2024 21:47:32 Europe/Berlin] PHP Warning:  Attempt to read property "valor" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 43
+[17-Nov-2024 21:47:32 Europe/Berlin] PHP Warning:  Attempt to read property "porcentagem_cashback" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 44
+[17-Nov-2024 21:49:57 Europe/Berlin] PHP Warning:  Attempt to read property "id_empresa" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 39
+[17-Nov-2024 21:49:57 Europe/Berlin] PHP Warning:  Attempt to read property "categoria" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 40
+[17-Nov-2024 21:49:57 Europe/Berlin] PHP Warning:  Attempt to read property "nome" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 41
+[17-Nov-2024 21:49:57 Europe/Berlin] PHP Warning:  Attempt to read property "codigo_barras" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 42
+[17-Nov-2024 21:49:57 Europe/Berlin] PHP Warning:  Attempt to read property "valor" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 43
+[17-Nov-2024 21:49:57 Europe/Berlin] PHP Warning:  Attempt to read property "porcentagem_cashback" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 44
+[17-Nov-2024 21:50:50 Europe/Berlin] PHP Warning:  Attempt to read property "id_empresa" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 39
+[17-Nov-2024 21:50:50 Europe/Berlin] PHP Warning:  Attempt to read property "categoria" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 40
+[17-Nov-2024 21:50:50 Europe/Berlin] PHP Warning:  Attempt to read property "nome" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 41
+[17-Nov-2024 21:50:50 Europe/Berlin] PHP Warning:  Attempt to read property "codigo_barras" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 42
+[17-Nov-2024 21:50:50 Europe/Berlin] PHP Warning:  Attempt to read property "valor" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 43
+[17-Nov-2024 21:50:50 Europe/Berlin] PHP Warning:  Attempt to read property "porcentagem_cashback" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 44
+[17-Nov-2024 21:52:50 Europe/Berlin] PHP Warning:  Attempt to read property "id_empresa" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 40
+[17-Nov-2024 21:52:50 Europe/Berlin] PHP Warning:  Attempt to read property "categoria" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 41
+[17-Nov-2024 21:52:50 Europe/Berlin] PHP Warning:  Attempt to read property "nome" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 42
+[17-Nov-2024 21:52:50 Europe/Berlin] PHP Warning:  Attempt to read property "codigo_barras" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 43
+[17-Nov-2024 21:52:50 Europe/Berlin] PHP Warning:  Attempt to read property "valor" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 44
+[17-Nov-2024 21:52:50 Europe/Berlin] PHP Warning:  Attempt to read property "porcentagem_cashback" on array in C:\xampp\htdocs\backend\controller\produto_controller.php on line 45
+[17-Nov-2024 22:58:16 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$id in C:\xampp\htdocs\backend\controller\produto_controller.php on line 134
+[17-Nov-2024 23:03:55 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ProdutoController::modify(), 1 passed in C:\xampp\htdocs\backend\controller\produto_controller.php on line 21 and exactly 2 expected in C:\xampp\htdocs\backend\controller\produto_controller.php:130
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\produto_controller.php(21): ProdutoController::modify(Object(stdClass))
+#1 C:\xampp\htdocs\backend\index.php(32): ProdutoController::route('modify')
+#2 {main}
+  thrown in C:\xampp\htdocs\backend\controller\produto_controller.php on line 130
+[17-Nov-2024 23:09:32 Europe/Berlin] Recebido no modify: {"id_empresa":40,"categoria":"Mercearia","nome":"Fone de Ouvido","codigo_barras":"7811987654321","valor":150.99,"porcentagem_cashback":10}
+[17-Nov-2024 23:10:39 Europe/Berlin] Recebido no modify: {"id_empresa":40,"categoria":"Mercearia","nome":"Fone de Ouvido","codigo_barras":"7811987654321","valor":150.99,"porcentagem_cashback":10}
+[17-Nov-2024 23:10:39 Europe/Berlin] Buscando produto com código de barras: '7811987654321'
+[17-Nov-2024 23:10:39 Europe/Berlin] Produto encontrado: {"id":35,"id_empresa":40,"categoria":"Doces","nome":"Whey Pro","codigo_barras":"7811987654321","valor":50.99,"porcentagem_cashback":1.99,"criado":"2024-11-17 21:34:55"}
+[17-Nov-2024 23:11:04 Europe/Berlin] Recebido no modify: {"id_empresa":40,"categoria":"Mercearia","nome":"Fone de Ouvido","codigo_barras":"7811987654321","valor":150.99,"porcentagem_cashback":10}
+[17-Nov-2024 23:12:00 Europe/Berlin] Recebido no modify: {"id_empresa":40,"categoria":"Mercearia","nome":"Fone de Ouvido","codigo_barras":"7811987654321","valor":150.99,"porcentagem_cashback":10}
+[17-Nov-2024 23:12:50 Europe/Berlin] Recebido no modify: {"id_empresa":"40","categoria":"Mercearia","nome":"Fone de Ouvido","codigo_barras":"7811987654321","valor":150.99,"porcentagem_cashback":10}
+[17-Nov-2024 23:13:43 Europe/Berlin] Recebido no modify: {"id_empresa":"40","categoria":"Mercearia","nome":"Fone de Ouvido","codigo_barras":"7811987654321","valor":150.99,"porcentagem_cashback":10}
+[17-Nov-2024 23:13:52 Europe/Berlin] Recebido no modify: {"id_empresa":"40","categoria":"Mercearia","nome":"Fone de Ouvido","codigo_barras":"7811987654321","valor":150.99,"porcentagem_cashback":10}
+[17-Nov-2024 23:15:28 Europe/Berlin] Recebido no modify: {"id_empresa":"40","categoria":"Mercearia","nome":"Fone de Ouvido","codigo_barras":"7811987654321","valor":150.99,"porcentagem_cashback":10}
+[17-Nov-2024 23:16:38 Europe/Berlin] Request initial: {"id_empresa":"40","categoria":"Mercearia","nome":"Fone de Ouvido","codigo_barras":"7811987654321","valor":150.99,"porcentagem_cashback":10}
+[17-Nov-2024 23:16:38 Europe/Berlin] Recebido no modify: {"id_empresa":"40","categoria":"Mercearia","nome":"Fone de Ouvido","codigo_barras":"7811987654321","valor":150.99,"porcentagem_cashback":10}
+[17-Nov-2024 23:17:28 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:17:28 Europe/Berlin] Request initial: {"id_empresa":"40","categoria":"Mercearia","nome":"Fone de Ouvido","codigo_barras":"7811987654321","valor":150.99,"porcentagem_cashback":10}
+[17-Nov-2024 23:17:28 Europe/Berlin] Recebido no modify: {"id_empresa":"40","categoria":"Mercearia","nome":"Fone de Ouvido","codigo_barras":"7811987654321","valor":150.99,"porcentagem_cashback":10}
+[17-Nov-2024 23:19:23 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:19:23 Europe/Berlin] Request initial: {"id_empresa":"40","categoria":"Mercearia","nome":"Fone de Ouvido","codigo_barras":"7811987654321","valor":150.99,"porcentagem_cashback":10}
+[17-Nov-2024 23:19:23 Europe/Berlin] Recebido no modify: {"id_empresa":"40","categoria":"Mercearia","nome":"Fone de Ouvido","codigo_barras":"7811987654321","valor":150.99,"porcentagem_cashback":10}
+[17-Nov-2024 23:19:50 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:19:50 Europe/Berlin] Request initial: {"id_empresa":"40","categoria":"Mercearia","nome":"Fone de Ouvido","codigo_barras":"7811987654321","valor":150.99,"porcentagem_cashback":10}
+[17-Nov-2024 23:20:08 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:20:08 Europe/Berlin] Request initial: {"id_empresa":"40","categoria":"Mercearia","nome":"Fone de Ouvido","codigo_barras":"7811987654321","valor":150.99,"porcentagem_cashback":10}
+[17-Nov-2024 23:20:16 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:20:16 Europe/Berlin] Request initial: {"id_empresa":"40","categoria":"Mercearia","nome":"Fone de Ouvido","codigo_barras":"7811987654321","valor":150.99,"porcentagem_cashback":10}
+[17-Nov-2024 23:20:47 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:22:21 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:22:21 Europe/Berlin] Query: UPDATE produto 
+                     SET id_empresa = :id_empresa, 
+                            categoria = :categoria, 
+                            nome = :nome,
+                            valor = :valor,
+                            porcentagem_cashback = :porcentagem_cashback,
+                            modificado = UTC_TIMESTAMP() 
+                     WHERE codigo_barras = :codigo_barras 
+                     AND excluido IS NULL
+[17-Nov-2024 23:22:21 Europe/Berlin] Valores: {"id_empresa":"40","categoria":"Mercearia","nome":"Fone de Ouvido","codigo_barras":"7811987654321","valor":150.99,"porcentagem_cashback":10}
+[17-Nov-2024 23:22:21 Europe/Berlin] Resultado do update: true
+[17-Nov-2024 23:23:03 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:23:03 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:23:06 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:23:30 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:23:55 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:24:28 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:24:39 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:24:39 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:24:39 Europe/Berlin] Query: UPDATE produto 
+                     SET id_empresa = :id_empresa, 
+                            categoria = :categoria, 
+                            nome = :nome,
+                            valor = :valor,
+                            porcentagem_cashback = :porcentagem_cashback,
+                            modificado = UTC_TIMESTAMP() 
+                     WHERE codigo_barras = :codigo_barras 
+                     AND excluido IS NULL
+[17-Nov-2024 23:24:39 Europe/Berlin] Valores: {"id_empresa":"40","categoria":"Mercearia","nome":"Fone de Ouvido","codigo_barras":"7811987654321","valor":"1500.99","porcentagem_cashback":"10"}
+[17-Nov-2024 23:24:39 Europe/Berlin] Resultado do update: true
+[17-Nov-2024 23:24:47 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:25:38 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:25:41 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:25:44 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:25:45 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:26:04 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:26:10 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:26:10 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:26:11 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:26:11 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:26:13 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:26:13 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:26:16 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:26:16 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:26:16 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:26:44 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:26:44 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:26:45 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:26:45 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:26:45 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:26:53 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:27:33 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:27:33 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:27:35 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:27:42 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:27:42 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:27:43 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:27:46 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:27:46 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:28:03 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:28:03 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:28:07 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:28:19 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:28:19 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:28:32 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:28:32 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:29:26 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:29:26 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:30:41 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:30:41 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:30:51 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:30:51 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:31:12 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:31:12 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:31:14 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:31:15 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:31:15 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:31:16 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:33:15 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:33:15 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:36:17 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:36:27 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:37:02 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:37:21 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:37:26 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:37:44 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:37:51 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:38:09 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:38:59 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:39:03 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:39:57 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:40:02 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:40:37 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:40:37 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:40:38 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:40:38 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:40:40 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:42:10 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:42:56 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:43:16 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:43:16 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:43:16 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:43:16 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:43:19 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:43:39 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:43:45 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:43:45 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:43:45 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:43:58 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:44:13 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:44:23 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:44:33 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:45:51 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:45:51 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:46:06 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:46:06 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:46:49 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:46:49 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:47:03 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:47:03 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:47:07 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:47:07 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:47:07 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:47:11 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:47:11 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:47:31 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:47:31 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:47:31 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:47:31 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:48:02 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:48:02 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:48:02 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:48:02 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:48:10 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:48:10 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:48:10 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:48:10 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:48:28 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:48:28 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:48:28 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:48:28 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:48:33 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:48:35 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:49:02 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:49:02 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:49:02 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:49:34 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:49:34 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:49:34 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:50:07 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:50:07 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:50:07 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:50:11 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:50:24 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:50:24 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:50:24 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:50:24 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:50:33 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:50:43 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:51:07 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:51:07 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:51:10 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:51:26 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:51:27 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:51:28 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:51:28 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:51:42 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:51:47 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:51:52 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:52:10 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:52:10 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:52:12 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:52:12 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:52:15 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:52:15 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:52:23 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:52:24 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:52:24 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:52:29 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:52:29 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:52:29 Europe/Berlin] === INÍCIO DO REQUEST ===
+[17-Nov-2024 23:52:31 Europe/Berlin] === INÍCIO DO REQUEST ===

@@ -89,38 +89,56 @@
             );
         }
 
+        // private static function collect($id_empresa) {
+        //     if (!$id_empresa) {
+        //         return ResponseClass::answer(
+        //             "ID da empresa é necessário",
+        //             Status::BAD_REQUEST
+        //         );
+        //     }
+
+        //     $id_funcionario = isset($_GET['id_funcionario']) ? $_GET['id_funcionario'] : null;
+        
+        //     if ($id_funcionario) {
+        //         $funcionario = FuncionarioRepository::one($id_funcionario);
+        //         if (!$funcionario) {
+        //             return ResponseClass::answer(
+        //                 "Funcionário não encontrado",
+        //                 Status::NOT_FOUND
+        //             );
+        //         }
+        //         return ResponseClass::answerWithBody($funcionario, Status::OK);
+        //     }
+        
+        //     $funcionarios = FuncionarioRepository::all($id_empresa);
+        
+        //     if (empty($funcionarios)) {
+        //         return ResponseClass::answer(
+        //             "Nenhum funcionário encontrado",
+        //             Status::NOT_FOUND
+        //         );
+        //     }
+        
+        //     return ResponseClass::answerWithBody($funcionarios, Status::OK);
+        // }
+
         private static function collect($id_empresa) {
             if (!$id_empresa) {
-                return ResponseClass::answer(
-                    "ID da empresa é necessário",
-                    Status::BAD_REQUEST
-                );
-            }
-
-            $id_funcionario = isset($_GET['id_funcionario']) ? $_GET['id_funcionario'] : null;
-        
-            if ($id_funcionario) {
-                $funcionario = FuncionarioRepository::one($id_funcionario);
-                if (!$funcionario) {
-                    return ResponseClass::answer(
-                        "Funcionário não encontrado",
-                        Status::NOT_FOUND
-                    );
-                }
-                return ResponseClass::answerWithBody($funcionario, Status::OK);
+                return ResponseClass::answer("ID da empresa é necessário", Status::BAD_REQUEST);
             }
         
             $funcionarios = FuncionarioRepository::all($id_empresa);
-        
+            
             if (empty($funcionarios)) {
-                return ResponseClass::answer(
-                    "Nenhum funcionário encontrado",
-                    Status::NOT_FOUND
-                );
+                return ResponseClass::answerWithBody(['data' => []], Status::OK);
             }
-        
-            return ResponseClass::answerWithBody($funcionarios, Status::OK);
+            
+            return ResponseClass::answerWithBody(['data' => $funcionarios], Status::OK);
         }
+        
+
+
+
 
         private static function create($request) {
             if (is_null($request)) {
