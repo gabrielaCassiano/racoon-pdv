@@ -6,9 +6,8 @@ require_once '../backend/utils/update.php';
 class CaixaRepository {
 
     public static function all($id_empresa) {
-
         global $pdo;
-
+    
         $stmt = $pdo->prepare("
             SELECT
                 id,
@@ -22,12 +21,12 @@ class CaixaRepository {
                 caixa
             WHERE 
                 id_empresa = :id_empresa
+            ORDER BY 
+                aberto DESC
         ");
-
-        $stmt->bindParam("id_empresa", $id_empresa);
-
-        return $stmt->fetchAll();
-
+    
+        $stmt->execute([':id_empresa' => $id_empresa]);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public static function specific($id_caixa) {
@@ -57,9 +56,8 @@ class CaixaRepository {
     }
 
     public static function one($id_empresa, $hoje) {
-
         global $pdo;
-
+    
         $stmt = $pdo->prepare("
             SELECT
                 id,
@@ -73,15 +71,17 @@ class CaixaRepository {
                 caixa
             WHERE 
                 id_empresa = :id_empresa
-                AND aberto >= :hoje
+                AND DATE(aberto) = :hoje
+            ORDER BY 
+                aberto DESC
+            LIMIT 1
         ");
-
+    
         $stmt->bindParam("id_empresa", $id_empresa);
         $stmt->bindParam("hoje", $hoje);
         $stmt->execute();
-
+    
         return $stmt->fetch(PDO::FETCH_ASSOC);
-
     }
 
     public static function last($id_empresa) {
@@ -160,6 +160,7 @@ class CaixaRepository {
         return $stmt->execute();
 
     }
+    
 
 }
 

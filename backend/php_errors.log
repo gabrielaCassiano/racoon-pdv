@@ -481,3 +481,802 @@ Stack trace:
 [12-Nov-2024 17:27:03 Europe/Berlin] PHP Warning:  Undefined array key "nome_ou_cpf" in C:\xampp\htdocs\backend\controller\cliente_controller.php on line 15
 [12-Nov-2024 19:18:33 Europe/Berlin] PHP Warning:  Undefined array key "id_empresa" in C:\xampp\htdocs\backend\controller\produto_controller.php on line 17
 [12-Nov-2024 19:18:49 Europe/Berlin] PHP Warning:  Undefined array key "id_produto" in C:\xampp\htdocs\backend\controller\produto_controller.php on line 17
+[13-Nov-2024 20:32:25 Europe/Berlin] PHP Warning:  Undefined array key "id_cliente" in C:\xampp\htdocs\backend\controller\cliente_controller.php on line 15
+[13-Nov-2024 20:32:25 Europe/Berlin] PHP Fatal error:  Uncaught Error: PDOStatement::bindParam(): Argument #2 ($var) cannot be passed by reference in C:\xampp\htdocs\backend\repository\cliente_repository.php:29
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\cliente_controller.php(21): ClienteRepository::all('123')
+#1 C:\xampp\htdocs\backend\controller\cliente_controller.php(15): ClienteController::collect(NULL, '123')
+#2 C:\xampp\htdocs\backend\index.php(34): ClienteController::route('collect')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\repository\cliente_repository.php on line 29
+[13-Nov-2024 20:32:37 Europe/Berlin] PHP Warning:  Undefined array key "id_cliente" in C:\xampp\htdocs\backend\controller\cliente_controller.php on line 15
+[13-Nov-2024 20:32:37 Europe/Berlin] PHP Fatal error:  Uncaught Error: PDOStatement::bindParam(): Argument #2 ($var) cannot be passed by reference in C:\xampp\htdocs\backend\repository\cliente_repository.php:29
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\cliente_controller.php(21): ClienteRepository::all('124')
+#1 C:\xampp\htdocs\backend\controller\cliente_controller.php(15): ClienteController::collect(NULL, '124')
+#2 C:\xampp\htdocs\backend\index.php(34): ClienteController::route('collect')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\repository\cliente_repository.php on line 29
+[13-Nov-2024 20:32:38 Europe/Berlin] PHP Warning:  Undefined array key "id_cliente" in C:\xampp\htdocs\backend\controller\cliente_controller.php on line 15
+[13-Nov-2024 20:32:38 Europe/Berlin] PHP Fatal error:  Uncaught Error: PDOStatement::bindParam(): Argument #2 ($var) cannot be passed by reference in C:\xampp\htdocs\backend\repository\cliente_repository.php:29
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\cliente_controller.php(21): ClienteRepository::all('1245')
+#1 C:\xampp\htdocs\backend\controller\cliente_controller.php(15): ClienteController::collect(NULL, '1245')
+#2 C:\xampp\htdocs\backend\index.php(34): ClienteController::route('collect')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\repository\cliente_repository.php on line 29
+[13-Nov-2024 20:35:14 Europe/Berlin] PHP Warning:  Undefined array key "id_cliente" in C:\xampp\htdocs\backend\controller\cliente_controller.php on line 15
+[13-Nov-2024 20:35:14 Europe/Berlin] PHP Fatal error:  Uncaught Error: PDOStatement::bindParam(): Argument #2 ($var) cannot be passed by reference in C:\xampp\htdocs\backend\repository\cliente_repository.php:29
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\cliente_controller.php(21): ClienteRepository::all('23')
+#1 C:\xampp\htdocs\backend\controller\cliente_controller.php(15): ClienteController::collect(NULL, '23')
+#2 C:\xampp\htdocs\backend\index.php(34): ClienteController::route('collect')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\repository\cliente_repository.php on line 29
+[13-Nov-2024 20:37:37 Europe/Berlin] PHP Fatal error:  Uncaught Error: PDOStatement::bindParam(): Argument #2 ($var) cannot be passed by reference in C:\xampp\htdocs\backend\repository\cliente_repository.php:29
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\cliente_controller.php(21): ClienteRepository::all('23')
+#1 C:\xampp\htdocs\backend\controller\cliente_controller.php(15): ClienteController::collect(NULL, '23')
+#2 C:\xampp\htdocs\backend\index.php(34): ClienteController::route('collect')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\repository\cliente_repository.php on line 29
+[13-Nov-2024 22:36:56 Europe/Berlin] PHP Warning:  Undefined array key "id_caixa" in C:\xampp\htdocs\backend\controller\caixa_controller.php on line 23
+[14-Nov-2024 18:27:29 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$cpf in C:\xampp\htdocs\backend\controller\cliente_controller.php on line 73
+[14-Nov-2024 18:27:29 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$nome in C:\xampp\htdocs\backend\controller\cliente_controller.php on line 73
+[14-Nov-2024 18:28:01 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$nome in C:\xampp\htdocs\backend\controller\cliente_controller.php on line 73
+[14-Nov-2024 18:28:52 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$cpf_cliente in C:\xampp\htdocs\backend\controller\compras_controller.php on line 31
+[15-Nov-2024 02:54:06 Europe/Berlin] PHP Warning:  require_once(connection.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\backend\controller\compras_controller.php on line 9
+[15-Nov-2024 02:54:06 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'connection.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\backend\controller\compras_controller.php:9
+Stack trace:
+#0 C:\xampp\htdocs\backend\index.php(8): require()
+#1 {main}
+  thrown in C:\xampp\htdocs\backend\controller\compras_controller.php on line 9
+[15-Nov-2024 16:28:52 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$plano in C:\xampp\htdocs\backend\controller\empresa_controller.php on line 78
+[15-Nov-2024 16:42:22 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '12345678989' for key 'cpf' in C:\xampp\htdocs\backend\repository\empresa_repository.php:222
+Stack trace:
+#0 C:\xampp\htdocs\backend\repository\empresa_repository.php(222): PDOStatement->execute()
+#1 C:\xampp\htdocs\backend\controller\empresa_controller.php(103): EmpresaRepository::create('Empresa Da Gabi', 'Gabi', '123452678000299', '12345678989', 'seha1234', 'medio')
+#2 C:\xampp\htdocs\backend\controller\empresa_controller.php(15): EmpresaController::create(Object(stdClass))
+#3 C:\xampp\htdocs\backend\index.php(31): EmpresaController::route('create')
+#4 {main}
+  thrown in C:\xampp\htdocs\backend\repository\empresa_repository.php on line 222
+[15-Nov-2024 16:48:55 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '12345267800029' for key 'cnpj' in C:\xampp\htdocs\backend\repository\empresa_repository.php:222
+Stack trace:
+#0 C:\xampp\htdocs\backend\repository\empresa_repository.php(222): PDOStatement->execute()
+#1 C:\xampp\htdocs\backend\controller\empresa_controller.php(124): EmpresaRepository::create('Empresa Da Gabi', 'Gabi', '123452678000299', '48873914841', 'seha1234', 'medio')
+#2 C:\xampp\htdocs\backend\controller\empresa_controller.php(15): EmpresaController::create(Object(stdClass))
+#3 C:\xampp\htdocs\backend\index.php(31): EmpresaController::route('create')
+#4 {main}
+  thrown in C:\xampp\htdocs\backend\repository\empresa_repository.php on line 222
+[15-Nov-2024 16:50:25 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '12345267800029' for key 'cnpj' in C:\xampp\htdocs\backend\repository\empresa_repository.php:222
+Stack trace:
+#0 C:\xampp\htdocs\backend\repository\empresa_repository.php(222): PDOStatement->execute()
+#1 C:\xampp\htdocs\backend\controller\empresa_controller.php(103): EmpresaRepository::create('Empresa Da Gabi', 'Gabi', '123452678000299', '48873914841', 'seha1234', 'medio')
+#2 C:\xampp\htdocs\backend\controller\empresa_controller.php(15): EmpresaController::create(Object(stdClass))
+#3 C:\xampp\htdocs\backend\index.php(31): EmpresaController::route('create')
+#4 {main}
+  thrown in C:\xampp\htdocs\backend\repository\empresa_repository.php on line 222
+[15-Nov-2024 16:50:31 Europe/Berlin] PHP Warning:  Attempt to read property "nome_empresa" on null in C:\xampp\htdocs\backend\controller\empresa_controller.php on line 73
+[15-Nov-2024 16:50:31 Europe/Berlin] PHP Warning:  Attempt to read property "nome_criador" on null in C:\xampp\htdocs\backend\controller\empresa_controller.php on line 74
+[15-Nov-2024 16:50:31 Europe/Berlin] PHP Warning:  Attempt to read property "cnpj" on null in C:\xampp\htdocs\backend\controller\empresa_controller.php on line 75
+[15-Nov-2024 16:50:31 Europe/Berlin] PHP Warning:  Attempt to read property "cpf" on null in C:\xampp\htdocs\backend\controller\empresa_controller.php on line 76
+[15-Nov-2024 16:50:31 Europe/Berlin] PHP Warning:  Attempt to read property "senha" on null in C:\xampp\htdocs\backend\controller\empresa_controller.php on line 77
+[15-Nov-2024 16:50:31 Europe/Berlin] PHP Warning:  Attempt to read property "plano" on null in C:\xampp\htdocs\backend\controller\empresa_controller.php on line 78
+[15-Nov-2024 16:50:40 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$plano in C:\xampp\htdocs\backend\controller\empresa_controller.php on line 78
+[15-Nov-2024 16:59:23 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$plano in C:\xampp\htdocs\backend\controller\empresa_controller.php on line 206
+[15-Nov-2024 17:00:13 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '12345267800029' for key 'cnpj' in C:\xampp\htdocs\backend\repository\empresa_repository.php:222
+Stack trace:
+#0 C:\xampp\htdocs\backend\repository\empresa_repository.php(222): PDOStatement->execute()
+#1 C:\xampp\htdocs\backend\controller\empresa_controller.php(230): EmpresaRepository::create('Empresa Da Gabi', 'Gabi', '123452678000299', '48873914841', 'seha1234', 'medio')
+#2 C:\xampp\htdocs\backend\controller\empresa_controller.php(15): EmpresaController::create(Object(stdClass))
+#3 C:\xampp\htdocs\backend\index.php(31): EmpresaController::route('create')
+#4 {main}
+  thrown in C:\xampp\htdocs\backend\repository\empresa_repository.php on line 222
+[15-Nov-2024 17:33:03 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '12345267800029' for key 'cnpj' in C:\xampp\htdocs\backend\repository\empresa_repository.php:222
+Stack trace:
+#0 C:\xampp\htdocs\backend\repository\empresa_repository.php(222): PDOStatement->execute()
+#1 C:\xampp\htdocs\backend\controller\empresa_controller.php(229): EmpresaRepository::create('Empresa Da Gabi', 'Gabi', '123452678000299', '48873914841', 'seha1234', 'medio')
+#2 C:\xampp\htdocs\backend\controller\empresa_controller.php(15): EmpresaController::create(Object(stdClass))
+#3 C:\xampp\htdocs\backend\index.php(31): EmpresaController::route('create')
+#4 {main}
+  thrown in C:\xampp\htdocs\backend\repository\empresa_repository.php on line 222
+[15-Nov-2024 17:34:40 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'seha1234' for key 'senha' in C:\xampp\htdocs\backend\repository\empresa_repository.php:222
+Stack trace:
+#0 C:\xampp\htdocs\backend\repository\empresa_repository.php(222): PDOStatement->execute()
+#1 C:\xampp\htdocs\backend\controller\empresa_controller.php(229): EmpresaRepository::create('Empresa Da Gabi', 'Gabi', '12345677000199', '12346678909', 'seha1234', 'medio')
+#2 C:\xampp\htdocs\backend\controller\empresa_controller.php(15): EmpresaController::create(Object(stdClass))
+#3 C:\xampp\htdocs\backend\index.php(31): EmpresaController::route('create')
+#4 {main}
+  thrown in C:\xampp\htdocs\backend\repository\empresa_repository.php on line 222
+[15-Nov-2024 17:48:02 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '448.731.638' for key 'cpf' in C:\xampp\htdocs\backend\repository\empresa_repository.php:222
+Stack trace:
+#0 C:\xampp\htdocs\backend\repository\empresa_repository.php(222): PDOStatement->execute()
+#1 C:\xampp\htdocs\backend\controller\empresa_controller.php(229): EmpresaRepository::create('Via nutri', 'Rosangela soare...', '51212777000172', '448.731.638-70', 'Gabi123456', 'medio')
+#2 C:\xampp\htdocs\backend\controller\empresa_controller.php(15): EmpresaController::create(Object(stdClass))
+#3 C:\xampp\htdocs\backend\index.php(31): EmpresaController::route('create')
+#4 {main}
+  thrown in C:\xampp\htdocs\backend\repository\empresa_repository.php on line 222
+[15-Nov-2024 18:30:13 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'vini123456' for key 'senha' in C:\xampp\htdocs\backend\repository\empresa_repository.php:222
+Stack trace:
+#0 C:\xampp\htdocs\backend\repository\empresa_repository.php(222): PDOStatement->execute()
+#1 C:\xampp\htdocs\backend\controller\empresa_controller.php(229): EmpresaRepository::create('Chiquinho ', 'VINICIUS E RIAC...', '51212777001234', '35034951234', 'vini123456', 'avancado')
+#2 C:\xampp\htdocs\backend\controller\empresa_controller.php(15): EmpresaController::create(Object(stdClass))
+#3 C:\xampp\htdocs\backend\index.php(31): EmpresaController::route('create')
+#4 {main}
+  thrown in C:\xampp\htdocs\backend\repository\empresa_repository.php on line 222
+[15-Nov-2024 18:30:25 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'vini123456' for key 'senha' in C:\xampp\htdocs\backend\repository\empresa_repository.php:222
+Stack trace:
+#0 C:\xampp\htdocs\backend\repository\empresa_repository.php(222): PDOStatement->execute()
+#1 C:\xampp\htdocs\backend\controller\empresa_controller.php(229): EmpresaRepository::create('Chiquinho ', 'VINICIUS E RIAC...', '51212777001234', '35034951234', 'vini123456', 'medio')
+#2 C:\xampp\htdocs\backend\controller\empresa_controller.php(15): EmpresaController::create(Object(stdClass))
+#3 C:\xampp\htdocs\backend\index.php(31): EmpresaController::route('create')
+#4 {main}
+  thrown in C:\xampp\htdocs\backend\repository\empresa_repository.php on line 222
+[15-Nov-2024 18:32:01 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'vini123456' for key 'senha' in C:\xampp\htdocs\backend\repository\empresa_repository.php:222
+Stack trace:
+#0 C:\xampp\htdocs\backend\repository\empresa_repository.php(222): PDOStatement->execute()
+#1 C:\xampp\htdocs\backend\controller\empresa_controller.php(229): EmpresaRepository::create('ChiquinhoASD ', 'VINICIUS E RASI...', '512127770011234', '35024951234', 'vini123456', 'medio')
+#2 C:\xampp\htdocs\backend\controller\empresa_controller.php(15): EmpresaController::create(Object(stdClass))
+#3 C:\xampp\htdocs\backend\index.php(31): EmpresaController::route('create')
+#4 {main}
+  thrown in C:\xampp\htdocs\backend\repository\empresa_repository.php on line 222
+[15-Nov-2024 18:32:21 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'vini123456' for key 'senha' in C:\xampp\htdocs\backend\repository\empresa_repository.php:222
+Stack trace:
+#0 C:\xampp\htdocs\backend\repository\empresa_repository.php(222): PDOStatement->execute()
+#1 C:\xampp\htdocs\backend\controller\empresa_controller.php(229): EmpresaRepository::create('ChiquinhoASD ', 'VINICIUS E RASI...', '512127770011234', '35024951234', 'vini123456', 'medio')
+#2 C:\xampp\htdocs\backend\controller\empresa_controller.php(15): EmpresaController::create(Object(stdClass))
+#3 C:\xampp\htdocs\backend\index.php(31): EmpresaController::route('create')
+#4 {main}
+  thrown in C:\xampp\htdocs\backend\repository\empresa_repository.php on line 222
+[15-Nov-2024 18:32:55 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '123456' for key 'senha' in C:\xampp\htdocs\backend\repository\empresa_repository.php:222
+Stack trace:
+#0 C:\xampp\htdocs\backend\repository\empresa_repository.php(222): PDOStatement->execute()
+#1 C:\xampp\htdocs\backend\controller\empresa_controller.php(229): EmpresaRepository::create('asdas', 'asdasd', '512127730001123...', '1503430516989', '123456', 'medio')
+#2 C:\xampp\htdocs\backend\controller\empresa_controller.php(15): EmpresaController::create(Object(stdClass))
+#3 C:\xampp\htdocs\backend\index.php(31): EmpresaController::route('create')
+#4 {main}
+  thrown in C:\xampp\htdocs\backend\repository\empresa_repository.php on line 222
+[15-Nov-2024 18:36:34 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'senha123' for key 'senha' in C:\xampp\htdocs\backend\repository\empresa_repository.php:222
+Stack trace:
+#0 C:\xampp\htdocs\backend\repository\empresa_repository.php(222): PDOStatement->execute()
+#1 C:\xampp\htdocs\backend\controller\empresa_controller.php(229): EmpresaRepository::create('Racoon2', 'VINICIUS E R RA...', '51212773000173', '15034056981', 'senha123', 'medio')
+#2 C:\xampp\htdocs\backend\controller\empresa_controller.php(15): EmpresaController::create(Object(stdClass))
+#3 C:\xampp\htdocs\backend\index.php(31): EmpresaController::route('create')
+#4 {main}
+  thrown in C:\xampp\htdocs\backend\repository\empresa_repository.php on line 222
+[15-Nov-2024 18:36:47 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'senha123' for key 'senha' in C:\xampp\htdocs\backend\repository\empresa_repository.php:222
+Stack trace:
+#0 C:\xampp\htdocs\backend\repository\empresa_repository.php(222): PDOStatement->execute()
+#1 C:\xampp\htdocs\backend\controller\empresa_controller.php(229): EmpresaRepository::create('Racoon2', 'VINICIUS E R RA...', '51212773000173', '15034056981', 'senha123', 'medio')
+#2 C:\xampp\htdocs\backend\controller\empresa_controller.php(15): EmpresaController::create(Object(stdClass))
+#3 C:\xampp\htdocs\backend\index.php(31): EmpresaController::route('create')
+#4 {main}
+  thrown in C:\xampp\htdocs\backend\repository\empresa_repository.php on line 222
+[15-Nov-2024 18:36:52 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'senha123' for key 'senha' in C:\xampp\htdocs\backend\repository\empresa_repository.php:222
+Stack trace:
+#0 C:\xampp\htdocs\backend\repository\empresa_repository.php(222): PDOStatement->execute()
+#1 C:\xampp\htdocs\backend\controller\empresa_controller.php(229): EmpresaRepository::create('Racoona', 'VINICIUS E R RA...', '51212773000173', '15034056981', 'senha123', 'medio')
+#2 C:\xampp\htdocs\backend\controller\empresa_controller.php(15): EmpresaController::create(Object(stdClass))
+#3 C:\xampp\htdocs\backend\index.php(31): EmpresaController::route('create')
+#4 {main}
+  thrown in C:\xampp\htdocs\backend\repository\empresa_repository.php on line 222
+[15-Nov-2024 18:39:45 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'senha123' for key 'senha' in C:\xampp\htdocs\backend\repository\empresa_repository.php:222
+Stack trace:
+#0 C:\xampp\htdocs\backend\repository\empresa_repository.php(222): PDOStatement->execute()
+#1 C:\xampp\htdocs\backend\controller\empresa_controller.php(229): EmpresaRepository::create('amazonita', 'asdasdasdasd', '21212773000172', '44873163838', 'senha123', 'medio')
+#2 C:\xampp\htdocs\backend\controller\empresa_controller.php(15): EmpresaController::create(Object(stdClass))
+#3 C:\xampp\htdocs\backend\index.php(31): EmpresaController::route('create')
+#4 {main}
+  thrown in C:\xampp\htdocs\backend\repository\empresa_repository.php on line 222
+[15-Nov-2024 18:40:46 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'senha123' for key 'senha' in C:\xampp\htdocs\backend\repository\empresa_repository.php:222
+Stack trace:
+#0 C:\xampp\htdocs\backend\repository\empresa_repository.php(222): PDOStatement->execute()
+#1 C:\xampp\htdocs\backend\controller\empresa_controller.php(229): EmpresaRepository::create('amazonita', 'adsdwdasd', '21212773000172', '12345678910', 'senha123', 'medio')
+#2 C:\xampp\htdocs\backend\controller\empresa_controller.php(15): EmpresaController::create(Object(stdClass))
+#3 C:\xampp\htdocs\backend\index.php(31): EmpresaController::route('create')
+#4 {main}
+  thrown in C:\xampp\htdocs\backend\repository\empresa_repository.php on line 222
+[15-Nov-2024 18:41:40 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'senha123' for key 'senha' in C:\xampp\htdocs\backend\repository\empresa_repository.php:222
+Stack trace:
+#0 C:\xampp\htdocs\backend\repository\empresa_repository.php(222): PDOStatement->execute()
+#1 C:\xampp\htdocs\backend\controller\empresa_controller.php(229): EmpresaRepository::create('via nutri', 'asdasdasdas', '512127770001721', '150340569123', 'senha123', 'medio')
+#2 C:\xampp\htdocs\backend\controller\empresa_controller.php(15): EmpresaController::create(Object(stdClass))
+#3 C:\xampp\htdocs\backend\index.php(31): EmpresaController::route('create')
+#4 {main}
+  thrown in C:\xampp\htdocs\backend\repository\empresa_repository.php on line 222
+[15-Nov-2024 18:42:28 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'senha123' for key 'senha' in C:\xampp\htdocs\backend\repository\empresa_repository.php:222
+Stack trace:
+#0 C:\xampp\htdocs\backend\repository\empresa_repository.php(222): PDOStatement->execute()
+#1 C:\xampp\htdocs\backend\controller\empresa_controller.php(229): EmpresaRepository::create('via nutri', 'sadsadasd', '21212773000112', '15034056965', 'senha123', 'medio')
+#2 C:\xampp\htdocs\backend\controller\empresa_controller.php(15): EmpresaController::create(Object(stdClass))
+#3 C:\xampp\htdocs\backend\index.php(31): EmpresaController::route('create')
+#4 {main}
+  thrown in C:\xampp\htdocs\backend\repository\empresa_repository.php on line 222
+[15-Nov-2024 19:48:15 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 12
+[15-Nov-2024 19:48:15 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 13
+[15-Nov-2024 19:48:15 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 14
+[15-Nov-2024 19:48:15 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ClienteController" not found in C:\xampp\htdocs\backend\index.php:34
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\backend\index.php on line 34
+[15-Nov-2024 19:48:34 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 12
+[15-Nov-2024 19:48:34 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 13
+[15-Nov-2024 19:48:34 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 14
+[15-Nov-2024 19:48:34 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 12
+[15-Nov-2024 19:48:34 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 13
+[15-Nov-2024 19:48:34 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 14
+[15-Nov-2024 19:48:34 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ClienteController" not found in C:\xampp\htdocs\backend\index.php:34
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\backend\index.php on line 34
+[15-Nov-2024 19:49:11 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 12
+[15-Nov-2024 19:49:11 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 13
+[15-Nov-2024 19:49:11 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 14
+[15-Nov-2024 19:49:11 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 12
+[15-Nov-2024 19:49:11 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 13
+[15-Nov-2024 19:49:11 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 14
+[15-Nov-2024 19:49:11 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ClienteController" not found in C:\xampp\htdocs\backend\index.php:34
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\backend\index.php on line 34
+[15-Nov-2024 19:49:39 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 12
+[15-Nov-2024 19:49:39 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 13
+[15-Nov-2024 19:49:39 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 14
+[15-Nov-2024 19:49:39 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ClienteController" not found in C:\xampp\htdocs\backend\index.php:34
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\backend\index.php on line 34
+[15-Nov-2024 19:49:39 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 12
+[15-Nov-2024 19:49:39 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 13
+[15-Nov-2024 19:49:39 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 14
+[15-Nov-2024 19:49:39 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ClienteController" not found in C:\xampp\htdocs\backend\index.php:34
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\backend\index.php on line 34
+[15-Nov-2024 19:53:59 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 12
+[15-Nov-2024 19:53:59 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 13
+[15-Nov-2024 19:53:59 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 14
+[15-Nov-2024 19:53:59 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ClienteController" not found in C:\xampp\htdocs\backend\index.php:34
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\backend\index.php on line 34
+[15-Nov-2024 19:54:58 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 12
+[15-Nov-2024 19:54:58 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 13
+[15-Nov-2024 19:54:58 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 14
+[15-Nov-2024 19:54:58 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ClienteController" not found in C:\xampp\htdocs\backend\index.php:34
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\backend\index.php on line 34
+[15-Nov-2024 19:55:01 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 12
+[15-Nov-2024 19:55:01 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 13
+[15-Nov-2024 19:55:01 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 14
+[15-Nov-2024 19:55:01 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ClienteController" not found in C:\xampp\htdocs\backend\index.php:34
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\backend\index.php on line 34
+[15-Nov-2024 19:55:22 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 12
+[15-Nov-2024 19:55:22 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 13
+[15-Nov-2024 19:55:22 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 14
+[15-Nov-2024 19:55:22 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 12
+[15-Nov-2024 19:55:22 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 13
+[15-Nov-2024 19:55:22 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 14
+[15-Nov-2024 19:55:22 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ClienteController" not found in C:\xampp\htdocs\backend\index.php:34
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\backend\index.php on line 34
+[15-Nov-2024 19:57:48 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 12
+[15-Nov-2024 19:57:48 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 13
+[15-Nov-2024 19:57:48 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 14
+[15-Nov-2024 19:57:48 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 12
+[15-Nov-2024 19:57:48 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 13
+[15-Nov-2024 19:57:48 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 14
+[15-Nov-2024 19:57:48 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ClienteController" not found in C:\xampp\htdocs\backend\index.php:34
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\backend\index.php on line 34
+[15-Nov-2024 19:58:36 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 16
+[15-Nov-2024 19:58:36 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 17
+[15-Nov-2024 19:58:36 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 18
+[15-Nov-2024 19:58:36 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 16
+[15-Nov-2024 19:58:36 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 17
+[15-Nov-2024 19:58:36 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 18
+[15-Nov-2024 19:58:36 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ClienteController" not found in C:\xampp\htdocs\backend\index.php:38
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\backend\index.php on line 38
+[15-Nov-2024 19:59:16 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 16
+[15-Nov-2024 19:59:16 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 17
+[15-Nov-2024 19:59:16 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 18
+[15-Nov-2024 19:59:16 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ClienteController" not found in C:\xampp\htdocs\backend\index.php:38
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\backend\index.php on line 38
+[15-Nov-2024 19:59:53 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 12
+[15-Nov-2024 19:59:53 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 13
+[15-Nov-2024 19:59:53 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 14
+[15-Nov-2024 19:59:53 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ClienteController" not found in C:\xampp\htdocs\backend\index.php:34
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\backend\index.php on line 34
+[15-Nov-2024 20:01:09 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 12
+[15-Nov-2024 20:01:09 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 13
+[15-Nov-2024 20:01:09 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\backend\repository\cliente_repository.php:1) in C:\xampp\htdocs\backend\index.php on line 14
+[15-Nov-2024 20:01:09 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ClienteController" not found in C:\xampp\htdocs\backend\index.php:34
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\backend\index.php on line 34
+[15-Nov-2024 20:05:52 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ClienteRepository::collect(), 1 passed in C:\xampp\htdocs\backend\controller\compras_controller.php on line 110 and exactly 2 expected in C:\xampp\htdocs\backend\repository\cliente_repository.php:82
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\compras_controller.php(110): ClienteRepository::collect('44873215950')
+#1 C:\xampp\htdocs\backend\controller\compras_controller.php(17): ComprasController::collect(NULL, '44873215950')
+#2 C:\xampp\htdocs\backend\index.php(36): ComprasController::routes('collect')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\repository\cliente_repository.php on line 82
+[15-Nov-2024 20:05:53 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ClienteRepository::collect(), 1 passed in C:\xampp\htdocs\backend\controller\compras_controller.php on line 110 and exactly 2 expected in C:\xampp\htdocs\backend\repository\cliente_repository.php:82
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\compras_controller.php(110): ClienteRepository::collect('44873215950')
+#1 C:\xampp\htdocs\backend\controller\compras_controller.php(17): ComprasController::collect(NULL, '44873215950')
+#2 C:\xampp\htdocs\backend\index.php(36): ComprasController::routes('collect')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\repository\cliente_repository.php on line 82
+[15-Nov-2024 20:05:53 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ClienteRepository::collect(), 1 passed in C:\xampp\htdocs\backend\controller\compras_controller.php on line 110 and exactly 2 expected in C:\xampp\htdocs\backend\repository\cliente_repository.php:82
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\compras_controller.php(110): ClienteRepository::collect('44873215950')
+#1 C:\xampp\htdocs\backend\controller\compras_controller.php(17): ComprasController::collect(NULL, '44873215950')
+#2 C:\xampp\htdocs\backend\index.php(36): ComprasController::routes('collect')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\repository\cliente_repository.php on line 82
+[15-Nov-2024 20:05:53 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ClienteRepository::collect(), 1 passed in C:\xampp\htdocs\backend\controller\compras_controller.php on line 110 and exactly 2 expected in C:\xampp\htdocs\backend\repository\cliente_repository.php:82
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\compras_controller.php(110): ClienteRepository::collect('44873215950')
+#1 C:\xampp\htdocs\backend\controller\compras_controller.php(17): ComprasController::collect(NULL, '44873215950')
+#2 C:\xampp\htdocs\backend\index.php(36): ComprasController::routes('collect')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\repository\cliente_repository.php on line 82
+[15-Nov-2024 20:06:35 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ClienteRepository::collect(), 1 passed in C:\xampp\htdocs\backend\controller\compras_controller.php on line 110 and exactly 2 expected in C:\xampp\htdocs\backend\repository\cliente_repository.php:82
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\compras_controller.php(110): ClienteRepository::collect('44873215950')
+#1 C:\xampp\htdocs\backend\controller\compras_controller.php(17): ComprasController::collect(NULL, '44873215950')
+#2 C:\xampp\htdocs\backend\index.php(36): ComprasController::routes('collect')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\repository\cliente_repository.php on line 82
+[15-Nov-2024 20:06:36 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ClienteRepository::collect(), 1 passed in C:\xampp\htdocs\backend\controller\compras_controller.php on line 110 and exactly 2 expected in C:\xampp\htdocs\backend\repository\cliente_repository.php:82
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\compras_controller.php(110): ClienteRepository::collect('44873215950')
+#1 C:\xampp\htdocs\backend\controller\compras_controller.php(17): ComprasController::collect(NULL, '44873215950')
+#2 C:\xampp\htdocs\backend\index.php(36): ComprasController::routes('collect')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\repository\cliente_repository.php on line 82
+[15-Nov-2024 20:06:37 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ClienteRepository::collect(), 1 passed in C:\xampp\htdocs\backend\controller\compras_controller.php on line 110 and exactly 2 expected in C:\xampp\htdocs\backend\repository\cliente_repository.php:82
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\compras_controller.php(110): ClienteRepository::collect('44873215950')
+#1 C:\xampp\htdocs\backend\controller\compras_controller.php(17): ComprasController::collect(NULL, '44873215950')
+#2 C:\xampp\htdocs\backend\index.php(36): ComprasController::routes('collect')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\repository\cliente_repository.php on line 82
+[15-Nov-2024 20:06:37 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ClienteRepository::collect(), 1 passed in C:\xampp\htdocs\backend\controller\compras_controller.php on line 110 and exactly 2 expected in C:\xampp\htdocs\backend\repository\cliente_repository.php:82
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\compras_controller.php(110): ClienteRepository::collect('44873215950')
+#1 C:\xampp\htdocs\backend\controller\compras_controller.php(17): ComprasController::collect(NULL, '44873215950')
+#2 C:\xampp\htdocs\backend\index.php(36): ComprasController::routes('collect')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\repository\cliente_repository.php on line 82
+[15-Nov-2024 20:06:37 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ClienteRepository::collect(), 1 passed in C:\xampp\htdocs\backend\controller\compras_controller.php on line 110 and exactly 2 expected in C:\xampp\htdocs\backend\repository\cliente_repository.php:82
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\compras_controller.php(110): ClienteRepository::collect('44873215950')
+#1 C:\xampp\htdocs\backend\controller\compras_controller.php(17): ComprasController::collect(NULL, '44873215950')
+#2 C:\xampp\htdocs\backend\index.php(36): ComprasController::routes('collect')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\repository\cliente_repository.php on line 82
+[15-Nov-2024 20:06:38 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ClienteRepository::collect(), 1 passed in C:\xampp\htdocs\backend\controller\compras_controller.php on line 110 and exactly 2 expected in C:\xampp\htdocs\backend\repository\cliente_repository.php:82
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\compras_controller.php(110): ClienteRepository::collect('44873215950')
+#1 C:\xampp\htdocs\backend\controller\compras_controller.php(17): ComprasController::collect(NULL, '44873215950')
+#2 C:\xampp\htdocs\backend\index.php(36): ComprasController::routes('collect')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\repository\cliente_repository.php on line 82
+[15-Nov-2024 20:06:44 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ClienteRepository::collect(), 1 passed in C:\xampp\htdocs\backend\controller\compras_controller.php on line 110 and exactly 2 expected in C:\xampp\htdocs\backend\repository\cliente_repository.php:82
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\compras_controller.php(110): ClienteRepository::collect('44873215950')
+#1 C:\xampp\htdocs\backend\controller\compras_controller.php(17): ComprasController::collect(NULL, '44873215950')
+#2 C:\xampp\htdocs\backend\index.php(36): ComprasController::routes('collect')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\repository\cliente_repository.php on line 82
+[15-Nov-2024 20:06:44 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ClienteRepository::collect(), 1 passed in C:\xampp\htdocs\backend\controller\compras_controller.php on line 110 and exactly 2 expected in C:\xampp\htdocs\backend\repository\cliente_repository.php:82
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\compras_controller.php(110): ClienteRepository::collect('44873215950')
+#1 C:\xampp\htdocs\backend\controller\compras_controller.php(17): ComprasController::collect(NULL, '44873215950')
+#2 C:\xampp\htdocs\backend\index.php(36): ComprasController::routes('collect')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\repository\cliente_repository.php on line 82
+[15-Nov-2024 20:06:44 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ClienteRepository::collect(), 1 passed in C:\xampp\htdocs\backend\controller\compras_controller.php on line 110 and exactly 2 expected in C:\xampp\htdocs\backend\repository\cliente_repository.php:82
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\compras_controller.php(110): ClienteRepository::collect('44873215950')
+#1 C:\xampp\htdocs\backend\controller\compras_controller.php(17): ComprasController::collect(NULL, '44873215950')
+#2 C:\xampp\htdocs\backend\index.php(36): ComprasController::routes('collect')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\repository\cliente_repository.php on line 82
+[15-Nov-2024 20:07:39 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ClienteRepository::collect(), 1 passed in C:\xampp\htdocs\backend\controller\compras_controller.php on line 110 and exactly 2 expected in C:\xampp\htdocs\backend\repository\cliente_repository.php:82
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\compras_controller.php(110): ClienteRepository::collect('44873215950')
+#1 C:\xampp\htdocs\backend\controller\compras_controller.php(17): ComprasController::collect(NULL, '44873215950')
+#2 C:\xampp\htdocs\backend\index.php(36): ComprasController::routes('collect')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\repository\cliente_repository.php on line 82
+[15-Nov-2024 20:07:45 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ClienteRepository::collect(), 1 passed in C:\xampp\htdocs\backend\controller\compras_controller.php on line 110 and exactly 2 expected in C:\xampp\htdocs\backend\repository\cliente_repository.php:82
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\compras_controller.php(110): ClienteRepository::collect('44873215950')
+#1 C:\xampp\htdocs\backend\controller\compras_controller.php(17): ComprasController::collect(NULL, '44873215950')
+#2 C:\xampp\htdocs\backend\index.php(36): ComprasController::routes('collect')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\repository\cliente_repository.php on line 82
+[15-Nov-2024 20:08:07 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ClienteRepository::collect(), 1 passed in C:\xampp\htdocs\backend\controller\compras_controller.php on line 110 and exactly 2 expected in C:\xampp\htdocs\backend\repository\cliente_repository.php:82
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\compras_controller.php(110): ClienteRepository::collect('12345678989')
+#1 C:\xampp\htdocs\backend\controller\compras_controller.php(17): ComprasController::collect(NULL, '12345678989')
+#2 C:\xampp\htdocs\backend\index.php(36): ComprasController::routes('collect')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\repository\cliente_repository.php on line 82
+[15-Nov-2024 20:09:24 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ClienteRepository::collect(), 1 passed in C:\xampp\htdocs\backend\controller\compras_controller.php on line 110 and exactly 2 expected in C:\xampp\htdocs\backend\repository\cliente_repository.php:82
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\compras_controller.php(110): ClienteRepository::collect('12345678989')
+#1 C:\xampp\htdocs\backend\controller\compras_controller.php(17): ComprasController::collect(NULL, '12345678989')
+#2 C:\xampp\htdocs\backend\index.php(36): ComprasController::routes('collect')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\repository\cliente_repository.php on line 82
+[15-Nov-2024 20:09:26 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ClienteRepository::collect(), 1 passed in C:\xampp\htdocs\backend\controller\compras_controller.php on line 110 and exactly 2 expected in C:\xampp\htdocs\backend\repository\cliente_repository.php:82
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\compras_controller.php(110): ClienteRepository::collect('12345678989')
+#1 C:\xampp\htdocs\backend\controller\compras_controller.php(17): ComprasController::collect(NULL, '12345678989')
+#2 C:\xampp\htdocs\backend\index.php(36): ComprasController::routes('collect')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\repository\cliente_repository.php on line 82
+[15-Nov-2024 20:09:27 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ClienteRepository::collect(), 1 passed in C:\xampp\htdocs\backend\controller\compras_controller.php on line 110 and exactly 2 expected in C:\xampp\htdocs\backend\repository\cliente_repository.php:82
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\compras_controller.php(110): ClienteRepository::collect('12345678989')
+#1 C:\xampp\htdocs\backend\controller\compras_controller.php(17): ComprasController::collect(NULL, '12345678989')
+#2 C:\xampp\htdocs\backend\index.php(36): ComprasController::routes('collect')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\repository\cliente_repository.php on line 82
+[15-Nov-2024 20:09:47 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ClienteRepository::collect(), 1 passed in C:\xampp\htdocs\backend\controller\compras_controller.php on line 110 and exactly 2 expected in C:\xampp\htdocs\backend\repository\cliente_repository.php:82
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\compras_controller.php(110): ClienteRepository::collect('44873215950')
+#1 C:\xampp\htdocs\backend\controller\compras_controller.php(17): ComprasController::collect(NULL, '44873215950')
+#2 C:\xampp\htdocs\backend\index.php(36): ComprasController::routes('collect')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\repository\cliente_repository.php on line 82
+[15-Nov-2024 20:10:30 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ClienteRepository::collect(), 1 passed in C:\xampp\htdocs\backend\controller\compras_controller.php on line 110 and exactly 2 expected in C:\xampp\htdocs\backend\repository\cliente_repository.php:82
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\compras_controller.php(110): ClienteRepository::collect('44873215950')
+#1 C:\xampp\htdocs\backend\controller\compras_controller.php(17): ComprasController::collect(NULL, '44873215950')
+#2 C:\xampp\htdocs\backend\index.php(36): ComprasController::routes('collect')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\repository\cliente_repository.php on line 82
+[15-Nov-2024 20:10:32 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ClienteRepository::collect(), 1 passed in C:\xampp\htdocs\backend\controller\compras_controller.php on line 110 and exactly 2 expected in C:\xampp\htdocs\backend\repository\cliente_repository.php:82
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\compras_controller.php(110): ClienteRepository::collect('44873215950')
+#1 C:\xampp\htdocs\backend\controller\compras_controller.php(17): ComprasController::collect(NULL, '44873215950')
+#2 C:\xampp\htdocs\backend\index.php(36): ComprasController::routes('collect')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\repository\cliente_repository.php on line 82
+[15-Nov-2024 20:10:32 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ClienteRepository::collect(), 1 passed in C:\xampp\htdocs\backend\controller\compras_controller.php on line 110 and exactly 2 expected in C:\xampp\htdocs\backend\repository\cliente_repository.php:82
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\compras_controller.php(110): ClienteRepository::collect('44873215950')
+#1 C:\xampp\htdocs\backend\controller\compras_controller.php(17): ComprasController::collect(NULL, '44873215950')
+#2 C:\xampp\htdocs\backend\index.php(36): ComprasController::routes('collect')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\repository\cliente_repository.php on line 82
+[15-Nov-2024 20:11:00 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ClienteRepository::collect(), 1 passed in C:\xampp\htdocs\backend\controller\compras_controller.php on line 110 and exactly 2 expected in C:\xampp\htdocs\backend\repository\cliente_repository.php:82
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\compras_controller.php(110): ClienteRepository::collect('44873215950')
+#1 C:\xampp\htdocs\backend\controller\compras_controller.php(17): ComprasController::collect(NULL, '44873215950')
+#2 C:\xampp\htdocs\backend\index.php(36): ComprasController::routes('collect')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\repository\cliente_repository.php on line 82
+[15-Nov-2024 20:11:02 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ClienteRepository::collect(), 1 passed in C:\xampp\htdocs\backend\controller\compras_controller.php on line 110 and exactly 2 expected in C:\xampp\htdocs\backend\repository\cliente_repository.php:82
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\compras_controller.php(110): ClienteRepository::collect('44873215950')
+#1 C:\xampp\htdocs\backend\controller\compras_controller.php(17): ComprasController::collect(NULL, '44873215950')
+#2 C:\xampp\htdocs\backend\index.php(36): ComprasController::routes('collect')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\repository\cliente_repository.php on line 82
+[15-Nov-2024 20:11:02 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ClienteRepository::collect(), 1 passed in C:\xampp\htdocs\backend\controller\compras_controller.php on line 110 and exactly 2 expected in C:\xampp\htdocs\backend\repository\cliente_repository.php:82
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\compras_controller.php(110): ClienteRepository::collect('44873215950')
+#1 C:\xampp\htdocs\backend\controller\compras_controller.php(17): ComprasController::collect(NULL, '44873215950')
+#2 C:\xampp\htdocs\backend\index.php(36): ComprasController::routes('collect')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\repository\cliente_repository.php on line 82
+[15-Nov-2024 20:11:31 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ClienteRepository::collect(), 1 passed in C:\xampp\htdocs\backend\controller\compras_controller.php on line 110 and exactly 2 expected in C:\xampp\htdocs\backend\repository\cliente_repository.php:82
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\compras_controller.php(110): ClienteRepository::collect('44873215950')
+#1 C:\xampp\htdocs\backend\controller\compras_controller.php(17): ComprasController::collect(NULL, '44873215950')
+#2 C:\xampp\htdocs\backend\index.php(36): ComprasController::routes('collect')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\repository\cliente_repository.php on line 82
+[15-Nov-2024 20:11:56 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ClienteRepository::collect(), 1 passed in C:\xampp\htdocs\backend\controller\compras_controller.php on line 110 and exactly 2 expected in C:\xampp\htdocs\backend\repository\cliente_repository.php:82
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\compras_controller.php(110): ClienteRepository::collect('44873215950')
+#1 C:\xampp\htdocs\backend\controller\compras_controller.php(17): ComprasController::collect(NULL, '44873215950')
+#2 C:\xampp\htdocs\backend\index.php(36): ComprasController::routes('collect')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\repository\cliente_repository.php on line 82
+[15-Nov-2024 20:13:06 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ClienteRepository::collect(), 1 passed in C:\xampp\htdocs\backend\controller\compras_controller.php on line 110 and exactly 2 expected in C:\xampp\htdocs\backend\repository\cliente_repository.php:82
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\compras_controller.php(110): ClienteRepository::collect('44873215950')
+#1 C:\xampp\htdocs\backend\controller\compras_controller.php(17): ComprasController::collect(NULL, '44873215950')
+#2 C:\xampp\htdocs\backend\index.php(36): ComprasController::routes('collect')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\repository\cliente_repository.php on line 82
+[15-Nov-2024 20:14:28 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ClienteRepository::collect(), 1 passed in C:\xampp\htdocs\backend\controller\compras_controller.php on line 110 and exactly 2 expected in C:\xampp\htdocs\backend\repository\cliente_repository.php:82
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\compras_controller.php(110): ClienteRepository::collect('44873215950')
+#1 C:\xampp\htdocs\backend\controller\compras_controller.php(17): ComprasController::collect(NULL, '44873215950')
+#2 C:\xampp\htdocs\backend\index.php(36): ComprasController::routes('collect')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\repository\cliente_repository.php on line 82
+[16-Nov-2024 01:29:31 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ClienteRepository::collect(), 1 passed in C:\xampp\htdocs\backend\controller\compras_controller.php on line 42 and exactly 2 expected in C:\xampp\htdocs\backend\repository\cliente_repository.php:82
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\compras_controller.php(42): ClienteRepository::collect('44873215950')
+#1 C:\xampp\htdocs\backend\controller\compras_controller.php(14): ComprasController::create(Object(stdClass))
+#2 C:\xampp\htdocs\backend\index.php(36): ComprasController::routes('create')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\repository\cliente_repository.php on line 82
+[16-Nov-2024 01:47:21 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ClienteRepository::collect(), 1 passed in C:\xampp\htdocs\backend\controller\compras_controller.php on line 43 and exactly 2 expected in C:\xampp\htdocs\backend\repository\cliente_repository.php:82
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\compras_controller.php(43): ClienteRepository::collect('44873215950')
+#1 C:\xampp\htdocs\backend\controller\compras_controller.php(14): ComprasController::create(Object(stdClass))
+#2 C:\xampp\htdocs\backend\index.php(36): ComprasController::routes('create')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\repository\cliente_repository.php on line 82
+[16-Nov-2024 01:51:30 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ClienteRepository::collect(), 1 passed in C:\xampp\htdocs\backend\controller\compras_controller.php on line 120 and exactly 2 expected in C:\xampp\htdocs\backend\repository\cliente_repository.php:82
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\compras_controller.php(120): ClienteRepository::collect('44873215950')
+#1 C:\xampp\htdocs\backend\controller\compras_controller.php(17): ComprasController::collect(NULL, '44873215950')
+#2 C:\xampp\htdocs\backend\index.php(36): ComprasController::routes('collect')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\repository\cliente_repository.php on line 82
+[16-Nov-2024 01:51:31 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ClienteRepository::collect(), 1 passed in C:\xampp\htdocs\backend\controller\compras_controller.php on line 120 and exactly 2 expected in C:\xampp\htdocs\backend\repository\cliente_repository.php:82
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\compras_controller.php(120): ClienteRepository::collect('44873215950')
+#1 C:\xampp\htdocs\backend\controller\compras_controller.php(17): ComprasController::collect(NULL, '44873215950')
+#2 C:\xampp\htdocs\backend\index.php(36): ComprasController::routes('collect')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\repository\cliente_repository.php on line 82
+[16-Nov-2024 01:52:39 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ClienteRepository::collect(), 1 passed in C:\xampp\htdocs\backend\controller\compras_controller.php on line 120 and exactly 2 expected in C:\xampp\htdocs\backend\repository\cliente_repository.php:82
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\compras_controller.php(120): ClienteRepository::collect('44873215950')
+#1 C:\xampp\htdocs\backend\controller\compras_controller.php(17): ComprasController::collect(NULL, '44873215950')
+#2 C:\xampp\htdocs\backend\index.php(36): ComprasController::routes('collect')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\repository\cliente_repository.php on line 82
+[16-Nov-2024 01:54:42 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ClienteRepository::collect(), 1 passed in C:\xampp\htdocs\backend\controller\compras_controller.php on line 120 and exactly 2 expected in C:\xampp\htdocs\backend\repository\cliente_repository.php:82
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\compras_controller.php(120): ClienteRepository::collect('44873215950')
+#1 C:\xampp\htdocs\backend\controller\compras_controller.php(17): ComprasController::collect(NULL, '44873215950')
+#2 C:\xampp\htdocs\backend\index.php(36): ComprasController::routes('collect')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\repository\cliente_repository.php on line 82
+[16-Nov-2024 02:00:44 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ClienteRepository::collect(), 1 passed in C:\xampp\htdocs\backend\controller\compras_controller.php on line 112 and exactly 2 expected in C:\xampp\htdocs\backend\repository\cliente_repository.php:82
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\compras_controller.php(112): ClienteRepository::collect('44873215950')
+#1 C:\xampp\htdocs\backend\controller\compras_controller.php(17): ComprasController::collect(NULL, '44873215950')
+#2 C:\xampp\htdocs\backend\index.php(36): ComprasController::routes('collect')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\repository\cliente_repository.php on line 82
+[16-Nov-2024 02:24:29 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: There is no active transaction in C:\xampp\htdocs\backend\controller\compras_controller.php:98
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\compras_controller.php(98): PDO->rollBack()
+#1 C:\xampp\htdocs\backend\controller\compras_controller.php(14): ComprasController::create(Object(stdClass))
+#2 C:\xampp\htdocs\backend\index.php(36): ComprasController::routes('create')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\controller\compras_controller.php on line 98
+[16-Nov-2024 02:39:35 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ClienteRepository" not found in C:\xampp\htdocs\backend\controller\compras_controller.php:37
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\compras_controller.php(5): ComprasController::create(Object(stdClass))
+#1 C:\xampp\htdocs\backend\index.php(36): ComprasController::routes('create')
+#2 {main}
+  thrown in C:\xampp\htdocs\backend\controller\compras_controller.php on line 37
+[16-Nov-2024 02:49:33 Europe/Berlin] Produto valor: 0.99
+[16-Nov-2024 02:49:33 Europe/Berlin] Porcentagem cashback: 0.03
+[16-Nov-2024 02:49:33 Europe/Berlin] Quantidade: 2
+[16-Nov-2024 02:49:33 Europe/Berlin] Valor cashback calculado: 0
+[16-Nov-2024 02:50:09 Europe/Berlin] Produto valor: 4.99
+[16-Nov-2024 02:50:09 Europe/Berlin] Porcentagem cashback: 0.5
+[16-Nov-2024 02:50:09 Europe/Berlin] Quantidade: 1
+[16-Nov-2024 02:50:09 Europe/Berlin] Valor cashback calculado: 0.02
+[16-Nov-2024 02:52:18 Europe/Berlin] Produto valor: 4.99
+[16-Nov-2024 02:52:18 Europe/Berlin] Porcentagem cashback: 0.5
+[16-Nov-2024 02:52:18 Europe/Berlin] Quantidade: 2
+[16-Nov-2024 02:52:18 Europe/Berlin] Valor cashback calculado: 0.05
+[16-Nov-2024 02:54:33 Europe/Berlin] Dados do produto:
+[16-Nov-2024 02:54:33 Europe/Berlin] Valor unitário: 4.99
+[16-Nov-2024 02:54:33 Europe/Berlin] Cashback em centavos: 0.5
+[16-Nov-2024 02:54:33 Europe/Berlin] Quantidade: 2
+[16-Nov-2024 02:54:33 Europe/Berlin] Valor do cashback em centavos: 0.5
+[16-Nov-2024 02:54:33 Europe/Berlin] Valor do cashback total em centavos: 1
+[16-Nov-2024 02:54:33 Europe/Berlin] Valor do cashback final em reais: 0.01
+[16-Nov-2024 02:54:33 Europe/Berlin] Valor do cashback arredondado: 0.01
+[16-Nov-2024 02:54:33 Europe/Berlin] Parâmetros da inserção:
+[16-Nov-2024 02:54:33 Europe/Berlin] Array
+(
+    [:id_cliente] => 158
+    [:id_produto] => 30
+    [:id_funcionario] => 22
+    [:quantidade] => 2
+    [:valor_cashback] => 0.01
+    [:valor_total] => 9.98
+    [:metodo_pagamento] => Dinheiro
+)
+
+[16-Nov-2024 02:54:43 Europe/Berlin] Dados do produto:
+[16-Nov-2024 02:54:43 Europe/Berlin] Valor unitário: 4.99
+[16-Nov-2024 02:54:43 Europe/Berlin] Cashback em centavos: 0.5
+[16-Nov-2024 02:54:43 Europe/Berlin] Quantidade: 1
+[16-Nov-2024 02:54:43 Europe/Berlin] Valor do cashback em centavos: 0.5
+[16-Nov-2024 02:54:43 Europe/Berlin] Valor do cashback total em centavos: 0.5
+[16-Nov-2024 02:54:43 Europe/Berlin] Valor do cashback final em reais: 0.005
+[16-Nov-2024 02:54:43 Europe/Berlin] Valor do cashback arredondado: 0.01
+[16-Nov-2024 02:54:43 Europe/Berlin] Parâmetros da inserção:
+[16-Nov-2024 02:54:43 Europe/Berlin] Array
+(
+    [:id_cliente] => 158
+    [:id_produto] => 30
+    [:id_funcionario] => 22
+    [:quantidade] => 1
+    [:valor_cashback] => 0.01
+    [:valor_total] => 4.99
+    [:metodo_pagamento] => Dinheiro
+)
+
+[16-Nov-2024 02:55:56 Europe/Berlin] Valor RAW da porcentagem_cashback: 0.5
+[16-Nov-2024 02:55:56 Europe/Berlin] Tipo da porcentagem_cashback: double
+[16-Nov-2024 02:55:56 Europe/Berlin] Valor direto do select: 0.5
+[16-Nov-2024 02:55:56 Europe/Berlin] Valor em centavos (sem conversão): 0.5
+[16-Nov-2024 02:55:56 Europe/Berlin] Valor final em reais: 0.005
+[16-Nov-2024 02:55:56 Europe/Berlin] Parâmetros finais: array (
+  ':id_cliente' => 158,
+  ':id_produto' => 30,
+  ':id_funcionario' => '22',
+  ':quantidade' => 1,
+  ':valor_cashback' => 0.005,
+  ':valor_total' => 4.99,
+  ':metodo_pagamento' => 'Dinheiro',
+)
+[16-Nov-2024 02:56:06 Europe/Berlin] Valor RAW da porcentagem_cashback: 0.5
+[16-Nov-2024 02:56:06 Europe/Berlin] Tipo da porcentagem_cashback: double
+[16-Nov-2024 02:56:06 Europe/Berlin] Valor direto do select: 0.5
+[16-Nov-2024 02:56:06 Europe/Berlin] Valor em centavos (sem conversão): 0.5
+[16-Nov-2024 02:56:06 Europe/Berlin] Valor final em reais: 0.005
+[16-Nov-2024 02:56:06 Europe/Berlin] Parâmetros finais: array (
+  ':id_cliente' => 158,
+  ':id_produto' => 30,
+  ':id_funcionario' => '22',
+  ':quantidade' => 1,
+  ':valor_cashback' => 0.005,
+  ':valor_total' => 4.99,
+  ':metodo_pagamento' => 'Dinheiro',
+)
+[16-Nov-2024 02:56:16 Europe/Berlin] Valor RAW da porcentagem_cashback: 0.5
+[16-Nov-2024 02:56:16 Europe/Berlin] Tipo da porcentagem_cashback: double
+[16-Nov-2024 02:56:16 Europe/Berlin] Valor direto do select: 0.5
+[16-Nov-2024 02:56:16 Europe/Berlin] Valor em centavos (sem conversão): 5
+[16-Nov-2024 02:56:16 Europe/Berlin] Valor final em reais: 0.05
+[16-Nov-2024 02:56:16 Europe/Berlin] Parâmetros finais: array (
+  ':id_cliente' => 158,
+  ':id_produto' => 30,
+  ':id_funcionario' => '22',
+  ':quantidade' => 10,
+  ':valor_cashback' => 0.05,
+  ':valor_total' => 49.900000000000006,
+  ':metodo_pagamento' => 'Dinheiro',
+)
+[16-Nov-2024 02:57:16 Europe/Berlin] Estrutura da coluna porcentagem_cashback: array (
+  'Field' => 'porcentagem_cashback',
+  'Type' => 'float(5,2)',
+  'Null' => 'NO',
+  'Key' => '',
+  'Default' => NULL,
+  'Extra' => '',
+)
+[16-Nov-2024 02:57:16 Europe/Berlin] Produto completo: array (
+  'id' => 30,
+  'valor' => 4.99,
+  'porcentagem_cashback' => 0.5,
+  'cashback_decimal' => '0.50',
+)
+[16-Nov-2024 02:57:16 Europe/Berlin] Valor do cashback em centavos após conversão: 0.5
+[16-Nov-2024 02:57:16 Europe/Berlin] Valor total em centavos: 5
+[16-Nov-2024 02:57:16 Europe/Berlin] Valor final: 5
+[16-Nov-2024 02:57:16 Europe/Berlin] Parâmetros de inserção: array (
+  ':id_cliente' => 158,
+  ':id_produto' => 30,
+  ':id_funcionario' => '22',
+  ':quantidade' => 10,
+  ':valor_cashback' => 5.0,
+  ':valor_total' => 49.900000000000006,
+  ':metodo_pagamento' => 'Dinheiro',
+)
+[16-Nov-2024 02:57:16 Europe/Berlin] ID da compra inserida: 31
+[16-Nov-2024 02:57:16 Europe/Berlin] Resultado final: array (
+  'id' => 31,
+  'id_cliente' => 158,
+  'id_produto' => 30,
+  'id_funcionario' => 22,
+  'compra' => '2024-11-16 01:57:16',
+  'quantidade' => 10,
+  'valor_cashback' => '5.00',
+  'data_resgate_cashback' => NULL,
+  'status_cashback' => 'DISPONIVEL',
+  'metodo_pagamento' => 'Dinheiro',
+  'valor_total' => '49.90',
+  'produto_nome' => 'clips TOP',
+  'produto_valor' => 4.99,
+  'cliente_nome' => 'roberta',
+)
+[16-Nov-2024 02:57:20 Europe/Berlin] Estrutura da coluna porcentagem_cashback: array (
+  'Field' => 'porcentagem_cashback',
+  'Type' => 'float(5,2)',
+  'Null' => 'NO',
+  'Key' => '',
+  'Default' => NULL,
+  'Extra' => '',
+)
+[16-Nov-2024 02:57:20 Europe/Berlin] Produto completo: array (
+  'id' => 30,
+  'valor' => 4.99,
+  'porcentagem_cashback' => 0.5,
+  'cashback_decimal' => '0.50',
+)
+[16-Nov-2024 02:57:20 Europe/Berlin] Valor do cashback em centavos após conversão: 0.5
+[16-Nov-2024 02:57:20 Europe/Berlin] Valor total em centavos: 0.5
+[16-Nov-2024 02:57:20 Europe/Berlin] Valor final: 0.5
+[16-Nov-2024 02:57:20 Europe/Berlin] Parâmetros de inserção: array (
+  ':id_cliente' => 158,
+  ':id_produto' => 30,
+  ':id_funcionario' => '22',
+  ':quantidade' => 1,
+  ':valor_cashback' => 0.5,
+  ':valor_total' => 4.99,
+  ':metodo_pagamento' => 'Dinheiro',
+)
+[16-Nov-2024 02:57:20 Europe/Berlin] ID da compra inserida: 32
+[16-Nov-2024 02:57:20 Europe/Berlin] Resultado final: array (
+  'id' => 32,
+  'id_cliente' => 158,
+  'id_produto' => 30,
+  'id_funcionario' => 22,
+  'compra' => '2024-11-16 01:57:20',
+  'quantidade' => 1,
+  'valor_cashback' => '0.50',
+  'data_resgate_cashback' => NULL,
+  'status_cashback' => 'DISPONIVEL',
+  'metodo_pagamento' => 'Dinheiro',
+  'valor_total' => '4.99',
+  'produto_nome' => 'clips TOP',
+  'produto_valor' => 4.99,
+  'cliente_nome' => 'roberta',
+)
+[16-Nov-2024 02:59:44 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ClienteRepository" not found in C:\xampp\htdocs\backend\controller\compras_controller.php:43
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\compras_controller.php(5): ComprasController::create(Object(stdClass))
+#1 C:\xampp\htdocs\backend\index.php(36): ComprasController::routes('create')
+#2 {main}
+  thrown in C:\xampp\htdocs\backend\controller\compras_controller.php on line 43
+[17-Nov-2024 02:58:51 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: array_column(): Argument #1 ($array) must be of type array, stdClass given in C:\xampp\htdocs\backend\controller\compras_controller.php:70
+Stack trace:
+#0 C:\xampp\htdocs\backend\controller\compras_controller.php(70): array_column(Object(stdClass), 'metodo')
+#1 C:\xampp\htdocs\backend\controller\compras_controller.php(12): ComprasController::create(Object(stdClass))
+#2 C:\xampp\htdocs\backend\index.php(36): ComprasController::routes('create')
+#3 {main}
+  thrown in C:\xampp\htdocs\backend\controller\compras_controller.php on line 70
+[16-Nov-2024 23:17:20 America/Sao_Paulo] Total de compras para empresa 38: 10
+[16-Nov-2024 23:17:28 America/Sao_Paulo] Total de compras para empresa 38: 10
+[16-Nov-2024 23:22:36 America/Sao_Paulo] Total de compras para empresa 38: 10
+[17-Nov-2024 14:56:05 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$cpf in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 66
+[17-Nov-2024 14:59:00 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$cpf in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 66
+[17-Nov-2024 14:59:36 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$cpf in C:\xampp\htdocs\backend\controller\funcionario_controller.php on line 66
+[17-Nov-2024 17:30:48 Europe/Berlin] PHP Warning:  Undefined array key "id_empresa" in C:\xampp\htdocs\backend\controller\caixa_controller.php on line 23
+[17-Nov-2024 17:31:13 Europe/Berlin] PHP Warning:  Undefined array key "id_empresa" in C:\xampp\htdocs\backend\controller\caixa_controller.php on line 23
+[17-Nov-2024 19:46:14 Europe/Berlin] PHP Parse error:  syntax error, unexpected identifier "create", expecting ")" in C:\xampp\htdocs\backend\controller\empresa_controller.php on line 15
+[17-Nov-2024 19:46:14 Europe/Berlin] PHP Parse error:  syntax error, unexpected identifier "create", expecting ")" in C:\xampp\htdocs\backend\controller\empresa_controller.php on line 15

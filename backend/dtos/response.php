@@ -16,13 +16,33 @@ class ResponseClass {
         echo json_encode(['message' => $message]);
     } 
 
-        // public static function answer(string $message, Status $status): void {
-        //     http_response_code($status->value);
-        //     echo json_encode([
-        //         'message' => $message,
-        //         'status' => $status->value
-        //     ]);
-        // }
+
+    
+         
+         
+         
+         
+         
+         
+         
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     public static function ifNull(...$values) {
 

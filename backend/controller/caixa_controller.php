@@ -20,105 +20,94 @@ class CaixaController {
                 json_decode(file_get_contents('php://input')) 
             ),
             'collect' => self::collect(
-                $_GET['id_caixa'], $_GET['id_empresa']
+                $_GET['id_caixa'] ?? null, $_GET['id_empresa']
             ),
             default => http_response_code(Status::NOT_FOUND->value)
         };
 
     }
 
-    private static function open($request) {
-
+    public static function open($request) {
         $esta_valido = ResponseClass::ifNull(
             "request", $request,
             "id_funcionario", $request->id_funcionario,
             "id_empresa", $request->id_empresa
         );
-
+    
         if (!$esta_valido) {
-
-            return; 
-
+            return;
         }
-
+    
         $funcionario = FuncionarioRepository::one(
             $request->id_funcionario
         );
-
+    
         if (!$funcionario) {
-
             return ResponseClass::answer(
                 "Nenhum funcionario foi encontrado com este id",
                 Status::NOT_FOUND
             );
-
         }
-
+    
         $empresa = EmpresaRepository::one(
             $request->id_empresa
         );
-
+    
         if (!$empresa) {
-
             return ResponseClass::answer(
                 "Nenhuma empresa foi encontrada com este id",
                 Status::NOT_FOUND
             );
-
         }
-
+    
         $hoje = new DateTime('now', new DateTimeZone('UTC'));
-
+    
+         
         $caixa = CaixaRepository::one(
             $request->id_empresa, 
             $hoje->format("Y-m-d")
         );
-
-        if ($caixa) {
-
+    
+        if ($caixa && $caixa['fechado'] === null) {
             return ResponseClass::answer(
-                "O caixa ja foi aberto hoje",
+                "Já existe um caixa aberto para esta empresa",
                 Status::CONFLICT
             );
-
         }
-
-        $caixa = CaixaRepository::last($request->id_empresa);
-
+    
+         
+        $ultimo_caixa = CaixaRepository::last($request->id_empresa);
+        $valor_inicial = $ultimo_caixa ? $ultimo_caixa['valor_final'] : 0;
+    
         $funcionou = CaixaRepository::open(
             $request->id_empresa, 
             $request->id_funcionario, 
-            $caixa ? $caixa['valor_final'] : 0
+            $valor_inicial
         );
-
+    
         if (!$funcionou) {
-
             return ResponseClass::answer(
                 "Algum erro ocorreu enquanto o caixa era aberto",
                 Status::INTERNAL_SERVER_ERROR
             );
-
         }
-
-        $caixa = CaixaRepository::one(
+    
+        $novo_caixa = CaixaRepository::one(
             $request->id_empresa, 
             $hoje->format("Y-m-d")
         );
-
-        if (!$caixa) {
-
+    
+        if (!$novo_caixa) {
             return ResponseClass::answer(
                 "Algum erro ocorreu enquanto o caixa era coletado",
                 Status::INTERNAL_SERVER_ERROR
             );
-
         }
-
+    
         return ResponseClass::answerWithBody(
-            $caixa,
+            $novo_caixa,
             Status::CREATED
         );
-
     }
 
     private static function close($request) {
@@ -221,16 +210,11 @@ class CaixaController {
 
         $caixa = null;
 
-        if ($id_caixa != null) {
-
-            $caixa = CaixaRepository::specific($id_caixa);
-
-        } else if ($id_empresa != null) {
-
-            $caixa = CaixaRepository::all($id_empresa);
-
+        if ($id_empresa) {
+             $caixa = CaixaRepository::all($id_empresa);
+        } else if ($id_caixa) {
+             $caixa = CaixaRepository::specific($id_caixa);
         }
-
         if ($caixa == null) {
 
             return ResponseClass::answer(

@@ -122,12 +122,23 @@ main {
     transition: background-color  200ms ease-in-out, color 150ms ease-in-out,scale 300ms ease-in-out;
     
 }
+.btn.active {
+    background-color: #000000;
+    color: white;
+}
+.btnSp{
+    margin-top: 1px;
+    height: 3em;
+    border: none;
+}
 .btn:hover{
     background-color: #000000;
     color: white;
 
 }
 .cashBtn {
+    width: 100%;
+    height: 100%;
     background-color: rgb(250, 250, 250);
     border: 3px solid #d3ffa4 ;
     color: rgb(13, 24, 1);

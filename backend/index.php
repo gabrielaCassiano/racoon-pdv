@@ -5,6 +5,7 @@ require 'controller/funcionario_controller.php';
 require 'controller/produto_controller.php';
 require 'controller/cliente_controller.php';
 require 'controller/caixa_controller.php';
+require 'controller/compras_controller.php';
 
 require_once 'enums/status.php';
 
@@ -27,20 +28,13 @@ $segments = explode('/', trim($uri, '/'));
 if (isset($segments[1])) {
 
     match ($segments[1]) {
-
-        'empresa' => EmpresaController::route($segments[2]), //TEST
-        'produto' => ProdutoController::route($segments[2]), //TEST
-        'funcionario' => FuncionarioController::route($segments[2]), //TEST
-        'cliente' => ClienteController::route($segments[2]), //TEST
+        'empresa' => EmpresaController::route($segments[2]),
+        'produto' => ProdutoController::route($segments[2]),
+        'funcionario' => FuncionarioController::route($segments[2]),
+        'cliente' => ClienteController::route($segments[2]),
         'caixa' => CaixaController::routes($segments[2]),
-//        'compras' => match($segments[1]) {
-//            'create',
-//            'collect',
-//            default => http_response_code(404)
-//        },
-
+        'compras' => ComprasController::routes($segments[2]),
         default => http_response_code(Status::NOT_FOUND->value) 
-
     };
 
 }

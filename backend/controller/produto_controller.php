@@ -7,24 +7,29 @@ require_once '../backend/enums/status.php';
 
 class ProdutoController {
 
-    public static function route($segment) {
-
-        return match($segment) {
-            'create' => self::create(
-                json_decode(file_get_contents('php://input'))
-            ),//TODO test
-            'collect' => self::collect(
-                $_GET['id_empresa'], $_GET['codigo_barras'] ?? null
-            ),//TODO test
-            'modify' => self::modify(
-                json_decode(file_get_contents('php://input'))
-            ),//TODO test 
-            'delete' => self::delete(
-                $_GET['codigo_barras']
-            ),//TODO test
-            default => http_response_code(Status::NOT_FOUND->value)
-        };
-
+    public static function route($segment)
+    {
+        try {
+            return match($segment) {
+                'create' => self::create(
+                    json_decode(file_get_contents('php://input'), true)
+                ),
+                'collect' => self::collect(
+                    $_GET['id_empresa'] ?? null,
+                    $_GET['codigo_barras'] ?? null
+                ),
+                'modify' => self::modify(
+                    json_decode(file_get_contents('php://input'), true)
+                ),
+                'delete' => self::delete(
+                    $_GET['codigo_barras'] ?? null
+                ),
+                default => throw new \Exception('Route not found')
+            };
+        } catch (\Exception $e) {
+            http_response_code(404);
+            return ['error' => $e->getMessage()];
+        }
     }
 
     private static function create($request) {
@@ -85,38 +90,6 @@ class ProdutoController {
         );
 
     }
-
-    // private static function collect($id_empresa, $codigo_barras) {
-
-    //     $produtos = null;
-
-    //     if ($id_empresa != null) {
-
-    //         $produtos = ProdutoRepository::all($id_empresa);
-
-    //     } else if ($codigo_barras != null) {
-
-    //         $produtos = ProdutoRepository::one($codigo_barras);
-
-    //     }
-
-    //     if (!$produtos) {
-
-    //         return ResponseClass::answer(
-    //             "Nenhum produto foi encontrado",
-    //             Status::NO_CONTENT
-    //         );
-
-    //     }
-
-    //     return ResponseClass::answerWithBody(
-    //         $produtos,
-    //         Status::OK
-    //     );
-
-    // }
-
-
     private static function collect($id_empresa, $codigo_barras) {
         header('Content-Type: application/json; charset=utf-8');
         
@@ -126,8 +99,7 @@ class ProdutoController {
                 Status::BAD_REQUEST
             );
         }
-    
-        // Verificar se o 'codigo_barras' foi passado como parâmetro
+
         $codigo_barras = isset($_GET['codigo_barras']) ? $_GET['codigo_barras'] : null;
     
         if ($codigo_barras) {
@@ -140,8 +112,7 @@ class ProdutoController {
             }
             return ResponseClass::answerWithBody([$produto], Status::OK);
         }
-    
-        // Buscar todos os produtos de uma empresa
+
         $produtos = ProdutoRepository::all($id_empresa);
     
         if (empty($produtos)) {
@@ -153,6 +124,7 @@ class ProdutoController {
     
         return ResponseClass::answerWithBody($produtos, Status::OK);
     }
+
 
     private static function modify($request) {
 

@@ -115,16 +115,6 @@
                     <label for="quantidade" class="word"> Quantidade </label>
                 </div>
         
-                <div class="inp">
-                    <input 
-                        type="text" 
-                        name="unitario"
-                        id="unitario"
-                        placeholder="valor unitário"
-                    />
-                    <label for="unitario" class="word"> Unitario </label>
-                </div>
-        
     
             </form>
                 
@@ -132,7 +122,9 @@
     
             <div class="opcao card" id="optPdv" style="display: none;">
 
-                <input  class="b1 scale" id="payBtn" type="button" value="PAGAMENTO" >
+                <span>
+                    <input  class="b1 scale" id="payBtn" type="button" value="PAGAMENTO" >
+                </span>
                 
                 <input class="b2 scale" id="btnCancelar" type="button" value="Cancelar" >
 
@@ -202,9 +194,9 @@
 
     <!-- <script type="module" src="../js/pdv-principal.js"></script> -->
     <script src="../js/signUp.js"></script>
-    <script src="../js/pdv-principal.js"></script>
-    <script src="../js/abrirCaixa.jsx"></script>
-    <script src="../js/executarVenda.jsx"></script>
+    <script type="module" src="../js/pdv-principal.js"></script>
+    <script type="module" src="../js/abrirCaixa.js"></script>
+    <script type="module" src="../js/executarVenda.js"></script>
     
 </body>
 </html>

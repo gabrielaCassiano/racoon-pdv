@@ -4,6 +4,8 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
   }
+
+
   
   body {
    
@@ -26,7 +28,7 @@
     position: relative;
     overflow: hidden;
     width: 100em;
-    height: 100em;
+    height: 105em;
     max-width: 100%;
     min-height: 480px;
   }
@@ -131,6 +133,7 @@
 }
 .sign-up{
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     left: 0;
@@ -140,8 +143,9 @@
 }
 
 .sign-up form {
+    padding-top: 50px;
     width: 70%;
-    height: 75%;
+    height: 80%;
     border-radius: 20px;
     box-shadow: 2px 2px 40px 3px rgb(0 0 0 / 30%);
 }
@@ -573,4 +577,36 @@
 .logo1{
     margin-top: 3em;
     width: 8em;
+}
+
+#voltarLogin {
+    background: none;
+    border: none;
+    position: relative;
+    z-index: 1;
+    left: -50%;
+    bottom: 25px;
+
+}
+.arrow{
+    display: flex;
+    height: 4em;
+    width: 4em;
+    transition: scale 200ms ease-in-out;    
+}
+#rodape {
+    display: flex;
+    align-items: center;
+}
+
+#confirmaDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3px;
+}
+
+#confirmaDiv span {
+    color: green;
+    display: none;
 }

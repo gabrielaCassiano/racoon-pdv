@@ -39,22 +39,22 @@
                 <div class="bloco">
                     <div class="dentro">
                         <h1>Altualizar Plano</h1>
-                        <div class="planosAtualizar">
+                        <div class="planosAtualizar item"  data-plano="basico">
                             <h2>Básico</h2>
                             <p>Conheça nossos planos e selecione o que melhor se encaixa no perfil de sua empresa: R$ 35,00</p>
                            
                         </div>
-                        <div class="planosAtualizar" >
+                        <div class="planosAtualizar item" data-plano="medio">
                             <h2>Médio</h2>
                             <p>Conheça nossos planos e selecione o que melhor se encaixa no perfil de sua empresa: R$ 35,00</p>
                             
                         </div>
-                        <div class="planosAtualizar">
+                        <div class="planosAtualizar item"  data-plano="avancado">
                             <h2>Avançado</h2>
                             <p>Conheça nossos planos e selecione o que melhor se encaixa no perfil de sua empresa: R$ 35,00</p>
 
                         </div>
-                        <button class="enviarPlano">Enviar</button> 
+                        <button class="enviarPlano" id="enviarPlano">Enviar</button> 
                     </div> 
 
                    
@@ -71,25 +71,19 @@
             <div id="modalCadastrarFunc" style="display: none;">
                 <div class="bloco">
                     <div class="dentro">
-                        <div class="editarPerfilImg">
-                            <img class="fotoFofo" src="../src/perfilFofo.png" alt="">
 
-                            <p>EMPRESA PERVOS</p>
-                            <input type="button" id="editarFoto" name="editarFoto" value="Editar Foto">
-                        </div>
-
-                        <div class="editarPerfilImg2">
-                            <h2>Editar Informações</h2>
-                            <input type="text" name="" id="" placeholder="Novo Nome">
-                            <input type="text" name="" id="">
-                            <input type="text" name="" id="">
+                        
+                            <h1>Editar Informações</h1>
+                            <input type="text" name="nomeNovo" id="nomeNovo" placeholder="Novo Nome">
+                            <input type="text" name="cnpjNovo" id="cnpjNovo" placeholder="Novo CNPJ">
+                            
                            
-                            <button class="enviarCadastrarFunc">Enviar</button> 
-                        </div>
+                            <button class="enviarCadastrarFunc" id="enviarEdicao">Enviar</button> 
+                       
 
 
                     </div>    
-                    <button class="botvoltarmodal">
+                    <button class="botvoltarmodal" id="hihi">
                       <img class="arrow" src="../src/arrow.png" alt="voltar">
                   </button>         
                 </div>
@@ -108,40 +102,41 @@
 
         <section class="info">
             <div class="bordinha">
-                <div class="empresaPerfil">
-    
-                    <div class="hehe">
-    
-                        <img src="../src/perfilFofo.png" alt="">
-    
-                        <p>EMPRESA PERVOS <br>
-                            CNPJ: 00.623.904/0001-73 <br>
-                            PLANO: Básico. <br>
-                            DURAÇÃO DO PLANO: 2 Meses. <br>
-                        </p>
+
+                <div class="dentroPerfil">
+
+                    <div class="tentei">
+                        <img class="fofo" src="../src/perfilFofo.png" alt="">
+
+                        <div id="EmpresaInfo" class="hehe">
+                        </div>
+
                     </div>
-    
-                    
-    
-                    
-                    
+
+
                     <div class="botoes">
                         <input type="button" id="btn" name="btn" value="Editar">
                         <input type="button" id="btn2" name="btn2" value="Plano">
                         <input type="button" id="btn3" name="btn3" value="Cadastrar Funcionario">
                     </div>
-                    
+
                 </div>
-
-                
-                <div class="pezin">
+    
                     
-                <button id="btnVoltar">
-                    <img src="../src/arrowpreto.png" alt="">
-                </button>
-
+    
+            
+                <div class="pezin">
+                        
+                    <button id="btnVoltar">
+                        <img src="../src/arrowpreto.png" alt="">
+                    </button>
+    
+                        
+                </div>
                     
             </div>
+
+                
 
         </section>
 
@@ -213,6 +208,7 @@
 
     <script src="../js/perfilEmpresa.js"></script>
     <script src="../js/signUp.js"></script>
-    <script src="../js/cadastrarFuncionario.jsx"></script>
+    <script type="module" src="../js/cadastrarFuncionario.js"></script>
+    <script type="module" src="../js/FuncionalidadePerfil.js"></script>
 </body>
 </html>

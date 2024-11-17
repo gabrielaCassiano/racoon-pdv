@@ -95,28 +95,28 @@ class EmpresaRepository {
     }
 
 
-    // public static function one($id_empresa) {
-    //     global $pdo;
+     
+     
     
-    //     $stmt = $pdo->prepare("
-    //         SELECT 
-    //             id,
-    //             nome_empresa,
-    //             nome_criador,
-    //             cnpj,
-    //             cpf,
-    //             criado
-    //         FROM 
-    //             empresas_ativas
-    //         WHERE 
-    //             id = :id_empresa
-    //     ");
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
     
-    //     $stmt->bindParam(":id_empresa", $id_empresa);
-    //     $stmt->execute();
+     
+     
     
-    //     return $stmt->fetch(PDO::FETCH_ASSOC);
-    // }
+     
+     
     
 
 
@@ -185,25 +185,100 @@ class EmpresaRepository {
 
     }
 
-    public static function create($nome_empresa, $nome_criador, $cnpj, $cpf, $senha) {
+     
 
+     
+
+     
+     
+     
+     
+
+     
+     
+     
+     
+     
+
+     
+
+     
+
+    public static function create($nome_empresa, $nome_criador, $cnpj, $cpf, $senha, $plano) {
         global $pdo;
-
+    
         $stmt = $pdo->prepare("
-            INSERT INTO empresa (nome_empresa, nome_criador, cnpj, cpf, senha, criado)
-            VALUES (:nome_empresa, :nome_criador, :cnpj, :cpf, :senha, UTC_TIMESTAMP())
+            INSERT INTO empresa (nome_empresa, nome_criador, cnpj, cpf, senha, plano, criado)
+            VALUES (:nome_empresa, :nome_criador, :cnpj, :cpf, :senha, :plano, UTC_TIMESTAMP())
         ");
-
+    
         $stmt->bindParam(":nome_empresa", $nome_empresa);
         $stmt->bindParam(":nome_criador", $nome_criador);
         $stmt->bindParam(":cnpj", $cnpj);
         $stmt->bindParam(":cpf", $cpf);
         $stmt->bindParam(":senha", $senha);
-
+        $stmt->bindParam(":plano", $plano);
+    
         return $stmt->execute();
-
     }
 
+
+    
+    public static function existsByCnpj($cnpj) {
+        global $pdo;
+    
+        $stmt = $pdo->prepare("
+            SELECT id 
+            FROM empresa 
+            WHERE cnpj = :cnpj 
+            AND excluido IS NULL
+        ");
+        $stmt->bindParam(":cnpj", $cnpj);
+        $stmt->execute();
+    
+        return $stmt->fetch(PDO::FETCH_ASSOC) !== false;
+    }
+    
+    public static function existsByCpf($cpf) {
+        global $pdo;
+    
+        $stmt = $pdo->prepare("
+            SELECT id 
+            FROM empresa 
+            WHERE cpf = :cpf 
+            AND excluido IS NULL
+        ");
+        $stmt->bindParam(":cpf", $cpf);
+        $stmt->execute();
+    
+        return $stmt->fetch(PDO::FETCH_ASSOC) !== false;
+    }
+    
+    
+
+    public static function updatePlano($id_empresa, $plano) {
+        global $pdo;
+    
+        $stmt = $pdo->prepare("
+            UPDATE empresa
+            SET plano = :plano, modificado = UTC_TIMESTAMP()
+            WHERE id = :id_empresa AND excluido IS NULL
+        ");
+        $stmt->bindParam(':plano', $plano);
+        $stmt->bindParam(':id_empresa', $id_empresa);
+    
+        return $stmt->execute();
+    }
+    
+
+    
+
 }
+    
+
+
+
+
+
 
 ?>

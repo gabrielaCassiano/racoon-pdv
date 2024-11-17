@@ -16,7 +16,7 @@
                 <h1>Problemas com o acesso?</h1>
                 <p>Insira seu e-mail de cadastro e enviaremos um link para redefinir o seu acesso a sua conta. </p>
               </div>
-              <input type="text" class="inpRecovery" id="emailm" name="email" placeholder="Digite o seu Email:">
+              <input type="text" class="inpRecovery" id="emaildomodal" name="email" placeholder="Digite o seu Email:">
               <input type="text" class="inpRecovery" id="codigom" name="email" placeholder="Digite o codigo" style="display: none;">
               <button class="enviarRecovery">Enviar</button> 
             </div>    
@@ -35,7 +35,7 @@
                 <h1>Precisa entrar em contato?</h1>
 
               </div>
-              <input type="email" class="inpRecovery" id="emailm" name="email" placeholder="Digite o seu Email:">
+              <input type="email" class="inpRecovery" id="emailm" name="email" placeholder="Digite o seu CNPJ:">
               <input type="text" class="inpRecovery" id="name" name="name" placeholder="Digite o seu Nome:">
               <textarea id="input1" name="input1" rows="7" maxlength="350" placeholder="Descreva o motivo do contato:"></textarea>
 
@@ -53,24 +53,24 @@
               
             
                 <div class="sign-up">
-                  <form>
+                  <form autocomplete="off">
                     <h1>Cadastro:</h1>
                  
-                    <input type="text" id="nomeEmpresa" name="nomeEmpresa" placeholder="Digite o NOME da sua empresa:">
-                    <input type="text" id="nomeDono" name="nomeDono" placeholder="Digite o seu NOME COMPLETO:">
-                    <input type="text" id="cnpj" name="cnpj" placeholder="Digite o CNPJ da sua empresa:">
-                    <input type="text" id="cpf" name="cpf" placeholder="Digite o seu CPF:">
-                    <input type="text" id="email" name="email" placeholder="Digite o seu Email:">
+                    <input autocomplete="off" type="text" id="nomeEmpresa" name="nomeEmpresa" placeholder="Digite o NOME da sua empresa:">
+                    <input autocomplete="off" type="text" id="nomeDono" name="nomeDono" placeholder="Digite o seu NOME COMPLETO:">
+                    <input autocomplete="off" type="text" id="cnpj" name="cnpj" placeholder="Digite o CNPJ da sua empresa:">
+                    <input autocomplete="off" type="text" id="cpf" name="cpf" placeholder="Digite o seu CPF:">
+                    <input autocomplete="off" type="text" id="email" name="email" placeholder="Digite o seu Email:">
                     <input type="password" id="senha" name="senha" placeholder="Digite sua SENHA:">
                     <input type="password" id="senhaConfirmar" name="senhaConfirmar" placeholder="Confirme sua SENHA:">
                     
-                    <div>
-                      
+                    <div id="rodape">
+                      <div id="confirmaDiv" style="position: relative;">
+                        <button class="" id="signInBtn">Confirmar</button>
+                        <span id="msgSucesso">Empresa criada com sucesso! Faça o login :)</span>
+                      </div>
                     </div>
-                    <div style="position: relative;">
-                      <button class="" id="signInBtn">Confirmar</button>
-                    </div>
-                    <button class="" id="voltarLogin"></button>
+                    <button class="" id="voltarLogin"><img src="../src/arrow.png" class="arrow" alt=""></button>
                   </form>
                 </div>
             
@@ -84,7 +84,9 @@
               
               <input id="cnpjLogin" type="text" placeholder="Email" />
               <input id="passLogin" type="password" placeholder="Password" />
-              <button id="loginBtn">Log-in</button>
+              <span>
+                <button id="loginBtn">Log-in</button>
+              </span>
               <a href="#" id="esqueceuSenha">Esqueceu a senha?</a>
               <div class="pezinDoLogin">
   
@@ -105,21 +107,21 @@
         
                     <p class="text">Conheça nossos planos e selecione o que melhor se encaixa no perfil de sua empresa:</p>
         
-                    <div id="item1" class="item">
+                    <div id="item1" class="item" data-plano="basico">
                         <h1 class="titulo1">Básico:</h1>
                         <p class="titulo1">Conheça nossos planos e selecione o que melhor se encaixa no perfil de sua empresa:</p>
                         <h1 class="valor" >R$35,00 /mês</h1>
                        
                     </div>
         
-                    <div  id="item2" class="item">
+                    <div  id="item2" class="item" data-plano="medio">
                         <h1 class="titulo1">Medio:</h1>
                         <p class="titulo1">Conheça nossos planos e selecione o que melhor se encaixa no perfil de sua empresa:</p>
                         <h1 class="valor">R$35,00 /mês</h1>
                        
                     </div>
         
-                    <div id="item3" class="item" >
+                    <div id="item3" class="item" data-plano="avancado" >
                         <h1 class="titulo1">Avançado:</h1>
                         <p class="titulo1">Conheça nossos planos e selecione o que melhor se encaixa no perfil de sua empresa:</p>
                         <h1 class="valor" >R$35,00 /mês</h1>
