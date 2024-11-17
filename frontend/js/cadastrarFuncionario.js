@@ -1,12 +1,14 @@
+let idii = getState("id_empresa")
 
-
+import {getState} from "../lib/state.js";
 const cadastrarFuncionarioBtn = document.getElementById('btnCadastroFuncionario');
 
 cadastrarFuncionarioBtn.addEventListener('click', async (event) => {
     event.preventDefault();
+    console.log(idii)
 
     const dados = {
-        id_empresa: "1",
+        id_empresa: String(idii),
         nome: document.getElementById('nomeFuncionario').value,
         cpf: document.getElementById('cpfFuncionario').value,
         senha: document.getElementById('codigoFuncionario').value
@@ -40,14 +42,20 @@ cadastrarFuncionarioBtn.addEventListener('click', async (event) => {
 
 
 
-//teste funcionarios na tabela ai ai 
-
+  
 
 
 async function fetchFuncionarios() {
     try {
-        const id_empresa = 1;
+       
+        const id_empresa = idii; 
+        if (!id_empresa) {
+            console.error("ID da empresa não encontrado.");
+            return;
+        }
+
         const response = await fetch(`http://localhost:8080/backend/funcionario/collect?id_empresa=${id_empresa}`);
+        
         
         if (!response.ok) {
             console.error("Erro na resposta do servidor:", response.statusText);
@@ -56,11 +64,12 @@ async function fetchFuncionarios() {
 
         const data = await response.json();
 
-        if (!data.data || data.data.length === 0) {
+        if (!data || !data.data || data.data.length === 0) {
             console.error("Nenhum funcionário encontrado");
             return;
         }
 
+        
         const funcionarios = data.data;
         const tbody = document.getElementById('funcionarios-body');
         tbody.innerHTML = '';
@@ -69,10 +78,9 @@ async function fetchFuncionarios() {
             const row = document.createElement('tr');
             row.innerHTML = `
                 <td>${funcionario.nome}</td>
-                <td>Função Exemplo</td>
-               
+                <td>${funcionario.funcao || 'Função não informada'}</td>
                 <td>${funcionario.cpf}</td>
-                <td>${funcionario.senha}</td>
+                <td>${funcionario.senha || 'N/A'}</td>
             `;
             tbody.appendChild(row);
         });
@@ -81,6 +89,11 @@ async function fetchFuncionarios() {
     }
 }
 
-window.onload = fetchFuncionarios;
 
+
+
+window.onload = function() {
+    
+    fetchFuncionarios();
+};
 

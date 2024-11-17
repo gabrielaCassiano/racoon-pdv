@@ -1,4 +1,6 @@
-
+import {getState} from "../lib/state.js";
+import { CaixaDeErro } from '../components/caixaDeErro.js';
+let idii = getState("id_empresa")
 
 
 
@@ -6,6 +8,7 @@ cadastroCliente.addEventListener('click', async (event) => {
     event.preventDefault();
 
     const dados = {
+        id_empresa: idii,
         nome: document.getElementById('nomeCliente').value,
         cpf: document.getElementById('cpfCliente').value   
     };
@@ -29,7 +32,7 @@ cadastroCliente.addEventListener('click', async (event) => {
         console.log('Cliente criado:', resultado);
     } catch (error) {
         const box = new CaixaDeErro('<p>Dados Inválidos</p>');
-        box.show(signInBtn);
+        box.show(cadastroCliente);
         console.error('Erro ao cadastrar cliente:', error);
     }
 });

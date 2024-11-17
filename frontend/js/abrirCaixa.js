@@ -1,4 +1,4 @@
-import { getState } from '../lib/state.js';
+import { getState, updateState } from '../lib/state.js';
 const loginFuncionarioBtn = document.getElementById('botaoLoginFunc');
 const optionsPdv = document.getElementById("optPdv")
 const optionsOpen = document.getElementById("optOpen")
@@ -7,6 +7,7 @@ const modalAbrirCaixa = document.getElementById("modalAberturaDeCaixa")
 
 async function estadoCaixa() {
     try {
+        console.log(getState("id_funcionario"))
         const idEmpresa = getState('id_empresa') || 1;
         const response = await fetch(`http://localhost:8080/backend/caixa/collect?id_empresa=${idEmpresa}`, {
             method: 'GET', 
@@ -24,6 +25,7 @@ async function estadoCaixa() {
         }
 
         const caixa = data[0];
+        console.log(caixa)
         if (caixa.fechado === null) {
             idCaixa = caixa.id;
             optionsPdv.style.display = 'flex';
@@ -47,15 +49,42 @@ document.addEventListener('DOMContentLoaded', estadoCaixa);
 loginFuncionarioBtn.addEventListener('click', async (event) => {
     event.preventDefault();
 
-    const dados = {
-        id_empresa: getState('id_empresa') || "1",
-        valor_inicial: document.getElementById('fundoDeCaixa').value,
-        id_funcionario: document.getElementById('numeroCadastrado').value
-    };
+    const senha = document.getElementById('numeroCadastrado').value;
+    const id_empresa = getState('id_empresa') || "1";
+
+    console.log(senha)
 
     try {
+        
+        const loginResponse = await fetch('http://localhost:8080/backend/funcionario/loginBySenha', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                senha: senha,
+                id_empresa: id_empresa
+            })
+        });
+
+        if (!loginResponse.ok) {
+            throw new Error('Senha inválida');
+        }
+
+        const funcionario = await loginResponse.json();
+        
+          
+        updateState('id_funcionario', funcionario.id);
+
+          
+        const dados = {
+            id_empresa: id_empresa,
+            valor_inicial: document.getElementById('fundoDeCaixa').value,
+            id_funcionario: funcionario.id
+        };
+
         const response = await fetch('http://localhost:8080/backend/caixa/open', {
-            method: 'POST', 
+            method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
@@ -72,7 +101,7 @@ loginFuncionarioBtn.addEventListener('click', async (event) => {
             optionsOpen.style.display = 'none';
         }
     } catch (error) {
-        console.error('Erro ao abrir o caixa:', error);
-        alert('Erro ao abrir o caixa. Por favor, tente novamente.');
+        console.error('Erro:', error);
+        alert(error.message || 'Erro ao abrir o caixa. Por favor, tente novamente.');
     }
 });

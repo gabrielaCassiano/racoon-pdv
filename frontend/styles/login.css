@@ -2,6 +2,14 @@ main {
 	display: flex;
 	flex-direction: row;
 }
+
+.arrow{
+    display: flex;
+    height: 4em;
+    width: 4em;
+    transition: scale 200ms ease-in-out;    
+    
+}
 .logo {
     position: relative;
     display: flex;

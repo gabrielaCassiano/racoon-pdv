@@ -1,7 +1,6 @@
 const container = document.getElementById('container');
-const registerbtn = document.getElementById('register');
-// const loginbtn = document.getElementById('loginBtn');
-// const signInBtn = document.getElementById('signInBtn');
+  
+  
 const esqueceuSenha = document.getElementById('esqueceuSenha');
 const modalEsqueceuSenha = document.getElementById('modalEsqueceuSenha');
 const entreEmContato = document.getElementById('entreEmContato');
@@ -26,11 +25,8 @@ for(let i = 0; i < botvoltarmodal.length; i++){
 botvoltarmodal3.addEventListener("click", () => {
     window.location.href ="../pages/index.html"
 })
-// AQUI
-registerbtn.addEventListener('click', (event) => {
-   event.preventDefault()
-    container.classList.add("active");
-});
+  
+
 
 voltarLogin.addEventListener('click', (event) => {
     
@@ -39,11 +35,11 @@ voltarLogin.addEventListener('click', (event) => {
 });
 
 
-// loginbtn.addEventListener('click', (event) => {
-//     event.preventDefault()
+  
+  
 
-//     window.location.href = "../pages/pdv-principal.html"
-// });
+  
+  
 
 // MODAL INICIO
 

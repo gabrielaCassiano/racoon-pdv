@@ -3,7 +3,7 @@ const btnConfig = document.querySelectorAll(".btnConfig")
 const btnVoltar = document.querySelectorAll(".botvoltar")
 
 
-// const payBtn = document.getElementById("payBtn")
+  
 const perfilRedirectBtn = document.getElementById("perfilRedirectBtn")
 const produtoRedirectBtn = document.getElementById("produtoRedirectBtn")
 const relatorioRedirectBtn = document.getElementById("relatorioRedirectBtn")

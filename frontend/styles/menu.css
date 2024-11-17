@@ -1,4 +1,4 @@
-/* CSS for the given HTML code */
+  
 .menu {
     display: none;
     justify-content: center;
@@ -14,15 +14,15 @@
 }
 .header {
     display: flex;
-    /* justify-content: space-between; */
+      
     align-items: center;
     height: 100px;
     width: 100%;
     background-color: #000;
     border-radius: 20px;
     flex-direction: column;
-    /* flex-wrap: nowrap; */
-    /* align-content: space-between; */
+      
+      
 }
 
 .header h1{
@@ -35,14 +35,14 @@
     right: 10em;
 }
 .opcoes {
-    /* display: flex; */
+      
     flex-direction: row;
     margin-top: -em;
-    /* height: 23em; */
+      
     width: 18em;
-    /* margin-left: 1em; */
+      
     flex-wrap: wrap;
-    /* align-content: space-evenly; */
+      
     align-items: flex-start;
     justify-content: space-between;
 }

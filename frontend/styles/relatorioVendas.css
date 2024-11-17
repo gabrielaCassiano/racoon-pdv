@@ -539,10 +539,18 @@ button{
 }
 .botVoltarModal {
     position: relative;
-    right: 3.3em;
+    right: -6em;
     background: none;
     border: none;
     outline: none;
 }
 
 /* MODAL FIM */
+
+.dentrinhoDoFechamento {
+color: #5a9818;
+}
+
+.valorTotal {
+    margin-right: 8em;
+}

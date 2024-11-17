@@ -283,7 +283,7 @@ main {
 
 
 
-/* MODAL INICIO */
+  
 
 .inputAbertura {
     display: flex;
@@ -370,7 +370,7 @@ main {
    color: rgb(0, 0, 0)
 }
 
-/* MODAL FIM */
+  
 
 .arrow{
     display: flex;
@@ -416,7 +416,7 @@ main {
     align-items: center;
 }
 
-/* Modal Cancelar */    
+      
 #blocoCancelar{
     display: flex;
     justify-content: center;
@@ -433,7 +433,7 @@ main {
 }
 
 
-/* Modal Cancelar Fim*/
+  
 
 .caixa-de-erro {
     display: block;

@@ -9,7 +9,7 @@
 </head>
 <body>
     
-      <!-- MODAL INICIO  -->
+      <!-- MODAL INICIO 1(cadastrar)  -->
       <div id="modalConfig" style="display: none;">
         <div class="bloco">
             <div class="dentro">
@@ -100,6 +100,93 @@
     <!-- MODAL FIM -->
 
 
+
+ <!-- MODAL INICIO  2(modificar) -->
+ <div id="modalmodifica" style="display: none;">
+    <div class="bloco">
+        <div class="dentro">
+            
+    
+            <form class="modalCadastro">
+
+                <h1>Alterar Informações Produto</h1>
+           
+                <div class="busca">
+                    <input 
+                    type="text" 
+                    name="nome"
+                    id="nome1"
+                    
+                    />
+                    
+                </div>
+                
+                <div class="inp">       
+                    <input 
+                        type="text" 
+                        name="codigoDeBarra" 
+                        id="codigoDeBarra1"
+                        
+                    />
+                    
+                </div>
+                <div class="inp">
+                    <input 
+                        type="text" 
+                        name="preco"
+                        id="preco1"
+                        
+                    />
+                   
+                </div>
+        
+        
+                <div class="inp">
+                    <input 
+                        type="text" 
+                        name="cashBack"
+                        id="cashBack1"
+                        
+                    />
+                    
+                </div>
+
+                
+                <div>
+                    <select name="Categoria" id="cat1">
+                        <option value="" selected disabled hidden>Selecione uma categoria</option>
+                        <option value="Mercearia">Mercearia</option>
+                        <option value="Doces">Doces</option>
+                        <option value="Carne">Carne</option>
+                    </select>
+                    
+                   
+                </div>
+                
+                
+                <input type="button" name="btnConf" class="btnConf2" id="btnConf" value="Confirmar">
+    
+                
+            </form>
+            
+            <button class="botvoltar">
+                <img class="arrow" src="../src/arrow.png" alt="voltar">
+            </button>
+            
+        
+        
+
+        </div>
+       
+    </div>
+</div>
+<!-- MODAL FIM -->
+
+
+
+
+
+
     
         <main>
 
@@ -157,7 +244,7 @@
                             </button>
                             <input type="button" class="btnCadastrar" id="btnCadastrar" name="btn" value="cadastrar produto">
 
-                            <input type="button" class="btnCadastrar" id="btnCadastrar" name="btn" value="editar">
+                            <input type="button" class="btnEditar" id="btnEditar" name="btn" value="editar">
 
                         </div>
 
@@ -175,8 +262,7 @@
                     <thead>
 
                         <th>Nome</th>
-                        <th>Categoria</th>
-                        
+                        <th>Categoria</th>                        
                         <th>Codgiodebarras</th>
                         <th>Preço</th>
                         <th>CashBack</th>
@@ -206,7 +292,7 @@
 
     <script src="../js/searchproduto.js"></script>
     <script src="../js/signUp.js"></script>
-    <script src="../js/cadastrarProdutos.jsx"></script>
+    <script type="module" src="../js/cadastrarProdutos.js"></script>
 
 </body>
 </html>

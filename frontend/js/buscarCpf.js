@@ -1,4 +1,5 @@
-import { updateState } from '../lib/state.js';
+import {getState} from "../lib/state.js";
+let idii = getState("id_empresa")
 const input = document.getElementById('cpfInput');
 const resultadosDiv = document.createElement('div');
 
@@ -46,7 +47,7 @@ input.addEventListener('input', () => {
         
         if (texto.length >= 2) {
             try {
-                const resposta = await fetch(`http://localhost:8080/backend/cliente/collect?nome_ou_cpf=${texto}`);
+                const resposta = await fetch(`http://localhost:8080/backend/cliente/collect?nome_ou_cpf=${texto}&id_empresa=${idii}`);
                 const dados = await resposta.json();
                 
                 resultadosDiv.innerHTML = '';
@@ -72,7 +73,7 @@ input.addEventListener('input', () => {
                         
                         itemDiv.onclick = () => {
                             input.value = cpfFormatado;
-                            // updateState("cpf_cliente", cpfFormatado)
+                              
                             resultadosDiv.style.display = 'none';
                         };
                         

@@ -40,63 +40,63 @@ class ProdutoRepository {
 
     }
 
-    // public static function one($id) {
+     
 
-    //     global $pdo;
+     
 
-    //     $stmt = $pdo->prepare("
-    //         SELECT 
-    //             id,
-    //             id_empresa, 
-    //             categoria, 
-    //             nome, 
-    //             codigo_barras, 
-    //             valor,
-    //             porcentagem_cashback,
-    //             criado 
-    //         FROM
-    //             produto 
-    //         WHERE 
-    //             id = :id
-    //             AND excluido IS NULL
-    //     ");
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
 
-    //     $stmt->bindParam(":id", $id);
+     
 
-    //     //In case of erro 
-    //     //return $stmt->fetch(PDO::FETCH_ASSOC);
-    //     return $stmt->fetchAll();
+     
+     
+     
 
-    // }
+     
 
-    // public static function all($id_empresa) {
+     
 
-    //     global $pdo;
+     
 
-    //     $stmt = $pdo->prepare("
-    //         SELECT 
-    //             id,
-    //             id_empresa, 
-    //             categoria, 
-    //             nome, 
-    //             codigo_barras, 
-    //             valor,
-    //             porcentagem_cashback,
-    //             criado 
-    //         FROM
-    //             produto 
-    //         WHERE 
-    //             id_empresa = :id_empresa
-    //             AND excluido IS NULL
-    //     ");
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
 
-    //     $stmt->bindParam(":id_empresa", $id_empresa);
+     
 
-    //     //In case of erro 
-    //     //return $stmt->fetch(PDO::FETCH_ASSOC);
-    //     return $stmt->fetchAll();
+     
+     
+     
 
-    // }
+     
 
 
    
@@ -177,9 +177,9 @@ class ProdutoRepository {
         $stmt->bindParam(":id_empresa", $id_empresa);
         $stmt->bindParam(":codigo_barras", $codigo_barras);
         $stmt->execute();
-        //In case of erro 
+         
         return $stmt->fetch(PDO::FETCH_ASSOC);
-        // return $stmt->fetch();
+         
 
     }
 

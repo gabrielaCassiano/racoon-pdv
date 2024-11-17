@@ -82,7 +82,14 @@ main {
     margin-top: 5em;
     margin-left: 2em;
 }
-
+.tentei{
+    display: flex;
+}
+.fofo{
+    
+    height: 10em;
+    width: 10em;
+}
 .botoes{
     display: flex;
     flex-direction: column;
@@ -101,6 +108,15 @@ main {
 }
 .hehe{
     display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-left: 2em;
+    
+    
+}
+.dentroPerfil{
+    display: flex;
+    flex-direction: column;
 }
 .bordinha{
     margin-top: 2em;
@@ -401,7 +417,7 @@ main {
     margin-left: 0.5em;
 }
 .dentro h1{
-    margin: 0;
+    margin: 1em;
 }
 
 .botvoltarmodal{
@@ -412,6 +428,9 @@ main {
     background: none;
     border: none;
     z-index: 1;
+}
+#hihi{
+    margin-top: 5em;
 }
 .arrow{
     display: flex;
@@ -424,3 +443,29 @@ main {
     scale: 1.1;
 }
 /* MODAL FIM */
+
+.minhaTabela {
+    display: flex;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.minhaTabela thead,
+.minhaTabela tbody {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.minhaTabela th, .minhaTabela td {
+    
+    padding: 8px;
+    text-align: left;
+}
+
+
+.minhaTabela tr {
+    display: flex;
+    justify-content: space-between;
+}
+

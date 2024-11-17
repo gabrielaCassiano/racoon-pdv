@@ -56,9 +56,8 @@ class CaixaRepository {
     }
 
     public static function one($id_empresa, $hoje) {
-
         global $pdo;
-
+    
         $stmt = $pdo->prepare("
             SELECT
                 id,
@@ -72,15 +71,17 @@ class CaixaRepository {
                 caixa
             WHERE 
                 id_empresa = :id_empresa
-                AND aberto >= :hoje
+                AND DATE(aberto) = :hoje
+            ORDER BY 
+                aberto DESC
+            LIMIT 1
         ");
-
+    
         $stmt->bindParam("id_empresa", $id_empresa);
         $stmt->bindParam("hoje", $hoje);
         $stmt->execute();
-
+    
         return $stmt->fetch(PDO::FETCH_ASSOC);
-
     }
 
     public static function last($id_empresa) {
@@ -159,6 +160,7 @@ class CaixaRepository {
         return $stmt->execute();
 
     }
+    
 
 }
 
