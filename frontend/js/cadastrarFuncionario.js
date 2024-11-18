@@ -1,10 +1,12 @@
 let idii = getState("id_empresa");
+let funcionarioSolicitado = null;
+let linhaSelecionada = null;   
 
 console.log("ID da empresa:", idii);
 
 
 
-import {getState} from "../lib/state.js";
+import {addFuncionario, addProduto, getState, updateState} from "../lib/state.js";
 const cadastrarFuncionarioBtn = document.getElementById('btnCadastroFuncionario');
 
 cadastrarFuncionarioBtn.addEventListener('click', async (event) => {
@@ -65,7 +67,6 @@ async function fetchFuncionarios() {
         const data = await response.json();
         console.log("Dados recebidos:", data);
 
-        // Verifique se 'data' é um array vazio
         if (!data.data || data.data.length === 0) {
             console.warn("Nenhum funcionário encontrado");
             return;
@@ -74,15 +75,37 @@ async function fetchFuncionarios() {
         const funcionarios = data.data;
         const tbody = document.getElementById('funcionarios-body');
         tbody.innerHTML = '';
-
+ 
+        
         funcionarios.forEach(funcionario => {
             const row = document.createElement('tr');
             row.innerHTML = `
-                <td>${funcionario.nome}</td>
-                <td>${funcionario.cpf}</td>
-                <td>${funcionario.senha || 'N/A'}</td>
+            <td>${funcionario.nome}</td>
+            <td>${funcionario.cpf}</td>
+            <td>${funcionario.id}</td>
+            <td>${funcionario.senha || 'N/A'}</td>
             `;
             tbody.appendChild(row);
+            addFuncionario({
+                id: funcionario.id
+            })
+
+            row.addEventListener('click', () => {
+                if (linhaSelecionada) {
+                    linhaSelecionada.classList.remove('selected');
+                }
+    
+                if (row === linhaSelecionada) {
+                    linhaSelecionada = null;
+                    funcionarioSolicitado = null;
+                } else {
+                    row.classList.add('selected');
+                    linhaSelecionada = row;
+                    funcionarioSolicitado = funcionario;   
+                    demitir.disabled = false
+                    demitir.style.backgroundColor = "red"
+                }
+            });
         });
 
         console.log("Funcionários carregados com sucesso!");
@@ -90,6 +113,35 @@ async function fetchFuncionarios() {
         console.error("Erro ao buscar funcionários:", error);
     }
 }
+
+const demitir = document.getElementById('btn4')
+
+console.log(demitir)
+
+demitir.addEventListener('click', async () => {
+    if (!funcionarioSolicitado || !funcionarioSolicitado.id) {
+        console.error('Funcionário não selecionado ou ID inválido.');
+        return;
+    }
+
+    try {
+        const response = await fetch(`http://localhost:8080/backend/funcionario/delete?id_funcionario=${funcionarioSolicitado.id}`, {
+            method: 'DELETE'
+        });
+
+        if (!response.ok) {
+            const errorData = await response.text();
+            console.error('Erro ao deletar func:', errorData);
+            throw new Error('Erro ao deletar func');
+        }
+
+        const data = await response.json();
+        // console.log('Funcionário deletado com sucesso:', data);
+        window.location.reload();
+    } catch (error) {
+        console.error('Erro ao deletar funcionário:', error);
+    }
+});
 
 
 window.onload = fetchFuncionarios;

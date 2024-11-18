@@ -1,7 +1,7 @@
 const stateConfig = {
     numericas: ['valorCompra', 'valorDesconto', 'valorTotal', 'cashback'],
     inteiras: ['id_cliente', 'id_funcionario', 'id_empresa', 'id_produto'],
-    listas: ['produtos']
+    listas: ['produtos', 'funcionarios']
 };
 
 const state = {
@@ -10,12 +10,13 @@ const state = {
     valorTotal: parseFloat(sessionStorage.getItem('valorTotal')) || 0,
     cashback: parseFloat(sessionStorage.getItem('cashback')) || 0,
     id_cliente: parseInt(localStorage.getItem('id_cliente')) || null,
-    id_funcionario: parseInt(localStorage.getItem('id_funcionario')) || null,
+    id_funcionario: JSON.parse(localStorage.getItem('id_funcionario')) ||  [],
     id_empresa: parseInt(localStorage.getItem('id_empresa')) || null,
     id_produto: parseInt(localStorage.getItem('id_produto')) || null,
     nome_cliente: localStorage.getItem('nome_cliente') || '',
     cpf_cliente: localStorage.getItem('cpf_cliente') || '',
-    produtos: JSON.parse(localStorage.getItem('produtos')) || []
+    produtos: JSON.parse(localStorage.getItem('produtos')) || [],
+    funcionarios: JSON.parse(localStorage.getItem('funcionarios')) || []
 };
 
 function processarValor(key, value) {
@@ -76,13 +77,38 @@ export function addProduto(produto) {
     return 'Produto adicionado';
 }
 
+export function addFuncionario(funcionario) {
+    if (!funcionario || typeof funcionario !== 'object') {
+        return 'Funcionário inválido';
+    }
+
+    if (!Array.isArray(state.funcionarios)) {
+        state.funcionarios = [];
+    }
+
+    const novoArray = [...state.funcionarios];
+    const index = novoArray.findIndex(f => f.id === funcionario.id);
+
+    if (index !== -1) {
+        return 'Funcionário já adicionado';
+    } else {
+        novoArray.push({ 
+            id: funcionario.id, 
+        });
+    }
+
+    state.funcionarios = novoArray;
+    localStorage.setItem('funcionarios', JSON.stringify(state.funcionarios));
+    return 'Funcionário adicionado';
+}
+
 export function getState(key) {
     if (key === undefined) {
         return 'Estado inválido';
     }
     
-    if (key === 'produtos') {
-        return Array.isArray(state.produtos) ? [...state.produtos] : [];
+    if (key === 'produtos' || key === 'funcionarios') {
+        return Array.isArray(state[key]) ? [...state[key]] : [];
     }
     
     const storage = stateConfig.numericas.includes(key) ? sessionStorage : localStorage;
@@ -100,10 +126,10 @@ export function clearState(key) {
         if (stateConfig.numericas.includes(key)) {
             sessionStorage.removeItem(key);
             state[key] = 0;
-        } else if (stateConfig.inteiras.includes(key) || key === 'produtos') {
+        } else if (stateConfig.inteiras.includes(key) || stateConfig.listas.includes(key)) {
             localStorage.removeItem(key);
             state[key] = null;
-            if (key === 'produtos') {
+            if (stateConfig.listas.includes(key)) {
                 state[key] = [];
             }
         }
@@ -112,10 +138,10 @@ export function clearState(key) {
             if (stateConfig.numericas.includes(key)) {
                 sessionStorage.removeItem(key);
                 state[key] = 0;
-            } else if (stateConfig.inteiras.includes(key) || key === 'produtos') {
+            } else if (stateConfig.inteiras.includes(key) || stateConfig.listas.includes(key)) {
                 localStorage.removeItem(key);
                 state[key] = null;
-                if (key === 'produtos') {
+                if (stateConfig.listas.includes(key)) {
                     state[key] = [];
                 }
             }

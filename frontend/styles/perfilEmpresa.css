@@ -94,7 +94,7 @@ main {
     display: flex;
     flex-direction: column;
     
-    height: 11em;
+    height: 15em;
     gap: 1.5em;
     margin-left: 7em;
     margin-top: 5em;
@@ -131,7 +131,7 @@ main {
 #btnVoltar {
     border: none;
     background: none ;
-    margin-top: 14em;
+    margin-top: 10em;
     
 }
 
@@ -153,7 +153,11 @@ main {
     color: white;
     
 }
-
+#btn4 {
+    background-color: rgb(255, 128, 128);
+    border: red;
+    color: white;
+}
 
 
 
@@ -469,3 +473,6 @@ main {
     justify-content: space-between;
 }
 
+.selected {
+    background-color: #ccc;
+}

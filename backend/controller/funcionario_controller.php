@@ -25,7 +25,7 @@
                     json_decode(file_get_contents('php://input'))
                 ),
                 'delete' => self::delete(
-                    $_GET['id_empresa']
+                    $_GET['id_funcionario']
                 ),
                 default => http_response_code(Status::NOT_FOUND->value)
             };

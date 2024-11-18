@@ -40,67 +40,6 @@ class ProdutoRepository {
 
     }
 
-     
-
-     
-
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-
-     
-
-     
-     
-     
-
-     
-
-     
-
-     
-
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-
-     
-
-     
-     
-     
-
-     
-
-
-   
-
         public static function one($codigo_barras) {
             global $pdo;
     
