@@ -67,7 +67,6 @@ async function fetchFuncionarios() {
         const data = await response.json();
         console.log("Dados recebidos:", data);
 
-        // Verifique se 'data' é um array vazio
         if (!data.data || data.data.length === 0) {
             console.warn("Nenhum funcionário encontrado");
             return;
